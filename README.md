@@ -12,7 +12,7 @@ is welcome.  The material is limited now, but lectures and demos will
 be added over the course of the class.  
 
 Note that labs, homework assignments and lecture notes are given in 
-NYU proprietary system NYU Classes and are available only to
+NYU's proprietary system NYU Classes and are available only to
 students enrolled in the class.  
 
 ## Pre-requisites
@@ -20,7 +20,7 @@ students enrolled in the class.
 Both classes assume no python or ML experience.  However, experience
 with some programming language (preferably object-oriented) is required.
 The class also requires undergraduate probability, 
-linear algebra and multi-variable classes.  
+linear algebra and multi-variable calculus.  
 
 ## Installation
 
