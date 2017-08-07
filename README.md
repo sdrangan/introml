@@ -31,9 +31,7 @@ Before getting started, you will need to install:
 * Later tutorials will require that you install `tensorflow`.
 
 ## Sequence
-The class will be following the following sequence:
-* Basics
-    * [Introduction to `numpy` vectors](./Basics/intro_vectors.ipynb)
+The class will be following the following [sequence](sequence.md)
 
 
 

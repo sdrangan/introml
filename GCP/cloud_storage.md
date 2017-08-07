@@ -1,3 +1,5 @@
+[Home](../sequence.md) - [GCP](./readme.md) - Cloud storage.
+
 # Using Google Cloud Storage
 
 [Google cloud storage](https://cloud.google.com/storage/) provides
@@ -20,9 +22,9 @@ to create the bucket.
 
 1. Log in to the Cloud Developers Console, and go to Storage->Storage.
 2. This will prompt you to “Create” a new bucket
-    •	For the name, I selected “introml-bucket”
-    •	Select “Regional”
-    •	Make sure region matches the region for your VM instance
+    * For the name, I selected “introml-bucket”
+    * Select “Regional”
+    * Make sure region matches the region for your VM instance
 3. Optionally, you create “folders” within the bucket and load data into the bucket. 
 
 ## Enable Storage Access in your VM
