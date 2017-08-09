@@ -82,6 +82,7 @@ Some of the commands below will need to be changed if you used `pip3` instead of
 ~~~
 This will prompt you to enter a password and then will produce a long string like
 `'sha1:e079...'`  Once this is diplayed, type `exit` to exit the `python` shell.
+
 3.  Modify jupyter config file.  You can use any text editor.  The code below
 assumes you use  `vi`, but you can use any editor of your choice like `nano`.
 ~~~
