@@ -17,7 +17,7 @@ and then run the software on top of that container.
 The only change is that instead of using the `Ubuntu 16.04 LTS` boot disk, select the
 one with a name like `Container-Optimized OS 60-9592.82.0 stable`.  
 This is a special boot disk that Google has created with Docker installed.
-~~~
+
 * SSH into the VM
 * When using `docker`, we need to create a
 [Docker volume](https://docs.docker.com/engine/admin/volumes/volumes/) and `bind mount`
