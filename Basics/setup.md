@@ -1,12 +1,12 @@
 [Home](../sequence.md) - Set-up 
 
-# Setting up your environment
+# Setting up the environment on a local machine
 
 Many of the demos and labs in the class use the powerful
-[Jupyter notebook](http://jupyter.org/) web-based application which lets you create
-and edit documents with live python code and rich documents.  It is ideal for 
-teaching.  You can install
-the software on any personal computer (Windows, Mac or Unix):
+[Jupyter notebook](http://jupyter.org/).  Jupyter notebook is a web-based application which lets you create
+and edit documents with live python code and rich comments and images.  It is ideal for 
+teaching.  You can install Jupyter notebook and other software
+on any personal computer (Windows, Mac or Unix):
 * Install [jupyter notebook and Python](http://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/index.html).
   Make sure you install Python 3 for the demos in these tutorials.
 * Install and familiarize yourself with [github](https://guides.github.com/).

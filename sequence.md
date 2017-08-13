@@ -18,7 +18,8 @@ and wish copies of the solutions for yourself, please contact Sundeep Rangan at 
 
 * [Setting up python, jupyter and github](./Basics/setup.md)
     * [Using a local machine](./Basics/setup.md)
-    * [Using a virtual machine in Google Cloud Platform](./GCP/readme.md)
+    * [Using a virtual machine in Google Cloud Platform](./GCP/getting_started.md)
+    * [Using a virtual machine in Google Cloud Platform with Docker](./GCP/docker.md)
 * [Introduction to `numpy` vectors](./Basics/intro_vectors.ipynb)
 * [Simple linear regression](./simp_lin_reg/readme.md)
     * [Demo:  Understanding automobile mpg](./simp_lin_reg/auto_mpg.ipynb)

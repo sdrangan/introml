@@ -16,3 +16,4 @@ are still being developed):
 * [Creating a virtual machine](./getting_started.md) with python and jupyter notebook 
 * [Connecting to Google cloud storage](./cloud_storage.md)
 * Installing Tensorflow [To be developed]
+* [Running Jupyter notebook and Tensorflow using Docker](./docker.md)
