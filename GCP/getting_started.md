@@ -32,12 +32,9 @@ can be found [here](https://cloud.google.com/getting-started/).
 
 You can connect to your instance via browser through the 
 [instance listing page](https://console.cloud.google.com/compute/instances).
-Alternatively, you can connect from any SSH client.  There are a large number
-of SSH clients available for Windows and MAC.  Some have editors and
-other advanced features.
+Alternatively, you can connect from a third party SSH client which may have
+more features.  We provide [instructions for using third party clients](./terminal.md).
 
-The only tricky part of using an SSH client is generating and using the SSH keys.
-You can follow these [instructions](https://cloud.google.com/compute/docs/instances/connecting-to-instance).
 
 
 ## Jupyter Notebook Setup with Anaconda
@@ -74,7 +71,9 @@ But, if you wish to install with `pip3` instead of `anaconda`, do the following:
 Some of the commands below will need to be changed if you used `pip3` instead of 
 `anaconda`.
 1.  SSH into the VM
-2.  Generate a `sha1` hashed password:
+2.  [Optional]  For security, you can add a password for access to Jupyter Notebook.
+But, if you do not use this, the system will automatically use a token.  If you prefer
+a password, generate a `sha1` hashed password:
 ~~~
     python3
     >>> from notebook.auth import passwd

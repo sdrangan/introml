@@ -5,7 +5,7 @@
 Instead of creating a VM and installing all the requisite software
 manually, you can run all the software in this class on a pre-configured
 [Docker](https://docs.docker.com) image.  This may simplify the process of
-getting started at the cost of being able to customize your software.
+getting started at the cost of not being able to customize your software.
 
 The Docker website has an excellent
 [tutorial](https://docs.docker.com/get-started/).  For this class, we will use
