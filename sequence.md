@@ -25,6 +25,7 @@ and wish copies of the solutions for yourself, please contact Sundeep Rangan at 
     * [Demo:  Understanding automobile mpg](./simp_lin_reg/auto_mpg.ipynb)
     * [Lab: Boston housing data](./simp_lin_reg/lab_housing_partial.ipynb). To be 
       completed by the student.
+* [More `numpy`:  Python broadcasting](./Basics/numpy_axes_broadcasting.ipynb)      
 * [Multiple linear regression](./mult_lin_reg/readme.md)
     * [Demo:  Predicting glucose levels](./mult_lin_reg/glucose.ipynb)
     * [Lab: Calibrating robot dynamics](./mult_lin_reg/lab_robot_calib_partial.ipynb) To be completed by the student.
