@@ -29,6 +29,9 @@ and wish copies of the solutions for yourself, please contact Sundeep Rangan at 
 * [Multiple linear regression](./mult_lin_reg/readme.md)
     * [Demo:  Predicting glucose levels](./mult_lin_reg/glucose.ipynb)
     * [Lab: Calibrating robot dynamics](./mult_lin_reg/lab_robot_calib_partial.ipynb) To be completed by the student.
+* [Model selection and regularization](./model_sel/readme.md)
+    * [Demo:  Polynomial order selection with cross-validation](./model_sel/polyfit.ipynb)
+    * [Demo:  LASSO regression for finding predictors of prostate cancer](./model_sel/prostate.ipynb) 
 
 
 
