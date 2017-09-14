@@ -32,7 +32,7 @@ and wish copies of the solutions for yourself, please contact Sundeep Rangan at 
 * [Model selection and regularization](./model_sel/readme.md)
     * [Demo:  Polynomial order selection with cross-validation](./model_sel/polyfit.ipynb)
     * [Demo:  LASSO regression for finding predictors of prostate cancer](./model_sel/prostate.ipynb) 
-    * [Lab: Neural decoding motor cortex signals](./model_sel/lab_neuron_partial.ipynb) 
+    * [Lab: Neural decoding motor cortex signals](./model_sel/lab_neural_partial.ipynb) 
 
 
 
