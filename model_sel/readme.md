@@ -10,6 +10,6 @@ in two demos.  A lab exercise will be added shortly.
 
 * [Demo:  Polynomial order selection with cross-validation](./polyfit.ipynb)
 * [Demo:  LASSO regression for finding predictors of prostate cancer](./prostate.ipynb) 
-
+* [Lab: Neural decoding motor cortex signals](./lab_neuron_partial.ipynb) 
 
 
