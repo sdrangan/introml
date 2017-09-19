@@ -32,9 +32,18 @@ and wish copies of the solutions for yourself, please contact Sundeep Rangan at 
 * [Model selection and regularization](./model_sel/readme.md)
     * [Demo:  Polynomial order selection with cross-validation](./model_sel/polyfit.ipynb)
     * [Demo:  LASSO regression for finding predictors of prostate cancer](./model_sel/prostate.ipynb) 
-    * [Lab: Neural decoding of motor cortex signals](./model_sel/lab_neural_partial.ipynb) 
+    * [Lab: Neural decoding of motor cortex signals](./model_sel/lab_neural_partial.ipynb) To be completed by the student.
 * [Logistic Regression](./logistic/readme.md)
     * [Demo:  Breast cancer diagnosis via logistic regression](./logistic/breast_cancer.ipynb)
-    * Lab: Genetic analysis in Down's syndrome [To be uploaded shortly]
+    * [Lab: Genetic analysis of Down's syndrome in mice](./logistic/lab_gene_partial.ipynb) To be completed by the student.
+    
+Items to be added over the course of this semester:
+
+* Support Vector Machines (SVMs)
+* Introduction to Tensorflow
+* Neural networks
+* Convolutional neural networks
+* PCA
+* Clustering and EM
 
 
