@@ -17,9 +17,10 @@ provided the full solutions in class.  If you are an instructor
 and wish copies of the solutions for yourself, please contact Sundeep Rangan at <srangan@nyu.edu>.
 
 * [Setting up python, jupyter and github](./Basics/setup.md)
-    * [Using a local machine](./Basics/setup.md)
-    * [Using a virtual machine in Google Cloud Platform](./GCP/getting_started.md)
-    * [Using a virtual machine in Google Cloud Platform with Docker](./GCP/docker.md)
+    * [Set up a local machine](./Basics/setup.md)
+    * [Set up a virtual machine in Google Cloud Platform](./GCP/getting_started.md)
+    * [Set up a virtual machine in Google Cloud Platform with Docker](./GCP/docker.md)
+    * [Downloading the course material from github](./Basics/github.md)
 * [Introduction to `numpy` vectors](./Basics/intro_vectors.ipynb)
 * [Simple linear regression](./simp_lin_reg/readme.md)
     * [Demo:  Understanding automobile mpg](./simp_lin_reg/auto_mpg.ipynb)
@@ -36,14 +37,13 @@ and wish copies of the solutions for yourself, please contact Sundeep Rangan at 
 * [Logistic Regression](./logistic/readme.md)
     * [Demo:  Breast cancer diagnosis via logistic regression](./logistic/breast_cancer.ipynb)
     * [Lab: Genetic analysis of Down's syndrome in mice](./logistic/lab_gene_partial.ipynb) To be completed by the student.
+*  Nonlinear optimization (To be added)
+*  Support vector machines (To be added)
+*  Neural networks and the Keras package
+    * [Demo: First neural network in Keras](./neural/synthetic.ipynb)
+    * More to be added
+*  Convolutional and deep networks
+*  PCA (To be added)
+*  Clustering and EM (To be added)
     
-Items to be added over the course of this semester:
-
-* Support Vector Machines (SVMs)
-* Introduction to Tensorflow
-* Neural networks
-* Convolutional neural networks
-* PCA
-* Clustering and EM
-
 
