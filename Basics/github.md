@@ -24,20 +24,23 @@ you can skip this step.
 * Next, download the *entire* repository.  In git, you cannot
 easily download a single file.  So, you need to clone the entire repository.
 Open a command shell or comand window (in Windows, you can use the
-[Windows powershell](https://docs.microsoft.com/en-us/powershell).
+[Windows powershell](https://docs.microsoft.com/en-us/powershell)).
 In the command shell type:
 ~~~bash
-    cd [directory where you want the files on your machine]
-    git clone https://github.com/sdrangan/introml.git
+    > cd [directory where you want the files on your machine]
+    > git clone https://github.com/sdrangan/introml.git
 ~~~
-* The repository will change over the course of the class as I update
-material.  To keep your local version up-to-date:
+This will create a directory `introml` with all the files.  You are
+now ready to go!
+* The repository will change over the course of the class and I will update
+material.  To update your local version at any time, open the command
+window and type:
 ~~~bash
-    cd introml
-    git pull
+    > cd introml
+    > git pull
 ~~~
 
-Note that `github` is a great tool for your own projects, even if you
+Github is also a great tool for your own projects, even if you
 are working individually.  Using `github` will allow you to keep track of 
 the files, develop in an organized manner, and release your work to
 a broader audience.
