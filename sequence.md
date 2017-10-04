@@ -37,7 +37,9 @@ and wish copies of the solutions for yourself, please contact Sundeep Rangan at 
 * [Logistic Regression](./logistic/readme.md)
     * [Demo:  Breast cancer diagnosis via logistic regression](./logistic/breast_cancer.ipynb)
     * [Lab: Genetic analysis of Down's syndrome in mice](./logistic/lab_gene_partial.ipynb) To be completed by the student.
-*  Nonlinear optimization (To be added)
+* [Nonlinear optimization](./optim/readme.md)
+    * [Demo:  Simple gradient descent optimization](./optim/grad_descent.ipynb)
+    * Lab: To be added soon
 *  Support vector machines (To be added)
 *  Neural networks and the Keras package
     * [Demo: First neural network in Keras](./neural/synthetic.ipynb)
