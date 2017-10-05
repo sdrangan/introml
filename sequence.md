@@ -23,24 +23,25 @@ and wish copies of the solutions for yourself, please contact Sundeep Rangan at 
     * [Downloading the course material from github](./Basics/github.md)
 * [Introduction to `numpy` vectors](./Basics/intro_vectors.ipynb)
 * [Simple linear regression](./simp_lin_reg/readme.md)
-    * [Demo:  Understanding automobile mpg](./simp_lin_reg/auto_mpg.ipynb)
-    * [Lab: Boston housing data](./simp_lin_reg/lab_housing_partial.ipynb). To be 
+    * [Demo 1:  Understanding automobile mpg](./simp_lin_reg/auto_mpg.ipynb)
+    * [Lab 1: Boston housing data](./simp_lin_reg/lab_housing_partial.ipynb). To be 
       completed by the student.
 * [More `numpy`:  Python broadcasting](./Basics/numpy_axes_broadcasting.ipynb)      
 * [Multiple linear regression](./mult_lin_reg/readme.md)
-    * [Demo:  Predicting glucose levels](./mult_lin_reg/glucose.ipynb)
-    * [Lab: Calibrating robot dynamics](./mult_lin_reg/lab_robot_calib_partial.ipynb) To be completed by the student.
+    * [Demo 2:  Predicting glucose levels](./mult_lin_reg/glucose.ipynb)
+    * [Lab 2: Calibrating robot dynamics](./mult_lin_reg/lab_robot_calib_partial.ipynb) To be completed by the student.
 * [Model selection and regularization](./model_sel/readme.md)
-    * [Demo:  Polynomial order selection with cross-validation](./model_sel/polyfit.ipynb)
-    * [Demo:  LASSO regression for finding predictors of prostate cancer](./model_sel/prostate.ipynb) 
-    * [Lab: Neural decoding of motor cortex signals](./model_sel/lab_neural_partial.ipynb) To be completed by the student.
+    * [Demo 3.1:  Polynomial order selection with cross-validation](./model_sel/polyfit.ipynb)
+    * [Demo 3.2:  LASSO regression for finding predictors of prostate cancer](./model_sel/prostate.ipynb) 
+    * [Lab 3: Neural decoding of motor cortex signals](./model_sel/lab_neural_partial.ipynb) To be completed by the student.
 * [Logistic Regression](./logistic/readme.md)
-    * [Demo:  Breast cancer diagnosis via logistic regression](./logistic/breast_cancer.ipynb)
-    * [Lab: Genetic analysis of Down's syndrome in mice](./logistic/lab_gene_partial.ipynb) To be completed by the student.
+    * [Demo 4:  Breast cancer diagnosis via logistic regression](./logistic/breast_cancer.ipynb)
+    * [Lab 4: Genetic analysis of Down's syndrome in mice](./logistic/lab_gene_partial.ipynb) To be completed by the student.
 * [Nonlinear optimization](./optim/readme.md)
-    * [Demo:  Simple gradient descent optimization](./optim/grad_descent.ipynb)
-    * Lab: To be added soon
-*  Support vector machines (To be added)
+    * [Demo 5.1:  Computing gradients](./optim/computing_gradients.ipynb)
+    * [Demo 5.2:  Simple gradient descent optimization](./optim/grad_descent.ipynb)    
+    * [Lab 5: Audio pitch detection](./optim/audio_pitch_partial.ipynb)
+*  Support vector machines (To be added)   
 *  Neural networks and the Keras package
     * [Demo: First neural network in Keras](./neural/synthetic.ipynb)
     * More to be added
