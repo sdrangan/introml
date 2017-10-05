@@ -9,6 +9,6 @@ simple numerical optimizers from scratch.
 
 * [Demo 5.1:  Computing gradients](./computing_gradients.ipynb)
 * [Demo 5.2:  Simple gradient descent optimization](./grad_descent.ipynb)    
-* [Lab 5: Audio pitch detection](./audio_pitch_partial.ipynb)
+* [Lab 5: Audio pitch detection](./lab_audio_partial.ipynb)
 
 
