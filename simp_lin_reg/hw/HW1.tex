@@ -1,0 +1,292 @@
+\documentclass[11pt]{article}
+
+\usepackage{fullpage}
+\usepackage{amsmath, amssymb, bm, cite, epsfig, psfrag}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{listings}
+\usepackage{cite}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{enumerate}
+\usepackage{listings}
+\lstloadlanguages{Python}
+\usetikzlibrary{shapes,arrows}
+%\usetikzlibrary{dsp,chains}
+
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{9} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{9}  % for normal
+% Defining colors
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+%\restylefloat{figure}
+%\theoremstyle{plain}      \newtheorem{theorem}{Theorem}
+%\theoremstyle{definition} \newtheorem{definition}{Definition}
+
+\def\del{\partial}
+\def\ds{\displaystyle}
+\def\ts{\textstyle}
+\def\beq{\begin{equation}}
+\def\eeq{\end{equation}}
+\def\beqa{\begin{eqnarray}}
+\def\eeqa{\end{eqnarray}}
+\def\beqan{\begin{eqnarray*}}
+\def\eeqan{\end{eqnarray*}}
+\def\nn{\nonumber}
+\def\binomial{\mathop{\mathrm{binomial}}}
+\def\half{{\ts\frac{1}{2}}}
+\def\Half{{\frac{1}{2}}}
+\def\N{{\mathbb{N}}}
+\def\Z{{\mathbb{Z}}}
+\def\Q{{\mathbb{Q}}}
+\def\R{{\mathbb{R}}}
+\def\C{{\mathbb{C}}}
+\def\argmin{\mathop{\mathrm{arg\,min}}}
+\def\argmax{\mathop{\mathrm{arg\,max}}}
+%\def\span{\mathop{\mathrm{span}}}
+\def\diag{\mathop{\mathrm{diag}}}
+\def\x{\times}
+\def\limn{\lim_{n \rightarrow \infty}}
+\def\liminfn{\liminf_{n \rightarrow \infty}}
+\def\limsupn{\limsup_{n \rightarrow \infty}}
+\def\GV{Guo and Verd{\'u}}
+\def\MID{\,|\,}
+\def\MIDD{\,;\,}
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{assumption}{Assumption}
+\newtheorem{claim}{Claim}
+\def\qed{\mbox{} \hfill $\Box$}
+\setlength{\unitlength}{1mm}
+
+\def\bhat{\widehat{b}}
+\def\ehat{\widehat{e}}
+\def\phat{\widehat{p}}
+\def\qhat{\widehat{q}}
+\def\rhat{\widehat{r}}
+\def\shat{\widehat{s}}
+\def\uhat{\widehat{u}}
+\def\ubar{\overline{u}}
+\def\vhat{\widehat{v}}
+\def\xhat{\widehat{x}}
+\def\xbar{\overline{x}}
+\def\zhat{\widehat{z}}
+\def\zbar{\overline{z}}
+\def\la{\leftarrow}
+\def\ra{\rightarrow}
+\def\MSE{\mbox{\small \sffamily MSE}}
+\def\SNR{\mbox{\small \sffamily SNR}}
+\def\SINR{\mbox{\small \sffamily SINR}}
+\def\arr{\rightarrow}
+\def\Exp{\mathbb{E}}
+\def\var{\mbox{var}}
+\def\Tr{\mbox{Tr}}
+\def\tm1{t\! - \! 1}
+\def\tp1{t\! + \! 1}
+
+\def\Xset{{\cal X}}
+
+\newcommand{\one}{\mathbf{1}}
+\newcommand{\abf}{\mathbf{a}}
+\newcommand{\bbf}{\mathbf{b}}
+\newcommand{\dbf}{\mathbf{d}}
+\newcommand{\ebf}{\mathbf{e}}
+\newcommand{\gbf}{\mathbf{g}}
+\newcommand{\hbf}{\mathbf{h}}
+\newcommand{\pbf}{\mathbf{p}}
+\newcommand{\pbfhat}{\widehat{\mathbf{p}}}
+\newcommand{\qbf}{\mathbf{q}}
+\newcommand{\qbfhat}{\widehat{\mathbf{q}}}
+\newcommand{\rbf}{\mathbf{r}}
+\newcommand{\rbfhat}{\widehat{\mathbf{r}}}
+\newcommand{\sbf}{\mathbf{s}}
+\newcommand{\sbfhat}{\widehat{\mathbf{s}}}
+\newcommand{\ubf}{\mathbf{u}}
+\newcommand{\ubfhat}{\widehat{\mathbf{u}}}
+\newcommand{\utildebf}{\tilde{\mathbf{u}}}
+\newcommand{\vbf}{\mathbf{v}}
+\newcommand{\vbfhat}{\widehat{\mathbf{v}}}
+\newcommand{\wbf}{\mathbf{w}}
+\newcommand{\wbfhat}{\widehat{\mathbf{w}}}
+\newcommand{\xbf}{\mathbf{x}}
+\newcommand{\xbfhat}{\widehat{\mathbf{x}}}
+\newcommand{\xbfbar}{\overline{\mathbf{x}}}
+\newcommand{\ybf}{\mathbf{y}}
+\newcommand{\zbf}{\mathbf{z}}
+\newcommand{\zbfbar}{\overline{\mathbf{z}}}
+\newcommand{\zbfhat}{\widehat{\mathbf{z}}}
+\newcommand{\Ahat}{\widehat{A}}
+\newcommand{\Abf}{\mathbf{A}}
+\newcommand{\Bbf}{\mathbf{B}}
+\newcommand{\Cbf}{\mathbf{C}}
+\newcommand{\Bbfhat}{\widehat{\mathbf{B}}}
+\newcommand{\Dbf}{\mathbf{D}}
+\newcommand{\Gbf}{\mathbf{G}}
+\newcommand{\Hbf}{\mathbf{H}}
+\newcommand{\Ibf}{\mathbf{I}}
+\newcommand{\Kbf}{\mathbf{K}}
+\newcommand{\Pbf}{\mathbf{P}}
+\newcommand{\Phat}{\widehat{P}}
+\newcommand{\Qbf}{\mathbf{Q}}
+\newcommand{\Rbf}{\mathbf{R}}
+\newcommand{\Rhat}{\widehat{R}}
+\newcommand{\Sbf}{\mathbf{S}}
+\newcommand{\Ubf}{\mathbf{U}}
+\newcommand{\Vbf}{\mathbf{V}}
+\newcommand{\Wbf}{\mathbf{W}}
+\newcommand{\Xhat}{\widehat{X}}
+\newcommand{\Xbf}{\mathbf{X}}
+\newcommand{\Ybf}{\mathbf{Y}}
+\newcommand{\Zbf}{\mathbf{Z}}
+\newcommand{\Zhat}{\widehat{Z}}
+\newcommand{\Zbfhat}{\widehat{\mathbf{Z}}}
+\def\alphabf{{\boldsymbol \alpha}}
+\def\betabf{{\boldsymbol \beta}}
+\def\mubf{{\boldsymbol \mu}}
+\def\lambdabf{{\boldsymbol \lambda}}
+\def\etabf{{\boldsymbol \eta}}
+\def\xibf{{\boldsymbol \xi}}
+\def\taubf{{\boldsymbol \tau}}
+\def\sigmahat{{\widehat{\sigma}}}
+\def\thetabf{{\bm{\theta}}}
+\def\thetabfhat{{\widehat{\bm{\theta}}}}
+\def\thetahat{{\widehat{\theta}}}
+\def\mubar{\overline{\mu}}
+\def\muavg{\mu}
+\def\sigbf{\bm{\sigma}}
+\def\etal{\emph{et al.}}
+\def\Ggothic{\mathfrak{G}}
+\def\Pset{{\mathcal P}}
+\newcommand{\bigCond}[2]{\bigl({#1} \!\bigm\vert\! {#2} \bigr)}
+\newcommand{\BigCond}[2]{\Bigl({#1} \!\Bigm\vert\! {#2} \Bigr)}
+\newcommand{\tran}{^{\text{\sf T}}}
+\newcommand{\herm}{^{\text{\sf H}}}
+\newcommand{\bkt}[1]{{\langle #1 \rangle}}
+\def\Norm{{\mathcal N}}
+\newcommand{\vmult}{.}
+\newcommand{\vdiv}{./}
+
+
+% Python style for highlighting
+\newcommand\pythonstyle{\lstset{
+language=Python,
+backgroundcolor=\color{backcolour},
+commentstyle=\color{deepgreen},
+basicstyle=\ttm,
+otherkeywords={self},             % Add keywords here
+keywordstyle=\ttb\color{deepblue},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\ttb\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepgreen},
+%frame=tb,                         % Any extra options here
+showstringspaces=false            %
+}}
+
+% Python environment
+\lstnewenvironment{python}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
+
+% Python for external files
+\newcommand\pythonexternal[2][]{{
+\pythonstyle
+\lstinputlisting[#1]{#2}}}
+
+% Python for inline
+\newcommand\pycode[1]{{\pythonstyle\lstinline!#1!}}
+
+\begin{document}
+
+\title{Introduction to Machine Learning\\
+Homework 1:  Simple Linear Regression}
+\author{Prof. Sundeep Rangan}
+\date{}
+
+\maketitle
+
+\begin{enumerate}
+\item A university admissions office wants to predict the success of students based on
+their application material.  They have access to past student records to learn
+a good algorithm.
+\begin{enumerate}[(a)]
+\item To formulate this as a supervised learning problem,
+identify a possible target variable.  This should be some variable that measures success
+in a meaningful way and can be easily collected (in an automated manner) by the
+university. There is no one correct answer to this problem.
+\item Is the target variable continuous or discrete-valued?
+\item State at least one possible variable that can act as the predictor for the target
+variable you chose in part (a).
+\item Before looking at the data, would a linear model for the data be reasonable?
+If so, what sign do you expect the slope to be?
+\end{enumerate}
+
+\item Suppose that we are given data samples $(x_i,y_i)$:
+\begin{center}
+\begin{tabular}[h]{|c|c|c|c|c|c|} \hline
+$x_i$ & 0 & 1 & 2 & 3 & 4 \\ \hline
+$y_i$ & 0 & 2 & 3 & 8 & 17 \\ \hline
+\end{tabular}
+\end{center}
+\begin{enumerate}[(a)]
+\item What are the sample means, $\bar{x}$ and $\bar{y}$?
+\item What are the sample variances and co-variances $s_x^2$, $s_y^2$ and $s_{xy}$?
+\item What are the least squares parameters for the regression line
+\[
+    y = \beta_0 + \beta_1x + \epsilon.
+\]
+\item Using the linear model, what is the predicted value at $x=2.5$?
+\end{enumerate}
+
+\item A medical researcher wants to model, $z(t)$, the concentration
+of some chemical in the blood
+over time. She believes the concentration should decay exponentially in that
+\beq \label{eq:zexp}
+    z(t) \approx z_0 e^{-\alpha t},
+\eeq
+for some parameters $z_0$ and $\alpha$.
+To confirm this model, and to estimate the parameters $z_0,\alpha$,
+she collects a large number of time-stamped samples $(t_i,z(t_i))$, $i=1,\ldots,N$.
+Unfortunately, the model \eqref{eq:zexp} is non linear, so she can't directly apply
+the linear regression formula.
+\begin{enumerate}[(a)]
+\item  Taking logarithms, show that we can rewrite the model in a form where the parameters
+$z_0$ and $\alpha$ appear linearly.
+
+\item Using the transform in part (a), write the least-squares solution for
+the best estimates of the parameters $z_0$ and $\alpha$ from the data.
+
+\item Write a few lines of python code that you would compute these estimates
+from vectors of samples \pycode{t} and \pycode{z}.
+\end{enumerate}
+
+\item Consider a linear model of the form,
+\[
+    y \approx \beta x,
+\]
+which is a linear model, but with the intercept forced to zero.  This occurs
+in applications where we want to force the predicted value $\hat{y}=0$ when
+$x=0$.  For example, if we are modeling $y=$ output power of a motor
+vs.\ $x=$ the input power, we would expect $x=0 \Rightarrow y=0$.
+\begin{enumerate}[(a)]
+\item Given data $(x_i,y_i)$,
+write a cost function representing the residual sum of squares (RSS) between
+$y_i$ and the predicted value $\hat{y}_i$ as a function of $\beta$.
+\item Taking the derivative with respect to $\beta$, find the $\beta$ that minimizes
+the RSS.
+\end{enumerate}
+\end{enumerate}
+
+\end{document}

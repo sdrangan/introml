@@ -24,19 +24,22 @@ and wish copies of the solutions for yourself, please contact Sundeep Rangan at 
 * [Introduction to `numpy` vectors](./Basics/intro_vectors.ipynb)
 * [Simple linear regression](./simp_lin_reg/readme.md)
     * [Demo 1:  Understanding automobile mpg](./simp_lin_reg/auto_mpg.ipynb)
-    * [Lab 1: Boston housing data](./simp_lin_reg/lab_housing_partial.ipynb). To be 
-      completed by the student.
+    * [Lab 1: Boston housing data](./simp_lin_reg/lab_housing_partial.ipynb). 
+    * Homework 1 [[pdf]](./simp_lin_reg/hw/HW1.pdf) [[Latex]](./simp_lin_reg/hw/HW1.tex)
 * [More `numpy`:  Python broadcasting](./Basics/numpy_axes_broadcasting.ipynb)      
 * [Multiple linear regression](./mult_lin_reg/readme.md)
     * [Demo 2:  Predicting glucose levels](./mult_lin_reg/glucose.ipynb)
-    * [Lab 2: Calibrating robot dynamics](./mult_lin_reg/lab_robot_calib_partial.ipynb) To be completed by the student.
+    * [Lab 2: Calibrating robot dynamics](./mult_lin_reg/lab_robot_calib_partial.ipynb) 
+    * Homework 2 [[pdf]](./mult_lin_reg/hw/HW2.pdf) [[Latex]](./mult_lin_reg/hw/HW2.tex)
 * [Model selection and regularization](./model_sel/readme.md)
     * [Demo 3.1:  Polynomial order selection with cross-validation](./model_sel/polyfit.ipynb)
     * [Demo 3.2:  LASSO regression for finding predictors of prostate cancer](./model_sel/prostate.ipynb) 
-    * [Lab 3: Neural decoding of motor cortex signals](./model_sel/lab_neural_partial.ipynb) To be completed by the student.
+    * [Lab 3: Neural decoding of motor cortex signals](./model_sel/lab_neural_partial.ipynb)
+    * Homework 3 [[pdf]](./model_sel/hw/HW3.pdf) [[Latex]](.//model_sel/hw/HW3.tex)
 * [Logistic Regression](./logistic/readme.md)
     * [Demo 4:  Breast cancer diagnosis via logistic regression](./logistic/breast_cancer.ipynb)
-    * [Lab 4: Genetic analysis of Down's syndrome in mice](./logistic/lab_gene_partial.ipynb) To be completed by the student.
+    * [Lab 4: Genetic analysis of Down's syndrome in mice](./logistic/lab_gene_partial.ipynb)
+    * Homework 4 [[pdf]](./logistic/hw/HW4_logistic.pdf) [[Latex]](./logistic/hw/HW4_logistic.tex)
 * [Nonlinear optimization](./optim/readme.md)
     * [Demo 5.1:  Computing gradients](./optim/computing_gradients.ipynb)
     * [Demo 5.2:  Simple gradient descent optimization](./optim/grad_descent.ipynb)    

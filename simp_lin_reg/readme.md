@@ -9,6 +9,6 @@ automobile data.  The lab then tests the concepts on a standard housing dataset.
 
 * [Demo:  Understanding automobile mpg](auto_mpg.ipynb)
 * [Lab: Boston housing data](lab_housing_partial.ipynb) To be completed by the student.
-
+* Homework [[pdf]](./hw/HW1.pdf) [[Latex]](./hw/HW1.tex)
 
 
