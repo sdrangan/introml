@@ -39,7 +39,7 @@ and wish copies of the solutions for yourself, please contact Sundeep Rangan at 
 * [Logistic Regression](./logistic/readme.md)
     * [Demo 4:  Breast cancer diagnosis via logistic regression](./logistic/breast_cancer.ipynb)
     * [Lab 4: Genetic analysis of Down's syndrome in mice](./logistic/lab_gene_partial.ipynb)
-    * Homework 4 [[pdf]](./logistic/hw/HW4_logistic.pdf) [[Latex]](./logistic/hw/HW4_logistic.tex)
+    * Homework 4 [[pdf]](./logistic/hw/HW4_Logistic.pdf) [[Latex]](./logistic/hw/HW4_Logistic.tex)
 * [Nonlinear optimization](./optim/readme.md)
     * [Demo 5.1:  Computing gradients](./optim/computing_gradients.ipynb)
     * [Demo 5.2:  Simple gradient descent optimization](./optim/grad_descent.ipynb)    
