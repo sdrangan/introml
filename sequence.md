@@ -44,6 +44,7 @@ and wish copies of the solutions for yourself, please contact Sundeep Rangan at 
     * [Demo 5.1:  Computing gradients](./optim/computing_gradients.ipynb)
     * [Demo 5.2:  Simple gradient descent optimization](./optim/grad_descent.ipynb)    
     * [Lab 5: Audio pitch detection](./optim/lab_audio_partial.ipynb)
+    * Homework 5 [[pdf]](./optim/hw/HW5_Optim.pdf) [[Latex]](./optim/hw/HW5_Optim.tex)
 *  Support vector machines (To be added)   
 *  Neural networks and the Keras package
     * [Demo: First neural network in Keras](./neural/synthetic.ipynb)
