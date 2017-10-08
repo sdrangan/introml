@@ -223,6 +223,9 @@ Homework 5:  Gradient Calculations and Nonlinear Optimization}
 
 \maketitle
 
+Submit answers only to problems 1, 3 and 4.  But, make sure you know how to do
+all the problems.
+
 \begin{enumerate}
 
 \item Suppose we want to fit a model,
@@ -252,6 +255,37 @@ some functions $g_i(z_i)$.
 $\nabla J(\wbf)$.
 \end{enumerate}
 
+\item In this problem, we will see why gradient descent can often exhibit
+very slow convergence, even on apparently simple functions.
+Consider the objective function,
+\[
+    J(\wbf) = \frac{1}{2}\left[ b_1w_1^2 + b_2w_2^2 \right],
+\]
+defined on a vector $\wbf=(w_1,w_2)$ with constants $b_1,b_2 > 0$.
+Assume $b_1 > b_2$.
+\begin{enumerate}[(a)]
+  \item What is the gradient $\nabla J(\wbf)$?
+  \item What is the minimum $\wbf^* = \argmin_{\wbf} J(\wbf)$?
+  \item Show that the gradient descent update of $\wbf$ with a step-size $\alpha$
+has the form,
+\[
+    w_1^{k+1} = \rho_1 \wbf_1^k, \quad w_2^{k+1} = \rho_2 \wbf_2^k,
+\]
+where constants $\rho_i$.  Write $\rho_i$ in terms of 
+$b_i$ and the step-size $\alpha$.
+  \item For what values $\alpha$ will gradient descent converge to the minimum? That is, what step sizes guarantee that $\wbf^k \arr \wbf^*$.
+      
+\item Take $\alpha = 2/(b_1+b_2)$.  It can be shown that this choice of $\alpha$ results in the fastest convergence (you do not need to show this).  
+But, show that with this selection of $\alpha$,
+\[
+    \|\wbf^k\| = C^k \|\wbf^0\|, \quad C = \frac{\kappa-1}{\kappa+1 }, \quad
+    \kappa = \frac{b_2}{b_1}.
+\]
+The term $\kappa$ is called the \emph{condition number}.  The above calculation
+shows that when $\kappa$ is very large, $C \approx 1$ and the convergence
+of gradient descent is slow.  In general, gradient descent performs poorly
+when the problems are ill-conditioned like this.
+\end{enumerate}
 
 \item \emph{Matrix minimization}.  Consider the problem of finding a matrix 
 $\Pbf \in \R^{m \x m}$ to minimize the loss function,
@@ -327,4 +361,5 @@ describe how we can minimize over $\bbf$.  That is, how can we compute,
 \end{enumerate}
 \end{document}
 
-
+a = 2/(b1+b2)
+rho1 = 1-2*b1/(b1+b2) = (b2-b1)/(b1+b2)  = (kappa-1)/(kappa+1)
