@@ -44,14 +44,14 @@ In this class, we will use Python 3.  So, make sure you get the correct version.
 1. SSH to the VM (see above)
 2. Create a directory in your VM, say `~/Downloads`
 3. Get the latest conda package: 
-~~~
+~~~bash
     wget  https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86_64.sh
 ~~~    
 4. Run the script:  `bash ~/Downloads/Anaconda3-4.4.0-Linux-x86_64.sh`.
 5. Follow instructions [https://www.continuum.io/downloads](https://www.continuum.io/downloads).
 6. Close and re-open SSH
-7. Update conda:
-~~~
+7. Update `conda`:
+~~~bash
     conda update conda
     conda update anaconda
 ~~~    
@@ -61,7 +61,7 @@ If you install Anaconda in the previous step, you can skip this step.
 But, if you wish to install with `pip3` instead of `anaconda`, do the following:
 1.  Connect to your VM instance using SSH
 2.  Install python 3 stuff:
-~~~
+~~~bash
     sudo apt install python3-pip
     pip3 install jupyter pandas numpy matplotlib
 ~~~
@@ -71,10 +71,10 @@ But, if you wish to install with `pip3` instead of `anaconda`, do the following:
 Some of the commands below will need to be changed if you used `pip3` instead of 
 `anaconda`.
 1.  SSH into the VM
-2.  [Optional]  For security, you can add a password for access to Jupyter Notebook.
+2.  [Optional] For security, you can add a password for access to Jupyter Notebook.
 But, if you do not use this, the system will automatically use a token.  If you prefer
 a password, generate a `sha1` hashed password:
-~~~
+~~~bash
     python3
     >>> from notebook.auth import passwd
     >>> passwd()
@@ -84,7 +84,7 @@ This will prompt you to enter a password and then will produce a long string lik
 
 3.  Modify jupyter config file.  You can use any text editor.  The code below
 assumes you use  `vi`, but you can use any editor of your choice like `nano`.
-~~~
+~~~bash
    jupyter notebook --generate-config
    vi .jupyter/jupyter_notebook_config.py
 ~~~
@@ -96,7 +96,7 @@ Uncomment and modify existing lines, or add these new ones:
     * `c.NotebookApp.open_browser = False`
     
 5. Start the jupyter notebook server as a background process:
-~~~
+~~~bash
     jupyter notebook &
 ~~~
 The jupyter notebook will remain active as long as the SSH remains open.
@@ -113,15 +113,3 @@ We need to modify the network settings to open up external access.
 3.	You should now be able to access the remote jupyter notebook GUI through your local browser.
 Just type your instance's external IP as the URL: `[IP_ADDRESS]:[PORT#]`
 
-## Download the Teaching Material
-
-You can download the teaching material by cloning the repository:
-~~~
-git clone https://github.com/sdrangan/introml.git
-~~~
-
-To update the repository,
-~~~
-cd introml
-git pull
-~~~
