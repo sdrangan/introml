@@ -338,11 +338,11 @@ instead of minimizing $J(\wbf_1,\wbf_2)$ over $\wbf_1$ and $\wbf_2$.
 \[
     \nabla_{\wbf_1} J_1(\wbf_1) = \left. \nabla_{\wbf_1} J(\wbf_1,\wbf_2)\right|_{\wbf_2=\wbfhat_2}.
 \]
-Thus, given $\wbf_1$, we can evaluate the gradient from (i) solve the minimization 
-$\wbfhat_2:= \argmin_{\wbf_2} J(\wbf_1,\wbf_2)$; and (ii) take the gradient 
+Thus, given $\wbf_1$, we can evaluate the gradient from (i) solve the minimization
+$\wbfhat_2:= \argmin_{\wbf_2} J(\wbf_1,\wbf_2)$; and (ii) take the gradient
 $\nabla_{\wbf_1} J(\wbf_1,\wbf_2)$ and evaluate at $\wbf_2 = \wbfhat_2$.
 
-\item Suppose we want to minimize a nonlinear least squares, 
+\item Suppose we want to minimize a nonlinear least squares,
 \[
     J(\abf,\bbf) := \sum_{i=1}^n \left( y_i -
         \sum_{j=1}^d b_j e^{-a_jx_i} \right)^2,
@@ -350,7 +350,7 @@ $\nabla_{\wbf_1} J(\wbf_1,\wbf_2)$ and evaluate at $\wbf_2 = \wbfhat_2$.
 over two parameters $\abf$ and $\bbf$.  Given parameters $\abf$,
 describe how we can minimize over $\bbf$.  That is, how can we compute,
 \[
-    \hat{\bbf} := \argmin_{\abf} J(\abf,\bbf).
+    \hat{\bbf} := \argmin_{\bbf} J(\abf,\bbf).
 \]
 
 \item In the above example, how would we compute the gradients,
