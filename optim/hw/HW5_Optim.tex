@@ -223,8 +223,8 @@ Homework 5:  Gradient Calculations and Nonlinear Optimization}
 
 \maketitle
 
-Submit answers only to problems 1, 3 and 4.  But, make sure you know how to do
-all the problems.
+Submit answers only to problems 1, 3 and 4(b) and (c).  You do not need to answer 2 or 4(a).
+But, make sure you know how to do all the problems.
 
 \begin{enumerate}
 
@@ -235,7 +235,7 @@ all the problems.
 for parameters $\wbf$. Given training data $(\xbf_i,y_i)$, $i=1,\ldots,n$,
 a nonlinear least squares fit could use the loss function,
 \[
-    J(\wbf) = \sum_{i=1}^n \left[y_i - 
+    J(\wbf) = \sum_{i=1}^n \left[y_i -
         \frac{1}{w_0 + \sum_{j=1}^d w_jx_{ij}}\right]^2
 \]
 \begin{enumerate}[(a)]
@@ -259,23 +259,24 @@ $\nabla J(\wbf)$.
 very slow convergence, even on apparently simple functions.
 Consider the objective function,
 \[
-    J(\wbf) = \frac{1}{2}\left[ b_1w_1^2 + b_2w_2^2 \right],
+    J(\wbf) = \frac{1}{2}b_1w_1^2 + \frac{1}{2}b_2w_2^2,
 \]
-defined on a vector $\wbf=(w_1,w_2)$ with constants $b_1,b_2 > 0$.
-Assume $b_1 > b_2$.
+defined on a vector $\wbf=(w_1,w_2)$ with constants $b_2 > b_1 > 0$.
 \begin{enumerate}[(a)]
   \item What is the gradient $\nabla J(\wbf)$?
   \item What is the minimum $\wbf^* = \argmin_{\wbf} J(\wbf)$?
-  \item Show that the gradient descent update of $\wbf$ with a step-size $\alpha$
+  \item Part (b) shows that we can minimize $J(\wbf)$ easily by hand.
+  But, suppose we tried to minimize it via gradient descent.
+  Show that the gradient descent update of $\wbf$ with a step-size $\alpha$
 has the form,
 \[
-    w_1^{k+1} = \rho_1 \wbf_1^k, \quad w_2^{k+1} = \rho_2 \wbf_2^k,
+    w_1^{k+1} = \rho_1 w_1^k, \quad w_2^{k+1} = \rho_2 w_2^k,
 \]
-where constants $\rho_i$.  Write $\rho_i$ in terms of 
+for some constants $\rho_i$, $i=1,2$.  Write $\rho_i$ in terms of
 $b_i$ and the step-size $\alpha$.
   \item For what values $\alpha$ will gradient descent converge to the minimum? That is, what step sizes guarantee that $\wbf^k \arr \wbf^*$.
-      
-\item Take $\alpha = 2/(b_1+b_2)$.  It can be shown that this choice of $\alpha$ results in the fastest convergence (you do not need to show this).  
+
+\item Take $\alpha = 2/(b_1+b_2)$.  It can be shown that this choice of $\alpha$ results in the fastest convergence.  You do not need to show this.
 But, show that with this selection of $\alpha$,
 \[
     \|\wbf^k\| = C^k \|\wbf^0\|, \quad C = \frac{\kappa-1}{\kappa+1 }, \quad
@@ -287,10 +288,10 @@ of gradient descent is slow.  In general, gradient descent performs poorly
 when the problems are ill-conditioned like this.
 \end{enumerate}
 
-\item \emph{Matrix minimization}.  Consider the problem of finding a matrix 
+\item \emph{Matrix minimization}.  Consider the problem of finding a matrix
 $\Pbf \in \R^{m \x m}$ to minimize the loss function,
 \[
-    J(\Pbf) = \sum_{i=1}^n \left[ \frac{z_i}{y_i} - \ln(z_i) \right], 
+    J(\Pbf) = \sum_{i=1}^n \left[ \frac{z_i}{y_i} - \ln(z_i) \right],
     \quad
     z_i = \xbf_i\tran \Pbf \xbf_i.
 \]
@@ -309,14 +310,14 @@ See the following article for more details:
 \item What is the gradient $\nabla_{\Pbf} J(\Pbf)$?
 
 \item Write a few lines of python code to evaluate $J(\Pbf)$ and
-$\nabla_{\Pbf} J(\Pbf)$ given data $\xbf_i$ and $y_i$.  
+$\nabla_{\Pbf} J(\Pbf)$ given data $\xbf_i$ and $y_i$.  You can use a for loop.
 
-\item See if you can rewrite (c) without a for loop.  
+\item See if you can rewrite (c) without a for loop.  You will need Python broadcasting.
 \end{enumerate}
 
-\item \emph{Nested optimization}.  Suppose we are given a loss function 
-$J(\wbf_1,\wbf_2)$ with two parameter vectors $\wbf_1$ and $\wbf_2$.  
-In some cases, it is easy to minimize over one of the sets of parameters, say 
+\item \emph{Nested optimization}.  Suppose we are given a loss function
+$J(\wbf_1,\wbf_2)$ with two parameter vectors $\wbf_1$ and $\wbf_2$.
+In some cases, it is easy to minimize over one of the sets of parameters, say
 $\wbf_2$, while holding the other parameter vector (say, $\wbf_1$) constant.
 In this case, one could perform the following \emph{nested} minimization:
 Define
@@ -325,7 +326,7 @@ Define
     \wbfhat_2(\wbf_1) := \argmin_{\wbf_2} J(\wbf_1,\wbf_2),
 \]
 which represent the minimum and argument of the loss function over $\wbf_2$
-holding $\wbf_1$ constant.   Then, 
+holding $\wbf_1$ constant.   Then,
 \[
     \wbfhat_1 = \argmin_{\wbf_1} J_1(\wbf_1) = \argmin_{\wbf_1} \min_{\wbf_2}
     J(\wbf_1,\wbf_2).
@@ -333,22 +334,23 @@ holding $\wbf_1$ constant.   Then,
 Hence, we can find the optimal $\wbf_1$ by minimizing $J_1(\wbf_1)$
 instead of minimizing $J(\wbf_1,\wbf_2)$ over $\wbf_1$ and $\wbf_2$.
 \begin{enumerate}[(a)]
-\item What is the gradient, 
+\item Show that the gradient of $J_1(\wbf_1)$ is given by
 \[
-    \nabla_{\wbf_1} J_1(\wbf_1)
+    \nabla_{\wbf_1} J_1(\wbf_1) = \left. \nabla_{\wbf_1} J(\wbf_1,\wbf_2)\right|_{\wbf_2=\wbfhat_2}.
 \]
-in terms of the gradients $\nabla_{\wbf_1} J(\wbf_1,\wbf_2)$ and 
-$\nabla_{\wbf_2} J(\wbf_1,\wbf_2)$?
+Thus, given $\wbf_1$, we can evaluate the gradient from (i) solve the minimization
+$\wbfhat_2:= \argmin_{\wbf_2} J(\wbf_1,\wbf_2)$; and (ii) take the gradient
+$\nabla_{\wbf_1} J(\wbf_1,\wbf_2)$ and evaluate at $\wbf_2 = \wbfhat_2$.
 
 \item Suppose we want to minimize a nonlinear least squares,
 \[
-    J(\abf,\bbf) := \sum_{i=1}^n \left( y_i - 
+    J(\abf,\bbf) := \sum_{i=1}^n \left( y_i -
         \sum_{j=1}^d b_j e^{-a_jx_i} \right)^2,
 \]
-over two parameters $\abf$ and $\bbf$.  Given parameters $\abf$, 
+over two parameters $\abf$ and $\bbf$.  Given parameters $\abf$,
 describe how we can minimize over $\bbf$.  That is, how can we compute,
 \[
-    \hat{\bbf} := \argmin_{\abf} J(\abf,\bbf).
+    \hat{\bbf} := \argmin_{\bbf} J(\abf,\bbf).
 \]
 
 \item In the above example, how would we compute the gradients,
@@ -360,6 +362,3 @@ describe how we can minimize over $\bbf$.  That is, how can we compute,
 
 \end{enumerate}
 \end{document}
-
-a = 2/(b1+b2)
-rho1 = 1-2*b1/(b1+b2) = (b2-b1)/(b1+b2)  = (kappa-1)/(kappa+1)
