@@ -1,0 +1,364 @@
+\documentclass[11pt]{article}
+
+\usepackage{fullpage}
+\usepackage{amsmath, amssymb, bm, cite, epsfig, psfrag}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{listings}
+\usepackage{cite}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{enumerate}
+\usepackage{listings}
+\usepackage{mathtools}
+\lstloadlanguages{Python}
+\usetikzlibrary{shapes,arrows}
+%\usetikzlibrary{dsp,chains}
+
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{9} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{9}  % for normal
+% Defining colors
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+%\restylefloat{figure}
+%\theoremstyle{plain}      \newtheorem{theorem}{Theorem}
+%\theoremstyle{definition} \newtheorem{definition}{Definition}
+
+\def\del{\partial}
+\def\ds{\displaystyle}
+\def\ts{\textstyle}
+\def\beq{\begin{equation}}
+\def\eeq{\end{equation}}
+\def\beqa{\begin{eqnarray}}
+\def\eeqa{\end{eqnarray}}
+\def\beqan{\begin{eqnarray*}}
+\def\eeqan{\end{eqnarray*}}
+\def\nn{\nonumber}
+\def\binomial{\mathop{\mathrm{binomial}}}
+\def\half{{\ts\frac{1}{2}}}
+\def\Half{{\frac{1}{2}}}
+\def\N{{\mathbb{N}}}
+\def\Z{{\mathbb{Z}}}
+\def\Q{{\mathbb{Q}}}
+\def\R{{\mathbb{R}}}
+\def\C{{\mathbb{C}}}
+\def\argmin{\mathop{\mathrm{arg\,min}}}
+\def\argmax{\mathop{\mathrm{arg\,max}}}
+%\def\span{\mathop{\mathrm{span}}}
+\def\diag{\mathop{\mathrm{diag}}}
+\def\x{\times}
+\def\limn{\lim_{n \rightarrow \infty}}
+\def\liminfn{\liminf_{n \rightarrow \infty}}
+\def\limsupn{\limsup_{n \rightarrow \infty}}
+\def\GV{Guo and Verd{\'u}}
+\def\MID{\,|\,}
+\def\MIDD{\,;\,}
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{assumption}{Assumption}
+\newtheorem{claim}{Claim}
+\def\qed{\mbox{} \hfill $\Box$}
+\setlength{\unitlength}{1mm}
+
+\def\bhat{\widehat{b}}
+\def\ehat{\widehat{e}}
+\def\phat{\widehat{p}}
+\def\qhat{\widehat{q}}
+\def\rhat{\widehat{r}}
+\def\shat{\widehat{s}}
+\def\uhat{\widehat{u}}
+\def\ubar{\overline{u}}
+\def\vhat{\widehat{v}}
+\def\xhat{\widehat{x}}
+\def\xbar{\overline{x}}
+\def\zhat{\widehat{z}}
+\def\zbar{\overline{z}}
+\def\la{\leftarrow}
+\def\ra{\rightarrow}
+\def\MSE{\mbox{\small \sffamily MSE}}
+\def\SNR{\mbox{\small \sffamily SNR}}
+\def\SINR{\mbox{\small \sffamily SINR}}
+\def\arr{\rightarrow}
+\def\Exp{\mathbb{E}}
+\def\var{\mbox{var}}
+\def\Tr{\mbox{Tr}}
+\def\tm1{t\! - \! 1}
+\def\tp1{t\! + \! 1}
+\def\Tm1{T\! - \! 1}
+\def\Tp1{T\! + \! 1}
+
+
+\def\Xset{{\cal X}}
+
+\newcommand{\one}{\mathbf{1}}
+\newcommand{\abf}{\mathbf{a}}
+\newcommand{\bbf}{\mathbf{b}}
+\newcommand{\dbf}{\mathbf{d}}
+\newcommand{\ebf}{\mathbf{e}}
+\newcommand{\gbf}{\mathbf{g}}
+\newcommand{\hbf}{\mathbf{h}}
+\newcommand{\pbf}{\mathbf{p}}
+\newcommand{\pbfhat}{\widehat{\mathbf{p}}}
+\newcommand{\qbf}{\mathbf{q}}
+\newcommand{\qbfhat}{\widehat{\mathbf{q}}}
+\newcommand{\rbf}{\mathbf{r}}
+\newcommand{\rbfhat}{\widehat{\mathbf{r}}}
+\newcommand{\sbf}{\mathbf{s}}
+\newcommand{\sbfhat}{\widehat{\mathbf{s}}}
+\newcommand{\ubf}{\mathbf{u}}
+\newcommand{\ubfhat}{\widehat{\mathbf{u}}}
+\newcommand{\utildebf}{\tilde{\mathbf{u}}}
+\newcommand{\vbf}{\mathbf{v}}
+\newcommand{\vbfhat}{\widehat{\mathbf{v}}}
+\newcommand{\wbf}{\mathbf{w}}
+\newcommand{\wbfhat}{\widehat{\mathbf{w}}}
+\newcommand{\xbf}{\mathbf{x}}
+\newcommand{\xbfhat}{\widehat{\mathbf{x}}}
+\newcommand{\xbfbar}{\overline{\mathbf{x}}}
+\newcommand{\ybf}{\mathbf{y}}
+\newcommand{\zbf}{\mathbf{z}}
+\newcommand{\zbfbar}{\overline{\mathbf{z}}}
+\newcommand{\zbfhat}{\widehat{\mathbf{z}}}
+\newcommand{\Ahat}{\widehat{A}}
+\newcommand{\Abf}{\mathbf{A}}
+\newcommand{\Bbf}{\mathbf{B}}
+\newcommand{\Cbf}{\mathbf{C}}
+\newcommand{\Bbfhat}{\widehat{\mathbf{B}}}
+\newcommand{\Dbf}{\mathbf{D}}
+\newcommand{\Gbf}{\mathbf{G}}
+\newcommand{\Hbf}{\mathbf{H}}
+\newcommand{\Ibf}{\mathbf{I}}
+\newcommand{\Kbf}{\mathbf{K}}
+\newcommand{\Pbf}{\mathbf{P}}
+\newcommand{\Phat}{\widehat{P}}
+\newcommand{\Qbf}{\mathbf{Q}}
+\newcommand{\Rbf}{\mathbf{R}}
+\newcommand{\Rhat}{\widehat{R}}
+\newcommand{\Sbf}{\mathbf{S}}
+\newcommand{\Ubf}{\mathbf{U}}
+\newcommand{\Vbf}{\mathbf{V}}
+\newcommand{\Wbf}{\mathbf{W}}
+\newcommand{\Xhat}{\widehat{X}}
+\newcommand{\Xbf}{\mathbf{X}}
+\newcommand{\Ybf}{\mathbf{Y}}
+\newcommand{\Zbf}{\mathbf{Z}}
+\newcommand{\Zhat}{\widehat{Z}}
+\newcommand{\Zbfhat}{\widehat{\mathbf{Z}}}
+\def\alphabf{{\boldsymbol \alpha}}
+\def\betabf{{\boldsymbol \beta}}
+\def\betabfhat{{\widehat{\bm{\beta}}}}
+\def\epsilonbf{{\boldsymbol \epsilon}}
+\def\mubf{{\boldsymbol \mu}}
+\def\lambdabf{{\boldsymbol \lambda}}
+\def\etabf{{\boldsymbol \eta}}
+\def\xibf{{\boldsymbol \xi}}
+\def\taubf{{\boldsymbol \tau}}
+\def\sigmahat{{\widehat{\sigma}}}
+\def\thetabf{{\bm{\theta}}}
+\def\thetabfhat{{\widehat{\bm{\theta}}}}
+\def\thetahat{{\widehat{\theta}}}
+\def\mubar{\overline{\mu}}
+\def\muavg{\mu}
+\def\sigbf{\bm{\sigma}}
+\def\etal{\emph{et al.}}
+\def\Ggothic{\mathfrak{G}}
+\def\Pset{{\mathcal P}}
+\newcommand{\bigCond}[2]{\bigl({#1} \!\bigm\vert\! {#2} \bigr)}
+\newcommand{\BigCond}[2]{\Bigl({#1} \!\Bigm\vert\! {#2} \Bigr)}
+\newcommand{\tran}{^{\text{\sf T}}}
+\newcommand{\herm}{^{\text{\sf H}}}
+\newcommand{\bkt}[1]{{\langle #1 \rangle}}
+\def\Norm{{\mathcal N}}
+\newcommand{\vmult}{.}
+\newcommand{\vdiv}{./}
+
+
+% Python style for highlighting
+\newcommand\pythonstyle{\lstset{
+language=Python,
+backgroundcolor=\color{backcolour},
+commentstyle=\color{deepgreen},
+basicstyle=\ttm,
+otherkeywords={self},             % Add keywords here
+keywordstyle=\ttb\color{deepblue},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\ttb\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepgreen},
+%frame=tb,                         % Any extra options here
+showstringspaces=false            %
+}}
+
+% Python environment
+\lstnewenvironment{python}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
+
+% Python for external files
+\newcommand\pythonexternal[2][]{{
+\pythonstyle
+\lstinputlisting[#1]{#2}}}
+
+% Python for inline
+\newcommand\pycode[1]{{\pythonstyle\lstinline!#1!}}
+
+\begin{document}
+
+\title{Introduction to Machine Learning\\
+Homework 5:  Gradient Calculations and Nonlinear Optimization}
+\author{Prof. Sundeep Rangan}
+\date{}
+
+\maketitle
+
+Submit answers only to problems 1, 3 and 4(b) and (c).  You do not need to answer 2 or 4(a).
+But, make sure you know how to do all the problems.
+
+\begin{enumerate}
+
+\item Suppose we want to fit a model,
+\[
+    \hat{y} = \frac{1}{w_0 + \sum_{j=1}^d w_jx_j},
+\]
+for parameters $\wbf$. Given training data $(\xbf_i,y_i)$, $i=1,\ldots,n$,
+a nonlinear least squares fit could use the loss function,
+\[
+    J(\wbf) = \sum_{i=1}^n \left[y_i -
+        \frac{1}{w_0 + \sum_{j=1}^d w_jx_{ij}}\right]^2
+\]
+\begin{enumerate}[(a)]
+\item Find a function $g(\zbf)$ and matrix $\Abf$ such that
+the loss function is given by,
+\[
+    J(\wbf) = g(\zbf), \quad \zbf = \Abf\wbf,
+\]
+and $g(\zbf)$ is factorizable, meaning $g(\zbf) = \sum_i g_i(z_i)$ for
+some functions $g_i(z_i)$.
+
+\item What is the gradient $\nabla J(\wbf)$?
+
+\item What is the gradient descent update for $\wbf$?
+
+\item Write a few lines of python code to compute the loss function $J(\wbf)$ and
+$\nabla J(\wbf)$.
+\end{enumerate}
+
+\item In this problem, we will see why gradient descent can often exhibit
+very slow convergence, even on apparently simple functions.
+Consider the objective function,
+\[
+    J(\wbf) = \frac{1}{2}b_1w_1^2 + \frac{1}{2}b_2w_2^2,
+\]
+defined on a vector $\wbf=(w_1,w_2)$ with constants $b_2 > b_1 > 0$.
+\begin{enumerate}[(a)]
+  \item What is the gradient $\nabla J(\wbf)$?
+  \item What is the minimum $\wbf^* = \argmin_{\wbf} J(\wbf)$?
+  \item Part (b) shows that we can minimize $J(\wbf)$ easily by hand.
+  But, suppose we tried to minimize it via gradient descent.
+  Show that the gradient descent update of $\wbf$ with a step-size $\alpha$
+has the form,
+\[
+    w_1^{k+1} = \rho_1 w_1^k, \quad w_2^{k+1} = \rho_2 w_2^k,
+\]
+for some constants $\rho_i$, $i=1,2$.  Write $\rho_i$ in terms of
+$b_i$ and the step-size $\alpha$.
+  \item For what values $\alpha$ will gradient descent converge to the minimum? That is, what step sizes guarantee that $\wbf^k \arr \wbf^*$.
+
+\item Take $\alpha = 2/(b_1+b_2)$.  It can be shown that this choice of $\alpha$ results in the fastest convergence.  You do not need to show this.
+But, show that with this selection of $\alpha$,
+\[
+    \|\wbf^k\| = C^k \|\wbf^0\|, \quad C = \frac{\kappa-1}{\kappa+1 }, \quad
+    \kappa = \frac{b_2}{b_1}.
+\]
+The term $\kappa$ is called the \emph{condition number}.  The above calculation
+shows that when $\kappa$ is very large, $C \approx 1$ and the convergence
+of gradient descent is slow.  In general, gradient descent performs poorly
+when the problems are ill-conditioned like this.
+\end{enumerate}
+
+\item \emph{Matrix minimization}.  Consider the problem of finding a matrix
+$\Pbf \in \R^{m \x m}$ to minimize the loss function,
+\[
+    J(\Pbf) = \sum_{i=1}^n \left[ \frac{z_i}{y_i} - \ln(z_i) \right],
+    \quad
+    z_i = \xbf_i\tran \Pbf \xbf_i.
+\]
+The problem arises in wireless communications where an $m$-antenna receiver wishes
+to estimate a spatial covariance matrix $\Pbf$ from $n$ power measurements.
+In this setting, $y_i > 0$ is the $i$-th receive power measurement and $\xbf_i$
+is the beamforming direction for that measurement.  In reality, the quantities
+would be complex, but for simplicity we will just look at the real-valued case.
+See the following article for more details:
+\begin{quote}
+  Eliasi, Parisa A., Sundeep Rangan, and Theodore S. Rappaport. ``Low-rank spatial channel estimation for millimeter wave cellular systems," \emph{IEEE Transactions on Wireless Communications} 16.5 (2017): 2748-2759.
+\end{quote}
+\begin{enumerate}[(a)]
+\item What is the gradient $\nabla_{\Pbf} z_i$?
+
+\item What is the gradient $\nabla_{\Pbf} J(\Pbf)$?
+
+\item Write a few lines of python code to evaluate $J(\Pbf)$ and
+$\nabla_{\Pbf} J(\Pbf)$ given data $\xbf_i$ and $y_i$.  You can use a for loop.
+
+\item See if you can rewrite (c) without a for loop.  You will need Python broadcasting.
+\end{enumerate}
+
+\item \emph{Nested optimization}.  Suppose we are given a loss function
+$J(\wbf_1,\wbf_2)$ with two parameter vectors $\wbf_1$ and $\wbf_2$.
+In some cases, it is easy to minimize over one of the sets of parameters, say
+$\wbf_2$, while holding the other parameter vector (say, $\wbf_1$) constant.
+In this case, one could perform the following \emph{nested} minimization:
+Define
+\[
+    J_1(\wbf_1) := \min_{\wbf_2} J(\wbf_1,\wbf_2), \quad
+    \wbfhat_2(\wbf_1) := \argmin_{\wbf_2} J(\wbf_1,\wbf_2),
+\]
+which represent the minimum and argument of the loss function over $\wbf_2$
+holding $\wbf_1$ constant.   Then,
+\[
+    \wbfhat_1 = \argmin_{\wbf_1} J_1(\wbf_1) = \argmin_{\wbf_1} \min_{\wbf_2}
+    J(\wbf_1,\wbf_2).
+\]
+Hence, we can find the optimal $\wbf_1$ by minimizing $J_1(\wbf_1)$
+instead of minimizing $J(\wbf_1,\wbf_2)$ over $\wbf_1$ and $\wbf_2$.
+\begin{enumerate}[(a)]
+\item Show that the gradient of $J_1(\wbf_1)$ is given by
+\[
+    \nabla_{\wbf_1} J_1(\wbf_1) = \left. \nabla_{\wbf_1} J(\wbf_1,\wbf_2)\right|_{\wbf_2=\wbfhat_2}.
+\]
+Thus, given $\wbf_1$, we can evaluate the gradient from (i) solve the minimization
+$\wbfhat_2:= \argmin_{\wbf_2} J(\wbf_1,\wbf_2)$; and (ii) take the gradient
+$\nabla_{\wbf_1} J(\wbf_1,\wbf_2)$ and evaluate at $\wbf_2 = \wbfhat_2$.
+
+\item Suppose we want to minimize a nonlinear least squares,
+\[
+    J(\abf,\bbf) := \sum_{i=1}^n \left( y_i -
+        \sum_{j=1}^d b_j e^{-a_jx_i} \right)^2,
+\]
+over two parameters $\abf$ and $\bbf$.  Given parameters $\abf$,
+describe how we can minimize over $\bbf$.  That is, how can we compute,
+\[
+    \hat{\bbf} := \argmin_{\bbf} J(\abf,\bbf).
+\]
+
+\item In the above example, how would we compute the gradients,
+\[
+    \nabla_\abf J(\abf,\bbf).
+\]
+
+\end{enumerate}
+
+\end{enumerate}
+\end{document}
