@@ -9,7 +9,8 @@ teaching.  You can install Jupyter notebook and other software
 on any personal computer (Windows, Mac or Unix):
 * Install [jupyter notebook and Python](http://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/index.html).
   Make sure you install Python 3 for the demos in these tutorials.
-* Install and familiarize yourself with [github](https://guides.github.com/).
+* Follow the [github instructions](./github.md) to install
+[github](https://guides.github.com/) and download the course material.
 * Later tutorials will require that you install [Tensorflow](https://www.tensorflow.org/install/).
 
 If you do not wish to run the code on your personal machine, all the software can
