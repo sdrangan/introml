@@ -2,20 +2,28 @@
  "cells": [
   {
    "cell_type": "markdown",
+<<<<<<< HEAD
+   "metadata": {},
+=======
    "metadata": {
     "deletable": true,
     "editable": true
    },
+>>>>>>> master
    "source": [
     "#  Breast Cancer Diagnosis via Logistic Regression"
    ]
   },
   {
    "cell_type": "markdown",
+<<<<<<< HEAD
+   "metadata": {},
+=======
    "metadata": {
     "deletable": true,
     "editable": true
    },
+>>>>>>> master
    "source": [
     "In this demo, we will see how to visualize training data for classification, plot the logistic function and perform logistic regression.  As an example, we will use the widely-used breast cancer data set.  This data set is described here:\n",
     "\n",
@@ -26,10 +34,14 @@
   },
   {
    "cell_type": "markdown",
+<<<<<<< HEAD
+   "metadata": {},
+=======
    "metadata": {
     "deletable": true,
     "editable": true
    },
+>>>>>>> master
    "source": [
     "## Loading and Visualizing the Data\n",
     "\n",
@@ -40,9 +52,13 @@
    "cell_type": "code",
    "execution_count": 1,
    "metadata": {
+<<<<<<< HEAD
+    "collapsed": true
+=======
     "collapsed": true,
     "deletable": true,
     "editable": true
+>>>>>>> master
    },
    "outputs": [],
    "source": [
@@ -56,10 +72,14 @@
   },
   {
    "cell_type": "markdown",
+<<<<<<< HEAD
+   "metadata": {},
+=======
    "metadata": {
     "deletable": true,
     "editable": true
    },
+>>>>>>> master
    "source": [
     "Next, we load the data.  It is important to remove the missing values."
    ]
@@ -68,9 +88,13 @@
    "cell_type": "code",
    "execution_count": 2,
    "metadata": {
+<<<<<<< HEAD
+    "collapsed": false
+=======
     "collapsed": false,
     "deletable": true,
     "editable": true
+>>>>>>> master
    },
    "outputs": [
     {
@@ -218,10 +242,14 @@
   },
   {
    "cell_type": "markdown",
+<<<<<<< HEAD
+   "metadata": {},
+=======
    "metadata": {
     "deletable": true,
     "editable": true
    },
+>>>>>>> master
    "source": [
     "After loading the data, we can create a scatter plot of the data labeling the class values with different colors.  We will pick two of the features.  "
    ]
@@ -231,8 +259,11 @@
    "execution_count": 3,
    "metadata": {
     "collapsed": false,
+<<<<<<< HEAD
+=======
     "deletable": true,
     "editable": true,
+>>>>>>> master
     "scrolled": true
    },
    "outputs": [
@@ -281,10 +312,14 @@
   },
   {
    "cell_type": "markdown",
+<<<<<<< HEAD
+   "metadata": {},
+=======
    "metadata": {
     "deletable": true,
     "editable": true
    },
+>>>>>>> master
    "source": [
     "The above plot is not informative, since many of the points are on top of one another.  Thus, we cannot see the relative frequency of points.  \n",
     "\n",
@@ -295,9 +330,13 @@
    "cell_type": "code",
    "execution_count": 4,
    "metadata": {
+<<<<<<< HEAD
+    "collapsed": false
+=======
     "collapsed": false,
     "deletable": true,
     "editable": true
+>>>>>>> master
    },
    "outputs": [
     {
@@ -351,10 +390,14 @@
   },
   {
    "cell_type": "markdown",
+<<<<<<< HEAD
+   "metadata": {},
+=======
    "metadata": {
     "deletable": true,
     "editable": true
    },
+>>>>>>> master
    "source": [
     "## In-Class Exercise\n",
     "\n",
@@ -365,9 +408,13 @@
    "cell_type": "code",
    "execution_count": 5,
    "metadata": {
+<<<<<<< HEAD
+    "collapsed": false
+=======
     "collapsed": false,
     "deletable": true,
     "editable": true
+>>>>>>> master
    },
    "outputs": [],
    "source": [
@@ -376,20 +423,28 @@
   },
   {
    "cell_type": "markdown",
+<<<<<<< HEAD
+   "metadata": {},
+=======
    "metadata": {
     "deletable": true,
     "editable": true
    },
+>>>>>>> master
    "source": [
     "## Some Simple Classification ideas"
    ]
   },
   {
    "cell_type": "markdown",
+<<<<<<< HEAD
+   "metadata": {},
+=======
    "metadata": {
     "deletable": true,
     "editable": true
    },
+>>>>>>> master
    "source": [
     "Here are some ideas for classification that you may have already thought of.  We can see that the benign samples are located in the lower left.  So, one simple classification rule is to define the region with a line.  We plot the region for one possible line with the following code."
    ]
@@ -398,9 +453,13 @@
    "cell_type": "code",
    "execution_count": 6,
    "metadata": {
+<<<<<<< HEAD
+    "collapsed": false
+=======
     "collapsed": false,
     "deletable": true,
     "editable": true
+>>>>>>> master
    },
    "outputs": [
     {
@@ -439,10 +498,14 @@
   },
   {
    "cell_type": "markdown",
+<<<<<<< HEAD
+   "metadata": {},
+=======
    "metadata": {
     "deletable": true,
     "editable": true
    },
+>>>>>>> master
    "source": [
     "Here is an alternate classification rule based on two linear constraints."
    ]
@@ -451,9 +514,13 @@
    "cell_type": "code",
    "execution_count": 7,
    "metadata": {
+<<<<<<< HEAD
+    "collapsed": false
+=======
     "collapsed": false,
     "deletable": true,
     "editable": true
+>>>>>>> master
    },
    "outputs": [
     {
@@ -491,20 +558,28 @@
   },
   {
    "cell_type": "markdown",
+<<<<<<< HEAD
+   "metadata": {},
+=======
    "metadata": {
     "deletable": true,
     "editable": true
    },
+>>>>>>> master
    "source": [
     "## Logistic Functions\n"
    ]
   },
   {
    "cell_type": "markdown",
+<<<<<<< HEAD
+   "metadata": {},
+=======
    "metadata": {
     "deletable": true,
     "editable": true
    },
+>>>>>>> master
    "source": [
     "This demo illustrate an important classifier known as *logistic regression*.  In logistic regression, we do not just output an estimate of the class label, `yhat`.  Instead, we ouput a *probability*, an estimate of how likely the sample is one class or the other.  That is our output is a number from 0 to 1 representing the likelihood:\n",
     "$$\n",
@@ -528,9 +603,13 @@
    "cell_type": "code",
    "execution_count": 8,
    "metadata": {
+<<<<<<< HEAD
+    "collapsed": false
+=======
     "collapsed": false,
     "deletable": true,
     "editable": true
+>>>>>>> master
    },
    "outputs": [
     {
@@ -571,20 +650,28 @@
   },
   {
    "cell_type": "markdown",
+<<<<<<< HEAD
+   "metadata": {},
+=======
    "metadata": {
     "deletable": true,
     "editable": true
    },
+>>>>>>> master
    "source": [
     "We see that $f(w_1x)$ represents the probability that $y=1$.  The function $f(w_1x) > 0.5$ for $x>0$ meaning the samples are more likely to be $y=1$.  Similarly, for $x<0$, the samples are more likely to $y=0$.  The scaling $w_1$ determines how fast that transition is."
    ]
   },
   {
    "cell_type": "markdown",
+<<<<<<< HEAD
+   "metadata": {},
+=======
    "metadata": {
     "deletable": true,
     "editable": true
    },
+>>>>>>> master
    "source": [
     "## Fitting the Logistic Model\n",
     "\n",
@@ -599,9 +686,13 @@
    "cell_type": "code",
    "execution_count": 9,
    "metadata": {
+<<<<<<< HEAD
+    "collapsed": false
+=======
     "collapsed": false,
     "deletable": true,
     "editable": true
+>>>>>>> master
    },
    "outputs": [],
    "source": [
@@ -613,10 +704,14 @@
   },
   {
    "cell_type": "markdown",
+<<<<<<< HEAD
+   "metadata": {},
+=======
    "metadata": {
     "deletable": true,
     "editable": true
    },
+>>>>>>> master
    "source": [
     "Next, we create a logistic regression object.  The parameter `C` states the level of regularization and will be discussed in class."
    ]
@@ -625,9 +720,13 @@
    "cell_type": "code",
    "execution_count": 10,
    "metadata": {
+<<<<<<< HEAD
+    "collapsed": true
+=======
     "collapsed": true,
     "deletable": true,
     "editable": true
+>>>>>>> master
    },
    "outputs": [],
    "source": [
@@ -636,10 +735,14 @@
   },
   {
    "cell_type": "markdown",
+<<<<<<< HEAD
+   "metadata": {},
+=======
    "metadata": {
     "deletable": true,
     "editable": true
    },
+>>>>>>> master
    "source": [
     "Then, we fit the model."
    ]
@@ -648,9 +751,13 @@
    "cell_type": "code",
    "execution_count": 11,
    "metadata": {
+<<<<<<< HEAD
+    "collapsed": false
+=======
     "collapsed": false,
     "deletable": true,
     "editable": true
+>>>>>>> master
    },
    "outputs": [
     {
@@ -673,10 +780,14 @@
   },
   {
    "cell_type": "markdown",
+<<<<<<< HEAD
+   "metadata": {},
+=======
    "metadata": {
     "deletable": true,
     "editable": true
    },
+>>>>>>> master
    "source": [
     "We can next plot the accuracy on the training data.  We see we get over 96%."
    ]
@@ -685,9 +796,13 @@
    "cell_type": "code",
    "execution_count": 12,
    "metadata": {
+<<<<<<< HEAD
+    "collapsed": false
+=======
     "collapsed": false,
     "deletable": true,
     "editable": true
+>>>>>>> master
    },
    "outputs": [
     {
@@ -706,10 +821,14 @@
   },
   {
    "cell_type": "markdown",
+<<<<<<< HEAD
+   "metadata": {},
+=======
    "metadata": {
     "deletable": true,
     "editable": true
    },
+>>>>>>> master
    "source": [
     "It is also useful to print the weights for each feature.  We can use the `pandas` package to make a table."
    ]
@@ -718,9 +837,13 @@
    "cell_type": "code",
    "execution_count": 13,
    "metadata": {
+<<<<<<< HEAD
+    "collapsed": false
+=======
     "collapsed": false,
     "deletable": true,
     "editable": true
+>>>>>>> master
    },
    "outputs": [
     {
@@ -812,9 +935,13 @@
   {
    "cell_type": "markdown",
    "metadata": {
+<<<<<<< HEAD
+    "collapsed": false
+=======
     "collapsed": false,
     "deletable": true,
     "editable": true
+>>>>>>> master
    },
    "source": [
     "## Cross-Validation\n",
@@ -826,9 +953,13 @@
    "cell_type": "code",
    "execution_count": 14,
    "metadata": {
+<<<<<<< HEAD
+    "collapsed": false
+=======
     "collapsed": false,
     "deletable": true,
     "editable": true
+>>>>>>> master
    },
    "outputs": [
     {
@@ -890,10 +1021,14 @@
   },
   {
    "cell_type": "markdown",
+<<<<<<< HEAD
+   "metadata": {},
+=======
    "metadata": {
     "deletable": true,
     "editable": true
    },
+>>>>>>> master
    "source": [
     "## ROC curve\n",
     "\n",
@@ -906,9 +1041,13 @@
    "cell_type": "code",
    "execution_count": 15,
    "metadata": {
+<<<<<<< HEAD
+    "collapsed": false
+=======
     "collapsed": false,
     "deletable": true,
     "editable": true
+>>>>>>> master
    },
    "outputs": [
     {
@@ -947,9 +1086,13 @@
    "cell_type": "code",
    "execution_count": null,
    "metadata": {
+<<<<<<< HEAD
+    "collapsed": true
+=======
     "collapsed": true,
     "deletable": true,
     "editable": true
+>>>>>>> master
    },
    "outputs": [],
    "source": []
@@ -958,9 +1101,15 @@
  "metadata": {
   "anaconda-cloud": {},
   "kernelspec": {
+<<<<<<< HEAD
+   "display_name": "Python [conda root]",
+   "language": "python",
+   "name": "conda-root-py"
+=======
    "display_name": "Python 3",
    "language": "python",
    "name": "python3"
+>>>>>>> master
   },
   "language_info": {
    "codemirror_mode": {
@@ -972,7 +1121,11 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
+<<<<<<< HEAD
+   "version": "3.5.3"
+=======
    "version": "3.6.1"
+>>>>>>> master
   }
  },
  "nbformat": 4,
