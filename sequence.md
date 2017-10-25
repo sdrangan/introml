@@ -47,7 +47,7 @@ and wish copies of the solutions for yourself, please contact Sundeep Rangan at 
     * Homework 5 [[pdf]](./optim/hw/HW5_Optim.pdf) [[Latex]](./optim/hw/HW5_Optim.tex)
 * [Unit 6:  Support vector machines](./svm/readme.md)
     * [Demo 6:  MNIST digit classification](./svm/mnist_svm.ipynb)
-    * Lab 6: MNIST with alpha-numeric characters (To be added)
+    * [Lab 6: Extended MNIST with letters](./svm/lab06_ext_mnist_partial.ipynb)
 * Unit 7: Neural networks and the Keras package
     * [Demo: First neural network in Keras](./neural/synthetic.ipynb)
     * More to be added
