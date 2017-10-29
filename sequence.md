@@ -13,7 +13,7 @@ generally cover
 all topics, since some concepts are left for the students to figure out 
 for themselves in the labs.  Also, as you will observe, the labs are 
 just empty skeletons with `TODO` markers that the students fill in.
-In addition to the lab, most units will have a *homework* which
+In addition to the lab, most units will have a **homework** which
 focuses on more analytic problems.  Students will be 
 provided the full solutions to the homeworks and labs in class.
 If you are an instructor
@@ -53,9 +53,10 @@ please contact Sundeep Rangan at <srangan@nyu.edu>.
     * [Demo 6:  MNIST digit classification](./svm/mnist_svm.ipynb)
     * [Lab 6: Extended MNIST with letters](./svm/lab06_ext_mnist_partial.ipynb)
     * Homework 6 [[pdf]](./svm/hw/HW6_svm.pdf) [[Latex]](./svm/hw/HW6_svm.tex)
-* Unit 7: Neural networks and the Keras package
-    * [Demo: First neural network in Keras](./neural/synthetic.ipynb)
-    * More to be added
+* [Unit 7: Neural networks with Keras and Tensorflow](./neural/readme.md)
+    * [Demo 7.1: First neural network in Keras](./neural/synthetic.ipynb)
+    * [Demo 7.2: MNIST neural network classification](./neural/mnist_neural.ipynb)
+    * Lab 7:  Music instrument classification.  To be added.
 * Unit 8:  Convolutional and deep networks
 * Unit 9:  PCA (To be added)
 * Unit 10:  Clustering and EM (To be added)
