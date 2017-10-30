@@ -58,6 +58,8 @@ please contact Sundeep Rangan at <srangan@nyu.edu>.
     * [Demo 7.2: MNIST neural network classification](./neural/mnist_neural.ipynb)
     * Lab 7:  Music instrument classification.  To be added.
 * Unit 8:  Convolutional and deep networks
+    * [Setting up a GPU instance](./GCP/gpu_setup.md) (Optional)
+    * More to be added.
 * Unit 9:  PCA (To be added)
 * Unit 10:  Clustering and EM (To be added)
     
