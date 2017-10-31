@@ -73,8 +73,11 @@ the
 
 * Select cuDNN for CUDA 8.0 v6.0 (There are more recent releases,
   but I am not sure if they work with Tensorflow)
+
+## Install Tensorflow with Anaconda
+
   
-## Install Tensorflow
+## Install Tensorflow0
 
 For GPU support, it is easier to use pip3 instead of Anaconda.
 I am still seeing if you can install over Anaconda.
@@ -95,10 +98,12 @@ More details are in the [Tensorflow page](https://www.tensorflow.org/install/ins
 
 ## Jupyter Notebook
 
-* If you used `pip3` installation above, you will need to install jupyter notebook.
+* Since you used `pip3` installation above, and not Anaconda,
+you will need to install jupyter notebook and the other common python
+packages manually:
 ~~~bash
 >> pip3 install --upgrade pip
->> pip3 install jupyter
+>> pip3 install jupyter pandas matplotlib sklearn
 ~~~
 See the [Jupyter installation page](http://jupyter.readthedocs.io/en/latest/install.html)
 for more details.

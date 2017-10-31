@@ -4,18 +4,21 @@
 
 Below is the sequence of topics used in the class.  Of course, students not enrolled in 
 the class are free to browse in any order they wish.  Right now,
-we have very little material.  But, more will be added over the course of the class.
+several units are empty.  But, more will be added over the course of the class.
 
-Ultimately, most topic will have a **demo** where the concepts are illustrated.
-The demos are covered in the class lectures.  After the lectures, the students complete a similar
-exercise on a new dataset in the **lab** at home.  Note the demos do not 
-generally cover
+Ultimately, most topics will have a **demo** where the concepts are illustrated.
+The demos are covered in the class lectures.  
+After the lectures, the students complete a similar
+exercise on a new dataset in the **lab** at home.
+Some demos have a component that is done in class.
+The demos do not generally cover
 all topics, since some concepts are left for the students to figure out 
 for themselves in the labs.  Also, as you will observe, the labs are 
 just empty skeletons with `TODO` markers that the students fill in.
 In addition to the lab, most units will have a **homework** which
 focuses on more analytic problems.  Students will be 
-provided the full solutions to the homeworks and labs in class.
+provided the full solutions to the homeworks and labs in class
+as well as the lecture notes.
 If you are an instructor
 and wish copies of the solutions for yourself,
 please contact Sundeep Rangan at <srangan@nyu.edu>.
