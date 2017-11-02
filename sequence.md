@@ -59,7 +59,7 @@ please contact Sundeep Rangan at <srangan@nyu.edu>.
 * [Unit 7: Neural networks with Keras and Tensorflow](./neural/readme.md)
     * [Demo 7.1: First neural network in Keras](./neural/synthetic.ipynb)
     * [Demo 7.2: MNIST neural network classification](./neural/mnist_neural.ipynb)
-    * Lab 7:  Music instrument classification.  To be added.
+    * [Lab 7:  Music instrument classification](./neural/lab07_music_partial.ipynb).
 * Unit 8:  Convolutional and deep networks
     * [Setting up a GPU instance](./GCP/gpu_setup.md) (Optional)
     * More to be added.
