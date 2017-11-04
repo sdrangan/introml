@@ -60,9 +60,12 @@ please contact Sundeep Rangan at <srangan@nyu.edu>.
     * [Demo 7.1: First neural network in Keras](./neural/synthetic.ipynb)
     * [Demo 7.2: MNIST neural network classification](./neural/mnist_neural.ipynb)
     * [Lab 7:  Music instrument classification](./neural/lab07_music_partial.ipynb).
-* Unit 8:  Convolutional and deep networks
+* [Unit 8:  Convolutional and deep networks](./cnn/readme.md)
     * [Setting up a GPU instance](./GCP/gpu_setup.md) (Optional)
-    * More to be added.
+    * [Demo 8.1: 2D convolutions and convolutional layers in keras](./cnn/convolutions.ipynb)
+    * Demo 8.2:  Downloading images from the web.  To be added
+    * Demo 8.3:  Exploring VGG16.  To be added
+    * Lab 8:  Transfer learning with a pre-trained network
 * Unit 9:  PCA (To be added)
 * Unit 10:  Clustering and EM (To be added)
     
