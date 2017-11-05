@@ -63,8 +63,8 @@ please contact Sundeep Rangan at <srangan@nyu.edu>.
 * [Unit 8:  Convolutional and deep networks](./cnn/readme.md)
     * [Setting up a GPU instance](./GCP/gpu_setup.md) (Optional)
     * [Demo 8.1: 2D convolutions and convolutional layers in keras](./cnn/convolutions.ipynb)
-    * Demo 8.2:  Downloading images from the web.  To be added
-    * Demo 8.3:  Exploring VGG16.  To be added
+    * [Demo 8.2: Creating an image set using the Flickr API](./cnn/flickr_images.ipynb)
+    * [Demo 8.3: Exploring the deep VGG16 network](./cnn/vgg16.ipynb)
     * Lab 8:  Transfer learning with a pre-trained network
 * Unit 9:  PCA (To be added)
 * Unit 10:  Clustering and EM (To be added)
