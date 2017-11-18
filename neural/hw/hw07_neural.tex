@@ -883,7 +883,7 @@ This can often be combined with chain rule.
 
 \item Consider the logistic loss function, 
 \[
-      J = \sum_{i=1}^N\left[ \ln(1+e^{y_iz_i}) - y_iz_i \right], \quad z_i = \sum_{j=1}^p x_{ij}w_j + b.
+      J = \sum_{i=1}^N\left[ \ln(1+e^{z_i}) - y_iz_i \right], \quad z_i = \sum_{j=1}^p x_{ij}w_j + b.
 \]
 \begin{enumerate}[(a)]
 \item What is the gradient $\partial J/\partial \zbf$?  That is, find the components $\partial J/\partial z_i$.
@@ -930,7 +930,7 @@ $2 \x 3$ matrix with the partial derivatives:
 \begin{enumerate}[(a)]
 \item The components of the gradient $dJ/\partial \zbf$ are given by the partial derivatives,
 \[
-    \frac{\partial J}{\partial z_i} = -y_i + \frac{y_ie^{y_iz_i}}{1+e^{y_iz_i}}.
+    \frac{\partial J}{\partial z_i} = -y_i + \frac{e^{z_i}}{1+e^{z_i}}.
 \]
 \item  The components of the gradient $\partial \zbf/\partial \wbf$ and $\partial \zbf/\partial b$ are
 \[
@@ -1037,7 +1037,7 @@ depends on the nature of the response variable $y_i$ to be predicted by the netw
 \item Binary classification:  In this case $y_i=0,1$,
 and $z^\out_i$ is the logit and we use the binary cross entropy,
 \beq \label{eq:gloss_bin}
-    g_{\rm loss}(z^\out_i,y_i) = \ln\left[ 1 + e^{y_iz_i^\out} \right] -y_iz_i.
+    g_{\rm loss}(z^\out_i,y_i) = \ln\left[ 1 + e^{z_i^\out} \right] -y_iz_i.
 \eeq
 
 \item Multi-class classification:  In this case, $y_i \in \{1,\ldots,K\}$
