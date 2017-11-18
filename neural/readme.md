@@ -14,5 +14,6 @@ You should then be able to go through the demos and labs:
 * [Demo 7.1: First neural network in Keras](./synthetic.ipynb)
 * [Demo 7.2: MNIST neural network classification](./mnist_neural.ipynb)
 * [Lab 7:  Music instrument classification](./lab07_music_partial.ipynb)
+* Homework 7: Notes with solved problems [[pdf]](./hw/hw07_neural.pdf) [[Latex]](./hw/hw07_neural.tex)
 
 
