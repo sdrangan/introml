@@ -68,7 +68,7 @@ please contact Sundeep Rangan at <srangan@nyu.edu>.
     * [Demo 8.2: Creating an image set using the Flickr API](./cnn/flickr_images.ipynb)
     * [Demo 8.3: Exploring the deep VGG16 network](./cnn/vgg16.ipynb)
     * [Lab 8:  Transfer learning with a pre-trained network](./cnn/lab08_fine_tune_partial.ipynb) (GPU optional)
-    * Homework 8 [[pdf]](./cnn/hw/HW8_ConvNets.pdf) [[Latex]](./svm/hw/HW8_ConvNets.tex)
+    * Homework 8 [[pdf]](./cnn/hw/HW8_ConvNets.pdf) [[Latex]](./cnn/hw/HW8_ConvNets.tex)
 * [Unit 9:  PCA](./pca/readme.md)
     * [Demo 9:  PCA eigen-faces](./pca/eigen_face.ipynb)
     * Lab 9: TBD
