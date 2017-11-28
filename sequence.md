@@ -1,21 +1,21 @@
 [Return to home page](./README.md) 
 
-# How to Follow This Course
+# Demos, Labs and Homeworks
 
-Below is the sequence of topics used in the class.  Of course, students not enrolled in 
+The class is taught in the sequence of units below.  Of course, students not enrolled in 
 the class are free to browse in any order they wish.  Right now,
-several units are empty.  But, more will be added over the course of the class.
+some units are empty.  But, more will be added over the course of the class.
 
-Ultimately, most topics will have a **demo** where the concepts are illustrated.
+Ultimately, most units will have a **demo** where the concepts are illustrated.
 The demos are covered in the class lectures.  
-After the lectures, the students complete a similar
-exercise on a new dataset in the **lab** at home.
 Some demos have a component that is done in class.
+After the lectures, the students complete a more involved
+exercise on a new dataset in the **lab** at home.
 The demos do not generally cover
 all topics, since some concepts are left for the students to figure out 
 for themselves in the labs.  Also, as you will observe, the labs are 
 just empty skeletons with `TODO` markers that the students fill in.
-In addition to the lab, most units will have a **homework** which
+In addition to the lab, most units have a **homework** which
 focuses on more analytic problems.  Students will be 
 provided the full solutions to the homeworks and labs in class
 as well as the lecture notes.
@@ -68,6 +68,7 @@ please contact Sundeep Rangan at <srangan@nyu.edu>.
     * [Demo 8.2: Creating an image set using the Flickr API](./cnn/flickr_images.ipynb)
     * [Demo 8.3: Exploring the deep VGG16 network](./cnn/vgg16.ipynb)
     * [Lab 8:  Transfer learning with a pre-trained network](./cnn/lab08_fine_tune_partial.ipynb) (GPU optional)
+    * Homework 8 [[pdf]](./cnn/hw/HW8_ConvNets.pdf) [[Latex]](./svm/hw/HW8_ConvNets.tex)
 * [Unit 9:  PCA](./pca/readme.md)
     * [Demo 9:  PCA eigen-faces](./pca/eigen_face.ipynb)
     * Lab 9: TBD
