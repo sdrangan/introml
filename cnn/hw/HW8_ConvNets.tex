@@ -247,7 +247,7 @@ Let $Z$ be the 2D convolution (without reversal):
 Assume that the arrays are indexed starting at $(0,0)$.
 \begin{enumerate}[(a)]
 \item What are the limits of the summations over $k_1$ and $k_2$ in \eqref{eq:Zconv}?
-\item What is the size of the output $Z[i,j]$ if the convolution is computed only on the \emph{valid} pixels (i.e.\ the pixel locations $(i,j)$ 
+\item What is the size of the output $Z[i,j]$ if the convolution is computed only on the \emph{valid} pixels (i.e.\ the pixel locations $(i,j)$
 where the summation in \eqref{eq:Zconv} does not exceed the boundaries of $W$ or $X$).
 \item What is the largest positive value of $Z[i,j]$ and state one pixel location $(i,j)$ where that value occurs.
 \item What is the largest negative value of $Z[i,j]$ and state one pixel location $(i,j)$ where that value occurs.
@@ -255,12 +255,12 @@ where the summation in \eqref{eq:Zconv} does not exceed the boundaries of $W$ or
 \end{enumerate}
 
 \item Suppose that a convolutional layer of a neural network has an input tensor $X[i,j,k]$ and computes
-an output via a convolution and ReLU activation, 
+an output via a convolution and ReLU activation,
 \begin{align*}
     Z[i,j,m] &= \sum_{k_1} \sum_{k_2} \sum_n W[k_1,k_2,n,m]X[i+k_1,j+k_2,n] + b[m], \\
     U[i,j,m] &= \max\{0, Z[i,j,m] \}.
 \end{align*}
-for some weight kernel $W[k_1,k_2,n,m]$ and bias $b[m]$.  Suppose that $X$ has shape (48,64,10) and $W$ has shape (3,3,20,10).
+for some weight kernel $W[k_1,k_2,n,m]$ and bias $b[m]$.  Suppose that $X$ has shape (48,64,10) and $W$ has shape (3,3,10,20).
 Assume the convolution is computed on the \emph{valid} pixels.
 \begin{enumerate}[(a)]
 \item What are the shapes of $Z$ and $U$?
