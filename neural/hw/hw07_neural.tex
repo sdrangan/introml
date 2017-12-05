@@ -236,24 +236,29 @@ Neural Network Notes with Solved Problems}
 
 \section{Description of Neural Networks}
 \begin{itemize}
-\item A neural network is simply a mapping from some input vector $\xbf$ to 
-a prediction of some target variable $y$.  
-\item The network can be used for \textbf{regression} or \textbf{classification} problems:
+\item Neural networks refer to a general class of models for making predictions on 
+data.  The key feature of neural networks is that the input data is processed in 
+multiple stages, called \emph{layers}.  The parameters in each layer are \emph{trained}
+or \emph{learned} from examples.  This multi-layer processing 
+with trainable parameters in each layer is loosely inspired by biological neural systems.
+\item To describe the neural network, let $\xbf$ denote the input vector and
+let $y$ denote the target variable that we wish to predict from $\xbf$.
+\item We consider networks for both \textbf{regression} or \textbf{classification} problems:
 \begin{itemize}
 \item For regression problems, $y$ is a scalar or vector and is typically continuous-valued.
 In this case, the neural network produces a prediction $\hat{y}$ of $y$ of the same dimension as $y$.
-\item For classification problems, the target variable $y \in \{1,\ldots,K\}$ and neural network
+\item For classification problems, the target variable $y \in \{1,\ldots,K\}$ and the neural network
 typically provides a soft prediction of the class label.
 Specifically, the networks makes a prediction of the probability $P(y=k|\xbf)$ for each class label $k$
 given the input $\xbf$.
 \end{itemize}
 \item For both regression and classification problems,
-we assume the input $\xbf$ is of dimension $N_i$ so that
+we assume the input $\xbf$ is a vector of dimension $N_i$ so that
 \[
     \xbf = (x_1,\ldots,x_{N_i}).
 \]
 
-\item In this note, we look at neural network with one hidden layer.
+\item In this note, we look at neural networks with one hidden layer.
 In such a network, the neural network mapping is performed in two steps -- each step is called a \emph{layer}:
 \begin{itemize}
 \item \emph{Hidden layer} produces outputs $\zbf^\hid$ and $\ubf^\hid$ of dimension $N_h$.
@@ -270,7 +275,7 @@ The dimensions $N_h$ and $N_o$ will be discussed below.
     \label{eq:nnhidden} \\
     &\mbox{Output layer:} \quad
     z_{j}^\out = \sum_{k=1}^{N_h} W^\out_{jk}u^\hid_{k} + b^\out_j,
-    \quad 
+    \quad
     u^\out = g_{\rm out}(\zbf^\out).
     \quad j=1,\ldots,N_o.
     \label{eq:nnout}
@@ -302,7 +307,8 @@ the output $u^\out$ is the class probability:
 \beq \label{eq:gout_binary_soft}
     P(y=1|\xbf) = u^\out = g_{\rm out}(z^\out) = \frac{1}{1 + e^{-\zout}}.
 \eeq
-The output $\zout$ is called the \emph{logit}.
+The variable $\zout$ is called the \emph{logit} and the output mapping \eqref{eq:gout_binary_soft}
+is a sigmoid.
 We can also use $\zout$ to make a hard decision by selecting the most likely class:
 \beq \label{eq:gout_thresh}
     \hat{y} =  \begin{cases}
@@ -312,7 +318,7 @@ We can also use $\zout$ to make a hard decision by selecting the most likely cla
 \eeq
 
 \item  $K$-class classification:  In this case,
-the response is the class label $y=1,\ldots,K$.  We typically take $N_o = K$ and use the
+the target is a class label $y=1,\ldots,K$.  We typically take $N_o = K$ and use the
 soft-max function for the class probability:
 \beq \label{eq:gout_mc_soft}
     P(y=k|\xbf) = u^\out_k =  g_{\rm out,k}(z^\out) = \frac{e^{z^\out_k}}{\sum_{\ell=1}^K  e^{z^\out_\ell}}.
@@ -322,15 +328,16 @@ Again, we can make a hard decision on the class label by selecting the highest l
     \hat{y} = \argmax_{k=1,\ldots,K} z^\out_k.
 \eeq
 
-\item Regression: In this case, you are trying to predict $\ybf \in \R^d$,
+\item Regression: In this case, one is trying to predict $\ybf \in \R^d$,
 where $d$ is the number of variables to predict and each component $y_j$
-is continuous-valued.  For this problem, we take $N_o=d$ and $\ubf^\out$ is the prediction of $\ybf$,
+is typically continuous-valued.  For this problem, we take $N_o=d$ and $\ubf^\out$ is the prediction of $\ybf$,
 \beq \label{eq:gout_id}
     \hat{\ybf} = \ubf^\out = g_{\rm out}(\zbf^\out) = \zbf^\out.
 \eeq
+In \eqref{eq:gout_id}, we will either say there is no activation or an \emph{identity} activation.
 \end{itemize}
 
-\item The number, $N_h$ of hidden variables (also called the number of \emph{hidden units}) 
+\item The number, $N_h$ of hidden variables (also called the number of \emph{hidden units})
 represents the model complexity.  Higher values of $N_h$ can express more complex mappings,
 but will need more data to train.
 
@@ -371,8 +378,8 @@ to each sample and rewrite \eqref{eq:nn} as:
 \end{align}
 \end{subequations}
 
-\item Matrix form of the multi-sample neural network:
-Define the matrices
+\item Matrix form of batch processing in neural networks:
+Define the matrices,
 \[
     \Xbf = \left[ \begin{array}{ccc}
         \xbf_1\tran \\
@@ -441,7 +448,7 @@ Then, we can write
     + \Bbf^\out
     \quad
     \Ubf^\out = g_{\rm out}\left( \Zbf^\out \right),
-    \label{eq:nn_ms_mat_out} 
+    \label{eq:nn_ms_mat_out}
 \end{align}
 \end{subequations}
 where $\Bbf^\hid$ and $\Bbf^\out$
@@ -739,15 +746,33 @@ Outside this region, $z^\out < 0$.  Hence, $z^O \geq 0$ only in the region
 \]
 
 \end{enumerate}
-\item
-\begin{enumerate}[Missing]
+
 \item 
+\begin{enumerate}[(a)]
+\item Assuming we represent the image pixels as a vector,
+the input size is $N_i=20\x20=400$.  Since this is a multi-class classification problem
+with 26 classes, one would generally take an output size of $N_o=26$ and use a soft-max for
+the output map $g_{\rm out}(\cdot)$.    The number of hidden units $N_h$
+and the activation $g_{\rm act}(\cdot)$ are free to choose
+
+\item The input size is $N_i=120$. Since this is a binary classification problem,
+we would generally take $N_o=1$ and use a sigmoid output for 
+$g_{\rm out}(\cdot)$.    The number of hidden units $N_h$
+and the activation $g_{\rm act}(\cdot)$ are free to choose.
+
+\item We would take $N_i=5$ for the stock prices for the last five days.
+Since this is a regression problem predicting a scalar value, we would take
+$N_o=1$ and use an identity activation, $g_{\rm out}(z)=z$ (i.e.\ there is 
+no activation).
+Again, the number of hidden units $N_h$
+and the activation $g_{\rm act}(\cdot)$ are free to choose.
 \end{enumerate}
+
 	
 \item
 \begin{enumerate}[(a)]
-\item 
-The operations in the hidden layer in \eqref{eq:nn_ms_matrix} can 
+\item
+The operations in the hidden layer in \eqref{eq:nn_ms_matrix} can
 be implemented as:
 \begin{python}
     Zh = X.dot(Wh.T) + bh[None,:]
@@ -757,7 +782,7 @@ where \pycode{Wh} and \pycode{bh} are the weight matrix and bias vector.
 Note that we have used python broadcasting on the bias vector \pycode{bh}
 
 \item For a binary classification problem, $N_o=1$ and
-we can represent $\Zbf^\out$ as an $N$-dimensional vector, \pycode{Zo}.  
+we can represent $\Zbf^\out$ as an $N$-dimensional vector, \pycode{Zo}.
 Also, we can represent the weight $\Wbf^\hid$ as an $N_h$-dimensional vector
 \pycode{Wh} and the bias $b^\hid$ as a scalar \pycode{bh}.
 In this case,
@@ -807,9 +832,9 @@ $X[i_1,\ldots,i_d]$ instead of $X_{i_1,\ldots,i_d}$.
   \item A color image can be represented as an order 3 tensor (height, width, color).
   For example, a $512 \times 512$ with three color channels (RGB) would have shape
   $(512,512,3)$.
-  \item A batch of color images can be represented as an order 4 tensor 
+  \item A batch of color images can be represented as an order 4 tensor
   (batch size, height, width, color).  For example, a mini-batch of 32 color images
-  as above would have shape $(32,512,512,3)$.  
+  as above would have shape $(32,512,512,3)$.
 \end{itemize}
 
 \item \emph{Gradient tensors:}  Suppose that $\Ybf = f(\Xbf)$ where:
@@ -821,7 +846,7 @@ The \emph{gradient} $\partial \Ybf / \partial \Xbf$
 is a tensor of shape $(M_1,\ldots,M_s,N_1,\ldots,N_r)$
 with components,
 \[
-    \left[ \frac{\partial \Ybf}{\partial \Xbf} \right]_{i_1,\ldots, i_s,j_1,\ldots,j_r} = 
+    \left[ \frac{\partial \Ybf}{\partial \Xbf} \right]_{i_1,\ldots, i_s,j_1,\ldots,j_r} =
         \frac{\partial Y_{i_1,\ldots,i_r}}{\partial X_{j_1,\ldots,j_s}}.
 \]
 
@@ -833,18 +858,18 @@ This is called the \emph{Jacobian}.
 \item \emph{Gradients for scalar-valued functions:}  Suppose $J = f(\Xbf)$,
 where the output $J$ is a scalar and the input $\Xbf$ has shape $(N_1,\ldots,N_r)$.
 In this case, the gradient tensor $\partial J/\partial \Xbf$ will have the shape
-$(1,N_1,\ldots,N_r)$.  It is sometimes convenient to regard $\partial J/\partial \Xbf$ has a 
+$(1,N_1,\ldots,N_r)$.  It is sometimes convenient to regard $\partial J/\partial \Xbf$ has a
 $(N_1,\ldots,N_r)$ tensor and drop the index over the single output components.  That is,
 $\partial J/\partial \Xbf$ has the same shape as $\Xbf$ with components,
 \[
     \frac{\partial J}{\partial X_{1_1,\ldots,1_r}}.
 \]
 
-\item \emph{Tensor chain rule:}  
+\item \emph{Tensor chain rule:}
 Consider the sequence $\Xbf \mapsto \Ybf \mapsto \Zbf$ where
 \begin{itemize}
   \item The input $\Xbf$ is a tensor of size $(K_1,\ldots,K_t)$;
-  \item The intermediate variable $\Ybf=g(\Xbf)$ is a tensor of size $(N_1,\ldots,N_r)$; 
+  \item The intermediate variable $\Ybf=g(\Xbf)$ is a tensor of size $(N_1,\ldots,N_r)$;
   \item The output $\Zbf=h(\Ybf)$ is a tensor of size $(M_1,\ldots,M_s)$.
 \end{itemize}
 Then, the components of the gradient tensor $\partial \Zbf/\partial \Xbf$ are given by:
@@ -885,7 +910,7 @@ This can often be combined with chain rule.
     f(\xbf) = (x_1+x_2x_3,x_1^2+3x_2).
 \]
 
-\item Consider the logistic loss function, 
+\item Consider the logistic loss function,
 \[
       J = \sum_{i=1}^N\left[ \ln(1+e^{z_i}) - y_iz_i \right], \quad z_i = \sum_{j=1}^p x_{ij}w_j + b.
 \]
@@ -895,8 +920,8 @@ This can often be combined with chain rule.
 \item Use the chain rule to compute the gradients $\partial J/\partial \wbf$ and $\partial J/\partial b$.
 \end{enumerate}
 
-\item Suppose that 
-\[  
+\item Suppose that
+\[
     \ubf = f(\zbf) = (f(z_1),\ldots,f(z_N)), \quad f(z_i) = \frac{1}{1+e^{-z_i}},
 \]
 so that both $\ubf$ and $\zbf$ are $N$-dimensional vectors.
@@ -919,7 +944,7 @@ so that both $\ubf$ and $\zbf$ are $N$-dimensional vectors.
 
 \paragraph*{Solutions}
 \begin{enumerate}
-\item This function has two outputs and three inputs.  Therefore, the gradient can be represented as 
+\item This function has two outputs and three inputs.  Therefore, the gradient can be represented as
 $2 \x 3$ matrix with the partial derivatives:
 \[
     \frac{\partial f(\xbf)}{\partial \xbf}
@@ -943,10 +968,10 @@ $2 \x 3$ matrix with the partial derivatives:
 
 \item Using chain rule,
 \begin{align*}
-    \frac{\partial J}{\partial w_j} &= \frac{\partial J}{\partial z_i}\frac{\partial z_i}{\partial w_j} = 
+    \frac{\partial J}{\partial w_j} &= \frac{\partial J}{\partial z_i}\frac{\partial z_i}{\partial w_j} =
         \frac{\partial J}{\partial z_i}x_{ij}, \\
     \frac{\partial J}{\partial b} &= \frac{\partial J}{\partial z_i}\frac{\partial z_i}{\partial b} =
-        \frac{\partial J}{\partial z_i},        
+        \frac{\partial J}{\partial z_i},
 \end{align*}
 where $\partial J/\partial z_i$ is given in part (a).
 \end{enumerate}
@@ -1200,7 +1225,7 @@ is $K$-class classification, we use the categorial cross-entropy loss \eqref{eq:
 Derive the back-propagation equations for all steps.
 
 \item \label{prob:cg_exp}
-Suppose that we are given a mini-batch of training data $(\xbf_i,y_i)$, $i=1,\ldots,N$, 
+Suppose that we are given a mini-batch of training data $(\xbf_i,y_i)$, $i=1,\ldots,N$,
 and we try to fit a model to the data of the form,
 \begin{align*}
     \zbf_i    &= \Wbf\xbf_i + \bbf, \quad
@@ -1217,7 +1242,7 @@ $u_{ij} = \exp(z_{ij})$.  Draw the computation graph showing the mapping
 from the inputs $\xbf_i$ and the parameters $\theta$ to the loss function, $L$.
 Also, write the equations for each step in the computation graph.
 
-\item Write the back-propagation equations to obtain the 
+\item Write the back-propagation equations to obtain the
 gradients with respect to the parameters $\theta$.
 \end{enumerate}
 
@@ -1287,7 +1312,7 @@ Using chain rule,
     \frac{\partial L}{\partial W^\hid_{jk}} &= \sum_{i=1}^N \frac{\partial L}{\partial z^\hid_{ik}}\frac{\partial z^\hid_{ij}}{\partial W^\hid_{jk}}
         = \sum_{i=1}^N \frac{\partial L}{\partial z^\hid_{ik}}x_{ik}, \\
     \frac{\partial L}{\partial b^\hid_{jk}} &= \sum_{i=1}^N \frac{\partial L}{\partial z^\hid_{ik}}\frac{\partial z^\hid_{ij}}{\partial b^\hid_{j}}
-        = \sum_{i=1}^N \frac{\partial L}{\partial z^\hid_{ik}}.        
+        = \sum_{i=1}^N \frac{\partial L}{\partial z^\hid_{ik}}.
 \end{align*}
 
 \end{itemize}
@@ -1353,15 +1378,15 @@ The computation graph is shown in Fig.~\ref{fig:compgraph_exp}.
 \]
 Therefore,
 \[
-    \frac{\partial \hat{y}_i}{\partial u_{ij}} = \alpha_j, \quad 
+    \frac{\partial \hat{y}_i}{\partial u_{ij}} = \alpha_j, \quad
     \frac{\partial \hat{y}_i}{\partial \alpha_j} = u_{ij}.
 \]
 Applying chain rule,
 \begin{align*}
-    \frac{\partial L}{\partial \alpha_j} &= \sum_{i=1}^N 
+    \frac{\partial L}{\partial \alpha_j} &= \sum_{i=1}^N
     \frac{\partial L}{\partial \hat{y}_i}\frac{\partial \hat{y}_i}{\partial \alpha_j}
     = \sum_{i=1}^N  \frac{\partial L}{\partial \hat{y}_i}u_{ij} \\
-    \frac{\partial L}{\partial u_{ij}} &= 
+    \frac{\partial L}{\partial u_{ij}} &=
     \frac{\partial L}{\partial \hat{y}_i}\frac{\partial \hat{y}_i}{\partial u_{ij}}
     = \sum_{i=1}^N  \frac{\partial L}{\partial \hat{y}_i}\alpha_j.
 \end{align*}
@@ -1376,7 +1401,7 @@ Using chain rule:
     = \frac{\partial L}{\partial u_{ij}}\exp(z_{ij}).
 \]
 
-\item $\zbf \arr \Wbf,\bbf$:  Since $\zbf_i = \Wbf\xbf_i + \bbf$, 
+\item $\zbf \arr \Wbf,\bbf$:  Since $\zbf_i = \Wbf\xbf_i + \bbf$,
 Therefore,
 \[
     z_{ij} = \sum_k W_{jk}x_{ik} + b_j.
@@ -1388,12 +1413,12 @@ Hence, we have the derivatives,
 \]
 Applying chain rule,
 \begin{align*}
-    \frac{\partial L}{\partial W_{jk}} &= 
-        \sum_i \frac{\partial L}{\partial z_{ij}}\frac{\partial z_{ij}}{\partial W_{jk}} 
+    \frac{\partial L}{\partial W_{jk}} &=
+        \sum_i \frac{\partial L}{\partial z_{ij}}\frac{\partial z_{ij}}{\partial W_{jk}}
         = \sum_i \frac{\partial L}{\partial z_{ij}}u_{ik}, \\
     \frac{\partial L}{\partial b_{j}} &=
         \sum_i \frac{\partial L}{\partial z_{ij}}\frac{\partial z_{ij}}{\partial b_{j}}
-        = \sum_i \frac{\partial L}{\partial z_{ij}}. 
+        = \sum_i \frac{\partial L}{\partial z_{ij}}.
 \end{align*}
 
 \end{itemize}
