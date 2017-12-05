@@ -294,10 +294,10 @@ There are three common choices:
 
 \item The output map $g_{\rm out}(z)$ and dimension $N_o$
 depends on the type of prediction problem we are using the neural
-network:
+network for:
 \begin{itemize}
 \item Binary classification:  In this case, the response
-is $y=0,1$.  To predict the response, we typically take $N_o = 1$ and
+is $y=\{0,1\}$.  To predict the response, we typically take $N_o = 1$ and
 the output $u^\out$ is the class probability:
 \beq \label{eq:gout_binary_soft}
     P(y=1|\xbf) = u^\out = g_{\rm out}(z^\out) = \frac{1}{1 + e^{-\zout}}.
@@ -340,7 +340,7 @@ but will need more data to train.
 \beq
     \mbox{Output layer:} \quad
     z^\out = \sum_{k=1}^{N_h} W^\hid_{k}u^\hid_k + b^\out, \quad
-    \hat{y} = g_{\rm out}(z^\out), \quad j=1,\ldots,N_o.
+    \hat{y} = g_{\rm out}(z^\out).
     \label{eq:nnout_scalar}
 \eeq
 
@@ -506,7 +506,7 @@ the intermediate variables $\zbf_i^\hid$,
 $\ubf_i^\hid$ and $z^\out_i$ for each sample $x=x_i$.
 
 \item Now suppose we are given a new sample, $x=3.5$.  What does the network
-predict as $\hat{y}$.
+predict as $\hat{y}$?
 \end{enumerate}
 
 \item \emph{Two-dimensional example:} Consider a neural network
@@ -589,7 +589,7 @@ Since $W^\out$ has 1 output, $N_o=1$.
     z^\out &= W^\out \ubf^\hid + b^\out =
     [-1, 2]\left[ \begin{array}{c} \indic{x \geq 1} \\ \indic{x \geq 3} \end{array} \right]
     + 0.5 \\
-    &= \indic{x \geq 1} -2\indic{x \geq 3} + 0.5
+    &= -\indic{x \geq 1} +2\indic{x \geq 3} + 0.5
     = \begin{cases}
         0.5 & \mbox{when } x < 1 \\
         -0.5 & \mbox{when } x \in [1,3) \\
@@ -612,8 +612,8 @@ Since $W^\out$ has 1 output, $N_o=1$.
 \item
 We can use a network similar in structure to the previous problem.
 In the hidden layer, we want to find features that can distinguish between
-$x=3$ which belongs to class $y=1$, and $x=0,1,5$ which belong to class $y=0$.
-There are lots of choices, but we will extract two features, whether $x \geq 2$
+$x=3$ which belongs to class $y=1$, and $x=\{0,1,5\}$ which belong to class $y=0$.
+There are lots of choices, but we will extract two features: whether $x \geq 2$
 and $x \geq 4$.  We can do this with the linear transforms:
 \[
     \Wbf^\hid = \left[ \begin{array}{c} 1 \\ 1 \end{array} \right], \quad
@@ -629,11 +629,11 @@ so that
 Then, the activation outputs in the hidden layer are
 \[
     \ubf^\hid = g_{\rm act}(\zbf^\hid) =
-     \left[ \begin{array}{c} g_{\rm act}(x-1) \\ g_{\rm act}(x-3) \end{array} \right]
+     \left[ \begin{array}{c} g_{\rm act}(x-2) \\ g_{\rm act}(x-4) \end{array} \right]
      =
      \left[ \begin{array}{c} \indic{x \geq 2} \\ \indic{x \geq 4} \end{array} \right].
 \]
-Now we need to combine these functions in a way that they negative
+Now we need to combine these functions in a way that they are negative
 for samples $x_i$ when $y_i=0$ and positive on sample $x_i$ when $y_i=1$.
 Similar to the previous problem, take
 \[
@@ -739,7 +739,11 @@ Outside this region, $z^\out < 0$.  Hence, $z^O \geq 0$ only in the region
 \]
 
 \end{enumerate}
-
+\item
+\begin{enumerate}[Missing]
+\item 
+\end{enumerate}
+	
 \item
 \begin{enumerate}[(a)]
 \item 
@@ -828,7 +832,7 @@ This is called the \emph{Jacobian}.
 
 \item \emph{Gradients for scalar-valued functions:}  Suppose $J = f(\Xbf)$,
 where the output $J$ is a scalar and the input $\Xbf$ has shape $(N_1,\ldots,N_r)$.
-In this case, the gradient tensor has shape $\partial J/\partial \Xbf$ will have the shape
+In this case, the gradient tensor $\partial J/\partial \Xbf$ will have the shape
 $(1,N_1,\ldots,N_r)$.  It is sometimes convenient to regard $\partial J/\partial \Xbf$ has a 
 $(N_1,\ldots,N_r)$ tensor and drop the index over the single output components.  That is,
 $\partial J/\partial \Xbf$ has the same shape as $\Xbf$ with components,
@@ -1034,7 +1038,7 @@ $\xbf=\xbf_i$ and parameters $\theta$.
 neural network output $z^\out_i$ with the observed $y_i$.  Its specific form
 depends on the nature of the response variable $y_i$ to be predicted by the network:
 \begin{itemize}
-\item Binary classification:  In this case $y_i=0,1$,
+\item Binary classification:  In this case $y_i=\{0,1\}$,
 and $z^\out_i$ is the logit and we use the binary cross entropy,
 \beq \label{eq:gloss_bin}
     g_{\rm loss}(z^\out_i,y_i) = \ln\left[ 1 + e^{z_i^\out} \right] -y_iz_i.
@@ -1070,7 +1074,7 @@ a sequence of estimates of the minimizer \eqref{eq:thetamin} by
     \theta^{\tp1} = \theta^t - \alpha \partial L(\theta^t)/\partial \theta^t,
 \eeq
 where $t$ is the training iteration index, $\alpha > 0$ is the step size
-(called the \emph{learning rate} and the gradients
+(called the \emph{learning rate}) and the gradient
 $\partial L(\theta)/\partial \theta$ is evaluated on some mini-batch.
 The gradient update is to be performed for each component of $\theta$ in
 \eqref{eq:thetann},
@@ -1167,8 +1171,7 @@ Then apply chain rule to compute the gradient of $L$,
 \end{align*}
 where the multiplication $\cdot$ represents a tensor dot-product.
 
-\item $\ubf^\hid \arr \zbf^\hid$: Compute $\partial \ubf^\hid/\partial \zbf^\hid$ and then use chain rule
-Then, we apply chain rule,
+\item $\ubf^\hid \arr \zbf^\hid$: Compute $\partial \ubf^\hid/\partial \zbf^\hid$. Then, we apply chain rule,
 \[
     \frac{\partial L}{\partial \zbf^\hid} = \frac{\partial L}{\partial \ubf^\hid} \cdot \frac{\partial \ubf^\hid}{\partial \zbf^\hid}.
 \]
@@ -1346,8 +1349,7 @@ The computation graph is shown in Fig.~\ref{fig:compgraph_exp}.
 
 \item $\hat{\ybf} \arr \alphabf, \ubf$:  We have
 \[
-    \hat{y}_i = \alphabf\tran \ubf_i = \sum_{j=1}^M \alpha_ju_{ij} \Rightarrow
-    \frac{\partial \hat{y}_i}{\partial u_{ij}}.
+    \hat{y}_i = \alphabf\tran \ubf_i = \sum_{j=1}^M \alpha_ju_{ij}.
 \]
 Therefore,
 \[
