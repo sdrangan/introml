@@ -71,7 +71,7 @@ please contact Sundeep Rangan at <srangan@nyu.edu>.
     * Homework 8 [[pdf]](./cnn/hw/HW8_ConvNets.pdf) [[Latex]](./cnn/hw/HW8_ConvNets.tex)
 * [Unit 9:  PCA](./pca/readme.md)
     * [Demo 9:  PCA eigen-faces](./pca/eigen_face.ipynb)
-    * Lab 9: TBD
+    * [Lab 9: Movie recommendations](./pca/lab09_movies_partial.ipynb)    
 * [Unit 10:  Clustering and EM](./cluster/readme.md)
     * [Demo 10: Document clustering via k-means and latent semantic analysis](./cluster/demo_doc_cluster.ipynb)
     
