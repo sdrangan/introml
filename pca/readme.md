@@ -4,6 +4,6 @@
 
 PCA is one of the most fundamental tools in dimensionality reduction.
 * [Demo 9:  PCA eigen-faces](./eigen_face.ipynb)
-* Lab 9: TBD
+* [Lab 9: Movie recommendations](./lab09_movies_partial.ipynb)
 
 
