@@ -4,10 +4,13 @@ Google Cloud Platform (GCP) has powerful instances with
 [GPU support](https://cloud.google.com/gpu/).  Using these instances
 can dramatically speed up training of deep networks
 and are essential for large-scale
-problems.  We will not need to use a GPU for any exercises in this class,
-but you may wish to consider them for your project, particularly if you
+problems.  All the exercises in this class can be done without a GPU.
+However, for the lab in deep learning, you can use one to get better results
+with less computation time.  
+You may also wish to consider using GPUs for your project, particularly if you
 are training a deep network with a large number of parameters.
-The per hour costs of GPU instances are much more expensive than
+
+Note that the per hour costs of GPU instances are much more expensive than
 regular CPU instancess, so you want to make sure you turn off the instances
 you are not using.  
 
@@ -73,11 +76,8 @@ the
 
 * Select cuDNN for CUDA 8.0 v6.0 (There are more recent releases,
   but I am not sure if they work with Tensorflow)
-
-## Install Tensorflow with Anaconda
-
   
-## Install Tensorflow0
+## Install Tensorflow
 
 For GPU support, it is easier to use pip3 instead of Anaconda.
 I am still seeing if you can install over Anaconda.
@@ -94,7 +94,6 @@ will need to install tensorflow from the binary:
 nsorflow_gpu-1.3.0-cp35-cp35m-linux_x86_64.whl
 ~~~
 More details are in the [Tensorflow page](https://www.tensorflow.org/install/install_linux).
-
 
 ## Jupyter Notebook
 
