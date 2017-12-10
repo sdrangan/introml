@@ -12,7 +12,7 @@ Each unit has the following:
 * **Lab**:  Following the lecture, the students do a similar exercise at home.
    Note that the labs are just empty skeletons with `TODO`
    markers that the students fill in.
-* **Homework**:  These are more analytic problems, also done in home.
+* **Homework**:  These are more analytic problems, also done at home.
 
 The homework and lab solutions are provided to students enrolled in the class.
 If you are an instructor
