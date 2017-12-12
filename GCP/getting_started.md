@@ -110,6 +110,7 @@ We need to modify the network settings to open up external access.
 2.	Create a new firewall rule:
     * Source filter: Allow from any source.
     * Allowed protocols and ports: `tcp:80, 8888` (or whatever custom port you used before)
+    * Targets: All instances in the network. If you specify a target tag, your VM instance must have a matching network tag or the firewall rule will not apply.
 3.	You should now be able to access the remote jupyter notebook GUI through your local browser.
 Just type your instance's external IP as the URL: `[IP_ADDRESS]:[PORT#]`
 
