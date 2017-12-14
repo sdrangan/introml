@@ -223,6 +223,8 @@ Homework 8:  Convolutional Neural Networks}
 
 \maketitle
 
+Submit answers to only problems 1--3.  But, make sure you know how to do all problems.
+
 \begin{enumerate}
 
 \item Let $X$ and $W$ be arrays,
@@ -233,11 +235,11 @@ Homework 8:  Convolutional Neural Networks}
         0 & 3 & 3 & 3 & 0 \\
         0 & 3 & 2 & 3 & 0 \\
         0 & 3 & 2 & 3 & 0 \\
-        0 & 0 & 0 & 0 & 0 
+        0 & 0 & 0 & 0 & 0
         \end{array} \right], \quad
     W = \left[ \begin{array}{cc}
         1 & -1 \\
-        1 & -1 
+        1 & -1
         \end{array} \right].
 \]
 Let $Z$ be the 2D convolution (without reversal):
@@ -269,19 +271,29 @@ Assume the convolution is computed on the \emph{valid} pixels.
 \item If $W$ and $b$ are to be learned, what are the total number of trainable parameters in the layer?
 \end{enumerate}
 
-\item Suppose that a convolutional layer as a linear convolution followed by a sigmoid activation,
+\item Suppose that a convolutional layer in some neural network
+is described as a linear convolution followed by a sigmoid activation,
 \begin{align*}
     Z[i,j,m] &= \sum_{k_1} \sum_{k_2} \sum_n W[k_1,k_2,n,m]X[i+k_1,j+k_2,n] + b[m], \\
     U[i,j,m] &= 1/(1+\exp(-Z[i,j,m])).
 \end{align*}
+where $X[i,j,n]$ is the input of the layer and $U[i,j,m]$ is the output.
 Suppose that during back-propagation, we have computed the gradient $\partial J/\partial U$ for some loss function $J$.
-That is, we have computed  $\partial J/\partial U[i,j,m]$.  Show how to compute the following:
+That is, we have computed  the components $\partial J/\partial U[i,j,m]$.  Show how to compute the following:
 \begin{enumerate}[(a)]
 \item The gradient components $\partial J/\partial Z[i,j,m]$.
 \item The gradient components $\partial J/\partial W[k_1,k_2,n,m]$.
-\item The gradient components $\partial J/\partial X[i,j,n]$. 
+\item The gradient components $\partial J/\partial X[i,j,n]$.
 \end{enumerate}
 
+\item 
+In the previous problem, we considered a single sample.
+Suppose there were a mini-batch of samples.
+\begin{enumerate}[(a)]
+\item How would you represent $Z$ and $U$ for the mini-batch case?
+\item Re-write the equations for $Z$ and $U$.  
+\item Re-compute the gradients.
+\end{enumerate}
 \end{enumerate}
 
 \end{document}
