@@ -969,10 +969,10 @@ $2 \x 3$ matrix with the partial derivatives:
 
 \item Using chain rule,
 \begin{align*}
-    \frac{\partial J}{\partial w_j} &= \frac{\partial J}{\partial z_i}\frac{\partial z_i}{\partial w_j} =
+    \frac{\partial J}{\partial w_j} &= \sum_i \frac{\partial J}{\partial z_i}\frac{\partial z_i}{\partial w_j} = \sum_i
         \frac{\partial J}{\partial z_i}x_{ij}, \\
-    \frac{\partial J}{\partial b} &= \frac{\partial J}{\partial z_i}\frac{\partial z_i}{\partial b} =
-        \frac{\partial J}{\partial z_i},
+    \frac{\partial J}{\partial b} &= \sum_i \frac{\partial J}{\partial z_i}\frac{\partial z_i}{\partial b} =
+        \sum_i \frac{\partial J}{\partial z_i},
 \end{align*}
 where $\partial J/\partial z_i$ is given in part (a).
 \end{enumerate}
