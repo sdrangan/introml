@@ -1027,17 +1027,19 @@ Hence, the components of the gradient $\partial J/\partial \zbf$ are,
 
 \item Using chain rule with \eqref{eq:gradlinvec},
 \[
-    \frac{\partial u_i}{\partial W_{ij}} = \frac{\partial u_i}{\partial z_i}\frac{\partial z_i}{\partial W_{ij}} = 2(z_i-y_i)x_j,
+    \frac{\partial L}{\partial W_{ij}} = \frac{\partial L}{\partial z_i}\frac{\partial z_i}{\partial W_{ij}} = 2(z_i-y_i)x_j,
 \]
 and
 \[
-    \frac{\partial u_i}{\partial b_i} = \frac{\partial u_i}{\partial z_i}\frac{\partial z_i}{\partial b_i} = 2(z_i-y_i).
+    \frac{\partial L}{\partial b_i} = \frac{\partial L}{\partial z_i}\frac{\partial z_i}{\partial b_i} = 2(z_i-y_i).
 \]
 
 
 \item We again use chain rule with \eqref{eq:gradlinvec},
 \[
-    \frac{\partial u_i}{\partial x_j} = \frac{\partial u_i}{\partial z_i}\frac{\partial z_i}{\partial x_j} = 2(z_i-y_i)W_{ij}.
+    \frac{\partial L}{\partial x_j} = \sum_i 
+    \frac{\partial L}{\partial z_i}\frac{\partial z_i}{\partial x_j} = 
+    2  \sum_i (z_i-y_i)W_{ij}.
 \]
 \end{enumerate}
 \end{enumerate}
