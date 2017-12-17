@@ -795,7 +795,7 @@ In this case,
 \begin{python}
     Zo = Uh.dot(Wo.T) + bo[None,:]
     expZo = np.exp(Zo)
-    Uo = expZo / np.sum(expZo,axis=1)[None,:]
+    Uo = expZo / np.sum(expZo,axis=1)[:,None]
 \end{python}
 Note the method for normalizing the outputs in a softmax classifier.
 
@@ -927,7 +927,7 @@ This can often be combined with chain rule.
 so that both $\ubf$ and $\zbf$ are $N$-dimensional vectors.
 \begin{enumerate}[(a)]
 \item What is the gradient $\partial \ubf/\partial \zbf$?
-\item If $\zbf = \Wbf\xbf + \bbf$, what are the gradients $\partial \ubf/\partial \Wbf$ and 
+\item If $\zbf = \Wbf\xbf + \bbf$, what are the gradients $\partial \ubf/\partial \Wbf$ and
 $\partial \ubf/\partial \bbf$?
 \item In part (b), what is $\partial \ubf/\partial \xbf$?
 \end{enumerate}
