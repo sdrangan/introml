@@ -1,9 +1,8 @@
 [Return to home page](./README.md) 
 
-# Demos, Labs and Homeworks
+# Table of Contents
 
-The class is taught in a sequence of units, as described below.
-Each unit has the following:
+The class is taught in a sequence of units. Each unit has the following:
 * **Demo**: This is a demonstration that is given in the class lectures to
    illustrate the basic concepts.  Some demos have a component that is
    done in class.  The demos do not generally cover
@@ -37,14 +36,15 @@ please contact Sundeep Rangan at <srangan@nyu.edu>.
     * Homework 2 [[pdf]](./unit02_mult_lin_reg/hw/hw02_mult_reg.pdf)
     [[Latex]](./unit02_mult_lin_reg/hw/hw02_mult_reg.tex)
 * [Unit 3:  Model selection and regularization](./unit03_model_sel/readme.md)
-    * [Demo:  Polynomial order selection with cross-validation](./unit03_model_sel/demo03_1_polyfit.ipynb)
-    * [Demo:  LASSO regression for finding predictors of prostate cancer](./unit03_model_sel/demo03_1_prostate.ipynb) 
-    * [Lab: Neural decoding motor cortex signals](./unit03_model_sel/lab03_neural_partial.ipynb) 
-    * Homework [[pdf]](./unit03_model_sel/hw/hw03_model_sel.pdf) [[Latex]](./unit03_model_sel/hw/hw03_model_sel.tex)
-* [Unit 4:  Logistic Regression](./logistic/readme.md)
-    * [Demo 4:  Breast cancer diagnosis via logistic regression](./logistic/breast_cancer.ipynb)
-    * [Lab 4: Genetic analysis of Down's syndrome in mice](./logistic/lab_gene_partial.ipynb)
-    * Homework 4 [[pdf]](./logistic/hw/HW4_Logistic.pdf) [[Latex]](./logistic/hw/HW4_Logistic.tex)
+    * [Demo 3.1:  Polynomial order selection with cross-validation](./unit03_model_sel/demo03_1_polyfit.ipynb)
+    * [Demo 3.2:  LASSO regression for finding predictors of prostate cancer](./unit03_model_sel/demo03_1_prostate.ipynb) 
+    * [Lab 3: Neural decoding motor cortex signals](./unit03_model_sel/lab03_neural_partial.ipynb) 
+    * Homework 3 [[pdf]](./unit03_model_sel/hw/hw03_model_sel.pdf) [[Latex]](./unit03_model_sel/hw/hw03_model_sel.tex)
+* [Unit 4:  Logistic Regression](./unit04_logistic/readme.md)
+    * [Demo 4:  Breast cancer diagnosis via logistic regression](./unit04_logistic/demo04_breast_cancer.ipynb)
+    * [Lab 4: Genetic analysis of Down's syndrome in mice](./unit04_logistic/lab04_gene_partial.ipynb)
+    * Homework 4 [[pdf]](./unit04_logistic/hw/hw04_Logistic.pdf)
+    [[Latex]](./unit04_logistic/hw/hw04_Logistic.tex) 
 * [Unit 5:  Nonlinear optimization](./optim/readme.md)
     * [Demo 5.1:  Computing gradients](./optim/computing_gradients.ipynb)
     * [Demo 5.2:  Simple gradient descent optimization](./optim/grad_descent.ipynb)    
