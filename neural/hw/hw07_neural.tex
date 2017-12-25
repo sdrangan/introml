@@ -1312,9 +1312,9 @@ Hence, we have the derivatives,
 \]
 Using chain rule,
 \begin{align*}
-    \frac{\partial L}{\partial W^\hid_{jk}} &= \sum_{i=1}^N \frac{\partial L}{\partial z^\hid_{ik}}\frac{\partial z^\hid_{ij}}{\partial W^\hid_{jk}}
-        = \sum_{i=1}^N \frac{\partial L}{\partial z^\hid_{ik}}x_{ik}, \\
-    \frac{\partial L}{\partial b^\hid_{jk}} &= \sum_{i=1}^N \frac{\partial L}{\partial z^\hid_{ik}}\frac{\partial z^\hid_{ij}}{\partial b^\hid_{j}}
+    \frac{\partial L}{\partial W^\hid_{jk}} &= \sum_{i=1}^N \frac{\partial L}{\partial z^\hid_{ij}}\frac{\partial z^\hid_{ij}}{\partial W^\hid_{jk}}
+        = \sum_{i=1}^N \frac{\partial L}{\partial z^\hid_{ij}}x_{ik}, \\
+    \frac{\partial L}{\partial b^\hid_{j}} &= \sum_{i=1}^N \frac{\partial L}{\partial z^\hid_{ik}}\frac{\partial z^\hid_{ij}}{\partial b^\hid_{j}}
         = \sum_{i=1}^N \frac{\partial L}{\partial z^\hid_{ik}}.
 \end{align*}
 
