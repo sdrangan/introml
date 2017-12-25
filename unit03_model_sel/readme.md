@@ -8,8 +8,8 @@ between the predictors and target variable.  But, using more complex models risk
 over-fitting.  We illustrate some simple model order selection techniques
 in two demos.  
 
-* [Demo:  Polynomial order selection with cross-validation](./polyfit.ipynb)
-* [Demo:  LASSO regression for finding predictors of prostate cancer](./prostate.ipynb) 
-* [Lab: Neural decoding motor cortex signals](./lab_neural_partial.ipynb) 
-* Homework [[pdf]](./hw/HW3.pdf) [[Latex]](./hw/HW3.tex)
+* [Demo:  Polynomial order selection with cross-validation](./demo03_1_polyfit.ipynb)
+* [Demo:  LASSO regression for finding predictors of prostate cancer](./demo03_1_prostate.ipynb) 
+* [Lab: Neural decoding motor cortex signals](./lab03_neural_partial.ipynb) 
+* Homework [[pdf]](./hw/hw03_model_sel.pdf) [[Latex]](./hw/hw03_model_sel.tex)
 
