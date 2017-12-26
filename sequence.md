@@ -3,10 +3,10 @@
 # Table of Contents
 
 Most units have four components:
-* **Lecture Notes**:  These are slides given in class.  They include code snippets
-   from the demos.   Note the lecture and unit numbering do not align.
-* **Demo**: The lectures also typically include one or more python
-   demonstrations to illustrate the basic concepts.  Some demos have a
+* **Lecture Notes**:  These are slides accompanying the class lecture.  They include code snippets
+   from the demos.   Note that the lecture and unit numbering do not align.
+* **Demo**: These are python-based [Jupyter notebooks](http://jupyter.org/)
+   for demonstrations given during the lectures.  Some demos have a
    component that is done in class.  The demos do not generally cover
    all topics, since some concepts are left for the students to figure out 
    for themselves in the labs.
