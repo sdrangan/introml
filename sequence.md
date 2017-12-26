@@ -2,7 +2,9 @@
 
 # Table of Contents
 
-Most units have four components:
+The course is taught in a sequence of ten units.  Each unit takes between one
+and two weeks so that the entire class can be fit into a single semester.
+Most units currently have four components:
 * **Lecture Notes**:  These are slides accompanying the class lecture.  They include code snippets
    from the demos.   Note that the lecture and unit numbering do not align.
 * **Demo**: These are python-based [Jupyter notebooks](http://jupyter.org/)
