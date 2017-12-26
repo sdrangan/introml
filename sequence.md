@@ -70,9 +70,10 @@ please contact Sundeep Rangan at <srangan@nyu.edu>.
     (GPU recommended)
     * Homework 8 [[pdf]](./unit08_cnn/hw/hw08_cnn.pdf) [[Latex]](./unit08_cnn/hw/hw08_cnn.tex)
 * [Unit 9:  PCA](./pca/readme.md)
-    * [Demo 9:  PCA eigen-faces](./pca/eigen_face.ipynb)
-    * [Lab 9: Movie recommendations](./pca/lab09_movies_partial.ipynb)    
-* [Unit 10:  Clustering and EM](./cluster/readme.md)
-    * [Demo 10: Document clustering via k-means and latent semantic analysis](./cluster/demo_doc_cluster.ipynb)
+    * [Demo 9:  PCA eigen-faces](./unit09_pca/demo09_eigen_face.ipynb)
+    * [Lab 9: Movie recommendations](./unit09_pca/lab09_movies_partial.ipynb)    
+* [Unit 10:  Clustering and EM](./unit10_cluster/readme.md)
+    * [Demo 10: Document clustering via k-means and latent semantic analysis]
+    (./unit10_cluster/demo10_doc_cluster.ipynb)
     
 
