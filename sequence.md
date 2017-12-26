@@ -73,7 +73,6 @@ please contact Sundeep Rangan at <srangan@nyu.edu>.
     * [Demo 9:  PCA eigen-faces](./unit09_pca/demo09_eigen_face.ipynb)
     * [Lab 9: Movie recommendations](./unit09_pca/lab09_movies_partial.ipynb)    
 * [Unit 10:  Clustering and EM](./unit10_cluster/readme.md)
-    * [Demo 10: Document clustering via k-means and latent semantic analysis]
-    (./unit10_cluster/demo10_doc_cluster.ipynb)
+    * [Demo 10: Document clustering via k-means and latent semantic analysis](./unit10_cluster/demo10_doc_cluster.ipynb)
     
 
