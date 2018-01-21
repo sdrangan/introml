@@ -28,6 +28,7 @@ please contact Sundeep Rangan at <srangan@nyu.edu>.
     * [Set up a virtual machine in Google Cloud Platform](./GCP/getting_started.md)
     * [Set up a virtual machine in Google Cloud Platform with Docker](./GCP/docker.md)
     * [Downloading the course material from github](./Basics/github.md)
+    * [Instruction for Fork the GitRepository and Make your own update and send pull request](https://github.com/ishjain/learnGithub/blob/master/updateMLrepo.md) 
 * Introduction
     * Course Admin [[pdf]](./lectures/CourseAdmin.pdf) [[Powerpoint]](./lectures/CourseAdmin.pptx)
     * Lecture 1:  Introduction to Machine Learning [[pdf]](./lectures/Lect01_IntroML.pdf)
