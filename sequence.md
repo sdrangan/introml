@@ -30,7 +30,7 @@ please contact Sundeep Rangan at <srangan@nyu.edu>.
     * [Downloading the course material from github](./Basics/github.md)
     * [Instruction for Fork the GitRepository and Make your own update and send pull request](https://github.com/ishjain/learnGithub/blob/master/updateMLrepo.md) 
     * [Basics of Python and Its Application for Image Processing through OpenCV](./Basics/PythonTutorial_ACK.pdf)
-      * [Example codes and images used](./Basics/PythonExampleCodes.zip)
+      * [Example codes and images used](./Basics/PythonSampleCodes.zip)
 * Introduction
     * Course Admin [[pdf]](./lectures/CourseAdmin.pdf) [[Powerpoint]](./lectures/CourseAdmin.pptx)
     * Lecture 1:  Introduction to Machine Learning [[pdf]](./lectures/Lect01_IntroML.pdf)
