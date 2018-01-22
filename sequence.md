@@ -28,6 +28,10 @@ please contact Sundeep Rangan at <srangan@nyu.edu>.
     * [Set up a virtual machine in Google Cloud Platform](./GCP/getting_started.md)
     * [Set up a virtual machine in Google Cloud Platform with Docker](./GCP/docker.md)
     * [Downloading the course material from github](./Basics/github.md)
+      * For NYU students taking the course in Spring 2018 from Yao Wang, you should download the course material from this Forked Repo, to make sure that you have the updated material for the course. That is, you should replace "https://github.com/sdrangan/introml" by "https://github.com/yaowangatpoly/introml" in the above guide.
+    * [Instruction for Fork the GitRepository and Make your own update and send pull request](https://github.com/ishjain/learnGithub/blob/master/updateMLrepo.md) 
+    * [Basics of Python and Its Application for Image Processing through OpenCV](./Basics/PythonTutorial_ACK.pdf)
+      * [Example codes and images used](./Basics/PythonSampleCodes.zip)
 * Introduction
     * Course Admin [[pdf]](./lectures/CourseAdmin.pdf) [[Powerpoint]](./lectures/CourseAdmin.pptx)
     * Lecture 1:  Introduction to Machine Learning [[pdf]](./lectures/Lect01_IntroML.pdf)
