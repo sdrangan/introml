@@ -295,9 +295,10 @@ can be approximately
 computed from the so-called auto-correlation functions
 \[
     R_{xy}(\ell) = \frac{1}{T} \sum_{k=0}^{T-1} x_ky_{k+\ell}, \quad
-    R_{yy}(\ell) = \frac{1}{T} \sum_{k=0}^{T-1} y_ky_{k+\ell}.
+    R_{yy}(\ell) = \frac{1}{T} \sum_{k=0}^{T-1} y_ky_{k+\ell}, \quad
+    R_{xx}(\ell) = \frac{1}{T} \sum_{k=0}^{T-1} x_k x_{k+\ell}, \quad
 \]
-In the sum, we take $x_k=0$ or $y_k$ whenever $k < 0$ or $k \geq T$.
+In the sum, we take $x_k=0$ or $y_k=0$ whenever $k < 0$ or $k \geq T$.
 
 \end{enumerate}
 
