@@ -59,7 +59,7 @@ please contact Sundeep Rangan at <srangan@nyu.edu>.
      [[Powerpoint]](./lectures/Lect05_Lasso.pptx)         
     * [Demo 3.1:  Polynomial order selection with cross-validation](./unit03_model_sel/demo03_1_polyfit.ipynb)
     * [Demo 3.2:  LASSO regression for finding predictors of prostate cancer](./unit03_model_sel/demo03_1_prostate.ipynb) 
-    * [Lab 3: Neural decoding motor cortex signals](./unit03_model_sel/lab03_neural_partial.ipynb) 
+    * [Lab 3.1: Neural decoding motor cortex signals (feature selection based on correlation and cross validation](./unit03_model_sel/lab03a_neural_partial.ipynb) 
     * Homework 3 [[pdf]](./unit03_model_sel/hw/hw03_model_sel.pdf) [[Latex]](./unit03_model_sel/hw/hw03_model_sel.tex)
 * [Unit 4:  Logistic regression](./unit04_logistic/readme.md)
     * Lecture 6:  Linear classification and logistic regression
