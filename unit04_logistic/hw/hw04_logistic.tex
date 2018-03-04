@@ -301,18 +301,41 @@ change the values $\hat{y}$ in part (b)?  Would they change the
 likelihoods $P(y_i|\xbf_i)$ in part (c)?  If they do not change, state why.
 If they do change, qualitatively describe the change as a function of $\alpha$.
 
-\item Complete the following python function to generate a vector
-of random labels \pycode{y}, where \pycode{y[i]} uses the data
-record in \pycode{X[i,:]}, weight vector \pycode{w} and bias \pycode{b}.
-\begin{python}
-    import numpy as np
-    def gen_rand(X,w,b):
-       ...
-       return y
-\end{python}
+% \item Complete the following python function to generate a vector
+% of random labels \pycode{y}, where \pycode{y[i]} uses the data
+% record in \pycode{X[i,:]}, weight vector \pycode{w} and bias \pycode{b}.
+% \begin{python}
+%     import numpy as np
+%     def gen_rand(X,w,b):
+%       ...
+%       return y
+% \end{python}
 
 \end{enumerate}
 
+\item Suppose we collect data for a group of students in a machine learning class
+with variables $X_1 =$ hours studied, $X_2 =$ undergrad GPA, and $Y =$
+receive an A. We fit a logistic regression and produce estimated
+coefficient, $\beta_0 = -6, \;\beta_1 = 0.05,\; \beta_2 = 1$.
+
+\begin{enumerate}
+    \item  Estimate the probability that a student who studies for 40 h and
+has an undergrad GPA of 3.5 gets an A in the class.
+
+
+\item  How many hours would the student in part (a) need to study to
+have a 50 \% chance of getting an A in the class?
 \end{enumerate}
+
+\item The loss function for logistic regression is the binary cross entropy defined as $$J(\betabf)=\sum_{i=1}^N\ln(1+e^{z_i})-y_iz_i$$ where $z_i = \beta_0+\beta_1x_{1i}+\beta_2x_{2i}$ for two features $\xbf_1$ and $\xbf_2$.
+\begin{enumerate}
+    \item What are the partial derivatives of $z_i$ with respect to $\beta_0$, $\beta_1$, and $\beta_2$.
+    \item Compute the partial derivatives of $J(\betabf)$ with respect to $\beta_0$, $\beta_1$, and $\beta_2$. You should use the chain rule of differentiation. 
+    \item Can you find the close form expressions for the optimal parameters $\hat{\beta}_0$, $\hat{\beta}_1$, and $\hat{\beta}_2$ by putting the derivatives of $J(\betabf)$ to 0? What methods can be used to optimize the loss function $J(\betabf)$?
+\end{enumerate}
+\end{enumerate}
+
+
+
 \end{document}
 
