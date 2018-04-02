@@ -93,9 +93,9 @@ please contact Sundeep Rangan at <srangan@nyu.edu>.
     * [Demo 7.2: MNIST neural network classification](./unit07_neural/demo07_1_mnist_neural.ipynb)
     * [Lab 7:  Music instrument classification](./unit07_neural/lab07_music_partial.ipynb)
     * [In-class Exercise](./unit07_neural/InclassExercise.ipynb)
-    * Supplementary notes with solved problems [[pdf]](./unit07_neural/hw/hw07_neural.pdf)
+    * Supplementary notes with solved problems [[pdf]](./unit07_neural/hw/hw07_neural.pdf) [[Latex]](./unit07_neural/hw/hw07_neural.tex)
     * Homework 7: To be posted
-      [[Latex]](./unit07_neural/hw/hw07_neural.tex)
+      
 * [Unit 8:  Convolutional and deep networks](./unit08_cnn/readme.md)
     * Lecture 10:  Convolutional and deep networks
     [[pdf]](./lectures/Lect10_ConvNet.pdf)
