@@ -92,6 +92,7 @@ please contact Sundeep Rangan at <srangan@nyu.edu>.
     * [Demo 7.1: First neural network in Keras](./unit07_neural/demo07_1_synthetic.ipynb)
     * [Demo 7.2: MNIST neural network classification](./unit07_neural/demo07_1_mnist_neural.ipynb)
     * [Lab 7:  Music instrument classification](./unit07_neural/lab07_music_partial.ipynb)
+    * [In-class Exercise] (./unit07_neural/InclassExercise.ipynb)
     * Homework 7: Notes with solved problems [[pdf]](./unit07_neural/hw/hw07_neural.pdf)
       [[Latex]](./unit07_neural/hw/hw07_neural.tex)
 * [Unit 8:  Convolutional and deep networks](./unit08_cnn/readme.md)
