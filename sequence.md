@@ -34,6 +34,8 @@ please contact Sundeep Rangan at <srangan@nyu.edu>.
       * [Example codes and images used](./Basics/PythonSampleCodes.zip)
 * Introduction
     * Course Admin [[pdf]](./lectures/CourseAdmin.pdf) [[Powerpoint]](./lectures/CourseAdmin.pptx)
+    * S18 Course syllabus [[pdf]](./lectures/EL9123_IntroML_Syllabus_S18.pdf) [[Powerpoint]](./lectures/EL9123_IntroML_Syllabus_S18.pptx)
+    * S18 Project Guideline [[pdf]](./lectures/ProjGuideline_S18.pdf) [[Powerpoint]](./lectures/ProjGuideline_S18.pptx)
     * Lecture 1:  Introduction to Machine Learning [[pdf]](./lectures/Lect01_IntroML.pdf)
      [[Powerpoint]](./lectures/Lect01_IntroML.pptx)    
 * [Unit 1:  Simple linear regression](./unit01_simp_lin_reg/readme.md)
