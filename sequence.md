@@ -106,6 +106,8 @@ please contact Sundeep Rangan at <srangan@nyu.edu>.
     * [Demo 8.1: 2D convolutions and convolutional layers in keras](./unit08_cnn/demo08_1_convolutions.ipynb)
     * [Demo 8.2: Creating an image set using the Flickr API](./unit08_cnn/demo08_2_flickr_images.ipynb)
     * [Demo 8.3: Exploring the deep VGG16 network](./unit08_cnn/demo08_3_vgg16.ipynb)
+    * [Demo 8.4: Building an image classifier using CIFAR10 dataset](./unit08_cnn/demo08_4_classifier.ipynb)
+    * [Demo 8.5: Building an autoencoder for image denoising using CIFAR10 dataset](./unit08_cnn/demo08_5_autoencoder.ipynb)
     * [Lab 8:  Transfer learning with a pre-trained network](./unit08_cnn/lab08_fine_tune_partial.ipynb)
     (GPU recommended)
     * Homework 8 [[pdf]](./unit08_cnn/hw/hw08_cnn.pdf) [[Latex]](./unit08_cnn/hw/hw08_cnn.tex)
