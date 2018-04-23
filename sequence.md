@@ -115,7 +115,7 @@ please contact Sundeep Rangan at <srangan@nyu.edu>.
     * Lecture 11:  PCA [[pdf]](./lectures/Lect11_PCA.pdf), Modifed Note [[pdf]](./lectures/Lect11_PCA_modified.pdf)
     [[Powerpoint]](./lectures/Lect11_PCA_modified.pptx)         
     * [Demo 9:  PCA eigen-faces-SVM](./unit09_pca/demo09_eigen_face_SVM.ipynb)
-    * [Lab 9a:  PCA with NN vs CNN](./unit09_pca/lab09a_PCA_NN_CNN_partial.ipynb)
+    * [Lab 9a:  PCA with NN vs CNN](./unit09_pca/lab09a_pca_NN_CNN_partial.ipynb)
     * [Lab 9: Movie recommendations](./unit09_pca/lab09_movies_partial.ipynb) (Not required) 
 * [Unit 10:  Clustering and EM](./unit10_cluster/readme.md)
     * Lecture 12:  Clustering and EM [[pdf]](./lectures/Lect12_Clustering.pdf)
