@@ -123,5 +123,5 @@ please contact Sundeep Rangan at <srangan@nyu.edu>.
     [[Powerpoint]](./lectures/Lect12_Clustering.pptx)         
     * [Demo 10: Document clustering via k-means and latent semantic analysis](./unit10_cluster/demo10_doc_cluster.ipynb)
     * [Demo 10b: Color quantization via k-means and EM-GMM](./unit10_cluster/demo10b_kmeans_GMM_color_quantization.ipynb)    
-    * Homework 10 [[pdf]](./unit10_clustering/hw/hw10_clustering.pdf) [[Latex]](./unit10_clustering/hw/hw10_clustering.tex)
+    * Homework 10 [[pdf]](./unit10_cluster/hw/hw10_clustering.pdf) [[Latex]](./unit10_cluster/hw/hw10_clustering.tex)
 
