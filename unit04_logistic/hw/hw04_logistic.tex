@@ -327,7 +327,7 @@ has an undergrad GPA of 3.5 gets an A in the class.
 have a 50 \% chance of getting an A in the class?
 \end{enumerate}
 
-\item The loss function for logistic regression is the binary cross entropy defined as $$J(\betabf)=\sum_{i=1}^N\ln(1+e^{z_i})-y_iz_i$$ where $z_i = \beta_0+\beta_1x_{1i}+\beta_2x_{2i}$ for two features $\xbf_1$ and $\xbf_2$.
+\item The loss function for logistic regression for binary classification is the binary cross entropy defined as $$J(\betabf)=\sum_{i=1}^N\ln(1+e^{z_i})-y_iz_i$$ where $z_i = \beta_0+\beta_1x_{1i}+\beta_2x_{2i}$ for two features $x_{1,i}$ and $x_{2,i}$.
 \begin{enumerate}
     \item What are the partial derivatives of $z_i$ with respect to $\beta_0$, $\beta_1$, and $\beta_2$.
     \item Compute the partial derivatives of $J(\betabf)$ with respect to $\beta_0$, $\beta_1$, and $\beta_2$. You should use the chain rule of differentiation. 
