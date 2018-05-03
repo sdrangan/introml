@@ -87,6 +87,7 @@ please contact Sundeep Rangan at <srangan@nyu.edu>.
     [[Powerpoint]](./lectures/Lect08_SVM.pptx)         
     * [Demo 6:  MNIST digit classification](./unit06_svm/demo06_mnist_svm.ipynb)
     * [Lab 6: Extended MNIST with letters](./unit06_svm/lab06_emnist_partial.ipynb)
+    * [Lab 6b: Extended MNIST digit and letter classification with image processing (optional)](./unit06_svm/lab06_emnist_2017_partial.ipynb)
     * Homework 6 [[pdf]](./unit06_svm/hw/hw06_svm.pdf) [[Latex]](./unit06_svm/hw/hw06_svm.tex) 
 * [Unit 7: Neural networks with Keras and Tensorflow](./unit07_neural/readme.md)
     * Lecture 9:  Neural networks [[pdf]](./lectures/Lect09_NeuralNet.pdf)
