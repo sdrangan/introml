@@ -125,7 +125,7 @@ please contact Sundeep Rangan at <srangan@nyu.edu>.
     * [Demo 10: Document clustering via k-means and latent semantic analysis](./unit10_cluster/demo10_doc_cluster.ipynb)
     * [Demo 10b: Color quantization via k-means and EM-GMM](./unit10_cluster/demo10b_kmeans_GMM_color_quantization.ipynb)    
     * Homework 10 [[pdf]](./unit10_cluster/hw/hw10_clustering.pdf) [[Latex]](./unit10_cluster/hw/hw10_clustering.tex)
-* [Unit 11:  Decision tree and random forest](./unit11_tree/readme.md)
+* [Unit 11:  Decision tree and random forest]
     * Lecture 13:  Decision tree and random foreast [[pdf]](./lectures/Lect13_Trees.pdf)
     [[Powerpoint]](./lectures/Lect13_Trees.pptx)         
     * [Demo 11: Prediction of temperature using decision tree and random forest](./unit11_tree/decision_tree_and_random_forest.ipynb)
