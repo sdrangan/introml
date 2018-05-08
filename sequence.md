@@ -129,7 +129,7 @@ please contact Sundeep Rangan at <srangan@nyu.edu>.
     * Lecture 13:  Decision tree and random foreast [[pdf]](./lectures/Lect13_Trees.pdf)
     [[Powerpoint]](./lectures/Lect13_Trees.pptx)         
     * [Demo 11: Prediction of temperature using decision tree and random forest](./unit11_tree/decision_tree_and_random_forest.ipynb)
-    * Homework 11 [[pdf]](./unit11_tree/hw/hw11_tree.pdf) [[Latex]](./unit11_tree/hw/hw11_tree.tex) (To be added)
+    * Homework 11 [[pdf]](./unit11_tree/hw/hw11_tree.pdf) [[Latex]](./unit11_tree/hw/hw11_tree.tex)
 * Summary and Review 
     * Lecture 13: Review [[pdf]](./lectures/Lect13_Review.pdf)
 [[Powerpoint]](./lectures/Lect12_Clustering.pptx)
