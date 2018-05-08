@@ -87,6 +87,7 @@ please contact Sundeep Rangan at <srangan@nyu.edu>.
     [[Powerpoint]](./lectures/Lect08_SVM.pptx)         
     * [Demo 6:  MNIST digit classification](./unit06_svm/demo06_mnist_svm.ipynb)
     * [Lab 6: Extended MNIST with letters](./unit06_svm/lab06_emnist_partial.ipynb)
+    * [Lab 6b: Extended MNIST digit and letter classification with image processing (optional)](./unit06_svm/lab06_emnist_2017_partial.ipynb)
     * Homework 6 [[pdf]](./unit06_svm/hw/hw06_svm.pdf) [[Latex]](./unit06_svm/hw/hw06_svm.tex) 
 * [Unit 7: Neural networks with Keras and Tensorflow](./unit07_neural/readme.md)
     * Lecture 9:  Neural networks [[pdf]](./lectures/Lect09_NeuralNet.pdf)
@@ -124,4 +125,12 @@ please contact Sundeep Rangan at <srangan@nyu.edu>.
     * [Demo 10: Document clustering via k-means and latent semantic analysis](./unit10_cluster/demo10_doc_cluster.ipynb)
     * [Demo 10b: Color quantization via k-means and EM-GMM](./unit10_cluster/demo10b_kmeans_GMM_color_quantization.ipynb)    
     * Homework 10 [[pdf]](./unit10_cluster/hw/hw10_clustering.pdf) [[Latex]](./unit10_cluster/hw/hw10_clustering.tex)
+* Unit 11:  Decision tree and random forest
+    * Lecture 13:  Decision tree and random foreast [[pdf]](./lectures/Lect13_Trees.pdf)
+    [[Powerpoint]](./lectures/Lect13_Trees.pptx)         
+    * [Demo 11: Prediction of temperature using decision tree and random forest](./unit11_tree/decision_tree_and_random_forest.ipynb)
+    * Homework 11 [[pdf]](./unit11_tree/hw/hw11_tree.pdf) [[Latex]](./unit11_tree/hw/hw11_tree.tex)
+* Summary and Review 
+    * Lecture 13: Review [[pdf]](./lectures/Lect13_Review.pdf)
+[[Powerpoint]](./lectures/Lect12_Clustering.pptx)
 
