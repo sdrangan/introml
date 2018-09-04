@@ -28,8 +28,16 @@ Go to the [units sequence](sequence.md) to being the machine learning course.
 Any feedback is welcome.  If you find errors, have ideas for improvements,
 or want to voice any other thoughts, [create an issue](https://help.github.com/articles/creating-an-issue/)
 and we will try to get to it.
-Even better, make the changes yourself and
+Even better, fork the repository, make the changes yourself and
 [create a pull request](https://help.github.com/articles/about-pull-requests/)
-and we will try to merge it in.
+and we will try to merge it in.  See the [excellent instructions]((https://github.com/ishjain/learnGithub/blob/master/updateMLrepo.md)
+from the former TA Ish Jain.
+
+## Contributors
+
+The course material has been developed by several faculty including:
+* [Sundeep Rangan](http://wireless.engineering.nyu.edu/sundeep-rangan/), ECE, NYU (Main developer)
+* [Yao Wang](http://eeweb.poly.edu/~yao/), ECE, NYU
+* [Alyson K. Fletcher](http://www.stat.ucla.edu/~akfletcher/), Statistics, ECE, UCLA
 
 

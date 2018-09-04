@@ -44,3 +44,9 @@ Github is also a great tool for your own projects, even if you
 are working individually.  Using `github` will allow you to keep track of 
 the files, develop in an organized manner, and release your work to
 a broader audience.
+
+# Other Instructors
+
+Some instructors may use a modified version of this site created by 
+*forking* the site.  In this case, the instructor will give you the URL
+for the forked repo.  Simply use this repo name instead of [https://github.com/sdrangan/introml].
