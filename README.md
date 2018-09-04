@@ -7,7 +7,8 @@ by [Sundeep Rangan](http://wireless.engineering.nyu.edu/sundeep-rangan/):
 * EE-UY / CS-UY 4563: Introduction to Machine Learning (Undergraduate)
 * EL-GY 9123: Introduction to Machine Learning (Graduate)
 
-Anyone is free to use and copy this material (at their own risk!).  
+Anyone is free to use and copy this material (at their own risk!).
+But, please cite the material if you use the material in your own class.
 
 ## Pre-requisites
 
@@ -30,7 +31,7 @@ or want to voice any other thoughts, [create an issue](https://help.github.com/a
 and we will try to get to it.
 Even better, fork the repository, make the changes yourself and
 [create a pull request](https://help.github.com/articles/about-pull-requests/)
-and we will try to merge it in.  See the [excellent instructions]((https://github.com/ishjain/learnGithub/blob/master/updateMLrepo.md)
+and we will try to merge it in.  See the [excellent instructions](https://github.com/ishjain/learnGithub/blob/master/updateMLrepo.md)
 from the former TA Ish Jain.
 
 ## Contributors
