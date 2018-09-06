@@ -6,7 +6,7 @@ The course is taught in a sequence of units.  Each unit takes between one
 and two weeks so that the entire class can be fit into a single semester.
 Most units currently have four components:
 * **Lecture Notes**:  These are slides accompanying the class lecture.  They include code snippets
-   from the demos.   Note that the lecture and unit numbering do not align.
+   from the demos.   
 * **Demo**: These are python-based [Jupyter notebooks](http://jupyter.org/)
    for demonstrations given during the lectures.  Some demos have a
    component that is done in class.  The demos do not generally cover
@@ -22,6 +22,7 @@ The problem and lab solutions are provided to students enrolled in the class.
 If you are an instructor
 and wish copies of the solutions for yourself,
 please contact Sundeep Rangan at <srangan@nyu.edu>.
+
 This site is undergoing re-numbering of units, so many links may connect
 to documents that don't match the number of the unit.  We will fix these soon!
 
@@ -32,37 +33,35 @@ to documents that don't match the number of the unit.  We will fix these soon!
     * [Downloading the course material from github](./Basics/github.md)
 * Introduction
     * Course Admin [[pdf]](./lectures/CourseAdmin.pdf) [[Powerpoint]](./lectures/CourseAdmin.pptx)
-* Unit 1:  What is Machine Learning? 
+* Unit 1:  What is machine learning? 
     * Lecture:  Introduction to Machine Learning [[pdf]](./lectures/Lect01_IntroML.pdf)
      [[Powerpoint]](./lectures/Lect01_IntroML.pptx)    
 * Unit 2:  Simple linear regression
     * Lecture:  Simple linear regression [[pdf]](./lectures/Lect02_SimpRegression.pdf)
      [[Powerpoint]](./lectures/Lect02_SimpRegression.pptx)    
-    * [Introduction to `numpy` vectors](./Basics/intro_vectors.ipynb)
-    * [Demo:  Understanding automobile mpg](./unit02_simp_lin_reg/demo_auto_mpg.ipynb)
+    * [Demo 1:  Introduction to numpy vectors](./unit02_simp_lin_reg/demo1_intro_vectors.ipynb)
+    * [Demo 2:  Understanding automobile mpg](./unit02_simp_lin_reg/demo2_auto_mpg.ipynb)
     * [Lab: Boston housing data](./unit02_simp_lin_reg/lab_housing_partial.ipynb) 
-    * Problems: [[pdf]](./unit02_simp_lin_reg/prob/prob_simp_lin_reg.pdf)
-     [[Latex]](./unit02_simp_lin_reg/prob/prob_simp_lin_reg.tex)
-* [Unit 3:  Multiple linear regression](./unit02_mult_lin_reg/readme.md)
+    * Problems [[pdf]](./unit02_simp_lin_reg/prob/prob_simp_lin_reg.pdf) [[Latex]](./unit02_simp_lin_reg/prob/prob_simp_lin_reg.tex)
+* Unit 3:  Multiple linear regression
     * Lecture:  Multiple linear regression [[pdf]](./lectures/Lect03_MultLinRegression.pdf)
      [[Powerpoint]](./lectures/Lect03_MultLinRegression.pptx)    
-    * [More `numpy`:  Python broadcasting](./Basics/numpy_axes_broadcasting.ipynb)      
-    * [Demo:  Predicting glucose levels](./unit02_mult_lin_reg/demo02_glucose.ipynb)
-    * [Lab: Calibrating robot dynamics](./unit02_mult_lin_reg/lab02_robot_calib_partial.ipynb)
-    * Problems [[pdf]](./unit02_mult_lin_reg/hw/hw02_mult_reg.pdf)
-    [[Latex]](./unit02_mult_lin_reg/hw/hw02_mult_reg.tex)
-* [Unit 4:  Model selection](./unit03_model_sel/readme.md)
+    * [Demo 1:  Predicting glucose levels](./unit03_mult_lin_reg/demo1_glucose.ipynb)
+    * [Demo 2:  Python broadcasting](./unit03_mult_lin_reg/demo2_python_broadcasting.ipynb)
+    * [Lab: Calibrating robot dynamics](./unit03_mult_lin_reg/lab_robot_calib_partial.ipynb)
+    * Problems [[pdf]](./unit03_mult_lin_reg/prob/prob_mult_reg.pdf) [[Latex]](./unit03_mult_lin_reg/prob/prob_mult_reg.tex)
+* Unit 4:  Model selection
     * Lecture:  Model selection [[pdf]](./lectures/Lect04_ModelSelection.pdf)
      [[Powerpoint]](./lectures/Lect04_ModelSelection.pptx)    
-    * [Demo:  Polynomial order selection with cross-validation](./unit03_model_sel/demo03_1_polyfit.ipynb)
-    * [Lab: Neural decoding motor cortex signals](./unit03_model_sel/lab03a_neural_partial.ipynb)          
-    * Problems [[pdf]](./unit03_model_sel/hw/hw03_model_sel.pdf) [[Latex]](./unit03_model_sel/hw/hw03_model_sel.tex)    
-* [Unit 5:  Regularization and LASSO](./unit03_model_sel/readme.md)
+    * [Demo:  Polynomial order selection with cross-validation](./unit04_model_sel/demo03_1_polyfit.ipynb)
+    * [Lab: Neural decoding motor cortex signals](./unit04_model_sel/lab03a_neural_partial.ipynb)          
+    * Problems [[pdf]](./unit04_model_sel/hw/hw03_model_sel.pdf) [[Latex]](./unit03_model_sel/hw/hw03_model_sel.tex)    
+* Unit 5:  Regularization and LASSO
     * Lecture:  LASSO Regularization [[pdf]](./lectures/Lect05_Lasso.pdf)
      [[Powerpoint]](./lectures/Lect05_Lasso.pptx)         
-    * [Demo:  LASSO regression for finding predictors of prostate cancer](./unit03_model_sel/demo03_2_prostate.ipynb) 
-    * [Lab: Student performance prediction](./unit03_model_sel/lab03b_student-performance_LASSO.ipynb) 
-    * Problems [[pdf]](./unit03_model_sel/hw/hw03b_LASSO.pdf) [[Latex]](./unit03_model_sel/hw/hw03b_LASSO.tex)
+    * [Demo:  Finding predictors of prostate cancer](./unit05_lasso/demo_prostate.ipynb) 
+    * [Lab: Student performance prediction](./unit05_lasso/lab_student-performance.ipynb) 
+    * Problems [[pdf]](./unit05_lasso/prob/prob_lasso.pdf) [[Latex]](./unit05_lasso/prob/prob_lasso.tex)
 * [Unit 6:  Logistic regression](./unit04_logistic/readme.md)
     * Lecture:  Linear classification and logistic regression
     [[pdf]](./lectures/Lect06_LogisticReg.pdf)
