@@ -36,11 +36,11 @@ to documents that don't match the number of the unit.  We will fix these soon!
 * Unit 1:  What is machine learning? 
     * Lecture:  Introduction to Machine Learning [[pdf]](./lectures/Lect01_IntroML.pdf)
      [[Powerpoint]](./lectures/Lect01_IntroML.pptx)    
+     * [Demo:  Introduction to numpy vectors](./unit01_intro/demo_intro_vectors.ipynb)
 * Unit 2:  Simple linear regression
     * Lecture:  Simple linear regression [[pdf]](./lectures/Lect02_SimpRegression.pdf)
-     [[Powerpoint]](./lectures/Lect02_SimpRegression.pptx)    
-    * [Demo 1:  Introduction to numpy vectors](./unit02_simp_lin_reg/demo1_intro_vectors.ipynb)
-    * [Demo 2:  Understanding automobile mpg](./unit02_simp_lin_reg/demo2_auto_mpg.ipynb)
+     [[Powerpoint]](./lectures/Lect02_SimpRegression.pptx)        
+    * [Demo:  Understanding automobile mpg](./unit02_simp_lin_reg/demo2_auto_mpg.ipynb)
     * [Lab: Boston housing data](./unit02_simp_lin_reg/lab_housing_partial.ipynb) 
     * Problems [[pdf]](./unit02_simp_lin_reg/prob/prob_simp_lin_reg.pdf) [[Latex]](./unit02_simp_lin_reg/prob/prob_simp_lin_reg.tex)
 * Unit 3:  Multiple linear regression
