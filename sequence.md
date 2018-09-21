@@ -53,9 +53,9 @@ to documents that don't match the number of the unit.  We will fix these soon!
 * Unit 4:  Model selection
     * Lecture:  Model selection [[pdf]](./lectures/Lect04_ModelSelection.pdf)
      [[Powerpoint]](./lectures/Lect04_ModelSelection.pptx)    
-    * [Demo:  Polynomial order selection with cross-validation](./unit04_model_sel/demo03_1_polyfit.ipynb)
-    * [Lab: Neural decoding motor cortex signals](./unit04_model_sel/lab03a_neural_partial.ipynb)          
-    * Problems [[pdf]](./unit04_model_sel/hw/hw03_model_sel.pdf) [[Latex]](./unit03_model_sel/hw/hw03_model_sel.tex)    
+    * [Demo:  Polynomial order selection with cross-validation](./unit04_model_sel/demo_polyfit.ipynb)
+    * [Lab: Neural decoding motor cortex signals](./unit04_model_sel/lab_neural_partial.ipynb)          
+    * Problems [[pdf]](./unit04_model_sel/prob/prob_model_sel.pdf) [[Latex]](./unit03_model_sel/hw/hw03_model_sel.tex)    
 * Unit 5:  Regularization and LASSO
     * Lecture:  LASSO Regularization [[pdf]](./lectures/Lect05_Lasso.pdf)
      [[Powerpoint]](./lectures/Lect05_Lasso.pptx)         
