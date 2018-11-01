@@ -1,10 +1,10 @@
 [Home](../sequence.md) - Numerical optimization
 
-# Unit 5:  Numerical optimization
+# Unit 7:  Numerical optimization
 
-* [Demo 5.1:  Computing gradients](./demo05_1_computing_gradients.ipynb)
-* [Demo 5.2:  Simple gradient descent optimization](./demo05_2_grad_descent.ipynb)    
-* [Lab 5: Audio pitch detection](./lab05_audio_partial.ipynb)
-* Homework 5 [[pdf]](./hw/hw05_optim.pdf) [[Latex]](./hw/hw05_optim.tex)
+* [Demo 1:  Computing gradients](./demo1_computing_gradients.ipynb)
+* [Demo 2:  Simple gradient descent optimization](./demo2_grad_descent.ipynb)    
+* [Lab: Audio pitch detection](./lab_audio_partial.ipynb)
+* Problems [[pdf]](./prob/prob_optim.pdf) [[Latex]](./prob/prob_optim.tex)
 
 
