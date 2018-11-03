@@ -217,7 +217,7 @@ showstringspaces=false            %
 \begin{document}
 
 \title{Introduction to Machine Learning\\
-Homework 5:  Gradient Calculations and Nonlinear Optimization}
+Unit 7 Problems:  Gradient Calculations and Nonlinear Optimization}
 \author{Prof. Sundeep Rangan}
 \date{}
 
@@ -225,9 +225,35 @@ Homework 5:  Gradient Calculations and Nonlinear Optimization}
 
 %Submit answers only to problems 1, 2, 3 and 4(b) and (c).  You do not need to answer  4(a).
 %But, make sure you know how to do all the problems.
-%I looked at the solution, I think the students should be able to do all of them. 
+%I looked at the solution, I think the students should be able to do all of them.
 
 \begin{enumerate}
+
+\item Consider a function,
+\[
+    J = z_1e^{z_1z_2}, \quad z_1 = a_1w_1w_2, \quad z_2 = a_2w_1 + a_3w_2^2,
+\]
+\begin{enumerate}[(a)]
+\item Compute the partial derivatives, $\partial J/\partial w_j$ for $j=1,2$.
+\item Write a python function that, given $\wbf$ and $\abf$ 
+computes $J(\wbf)$ and $\nabla J(\wbf)$.
+\end{enumerate}
+
+\item Consider the function
+\[
+    f(x) = \frac{1}{4}x^2 + 1 - \cos(x).
+\]
+\begin{enumerate}[(a)]
+\item Approximately draw $f(x)$.
+\item Write an equation for the gradient descent update to minimize $f(x)$.
+\item Using the graph in part (a), where is the global minima of $f(x)$?
+\item Using the graph in part (a), find one initial condition where gradient descent
+could end up converging to a local minima that is not the global minima.
+The local minima do not have a closed form expression, but you should be 
+able to use the graph in part (a) to ``eyeball" an initial condition close to 
+a bad local minima.
+\end{enumerate}
+
 
 \item Suppose we want to fit a model,
 \[
@@ -243,17 +269,17 @@ a nonlinear least squares fit could use the loss function,
 \item Find a function $g(\zbf)$ and matrix $\Abf$ such that
 the loss function is given by,
 \[
-    J(\wbf) = g(\zbf), \quad \zbf = \Abf\wbf,
+    J(\wbf) = g(\zbf), \quad \zbf = \Abf\wbf.
 \]
-and $g(\zbf)$ is factorizable, meaning $g(\zbf) = \sum_i g_i(z_i)$ for
-some functions $g_i(z_i)$.
 
-\item What is the gradient $\nabla J(\wbf)$?
+\item Use chain rule to compute the components of the gradient $\partial J/\partial w_j$.
 
-\item What is the gradient descent update for $\wbf$?
+\item Using the previous answer to write $\nabla_w J(\wbf)$ as a matrix vector product.
 
 \item Write a few lines of python code to compute the loss function $J(\wbf)$ and
 $\nabla J(\wbf)$.
+
+\item What is the gradient descent update for $\wbf$?
 \end{enumerate}
 
 \item In this problem, we will see why gradient descent can often exhibit
