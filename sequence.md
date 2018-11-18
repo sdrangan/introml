@@ -79,12 +79,12 @@ to documents that don't match the number of the unit.  We will fix these soon!
     * [Lab: Audio pitch detection](./unit07_optim/lab_audio_partial.ipynb)
     * Problems [[pdf]](./unit07_optim/prob/prob_optim.pdf)
     [[Latex]](./unit07_optim/prob/prob_optim.tex)
-* [Unit 8:  Support vector machines](./unit06_svm/readme.md)
+* [Unit 8:  Support vector machines](./unit08_svm/readme.md)
     * Lecture:  SVM [[pdf]](./lectures/Lect08_SVM.pdf)
     [[Powerpoint]](./lectures/Lect08_SVM.pptx)         
-    * [Demo:  MNIST digit classification](./unit06_svm/demo06_mnist_svm.ipynb)
-    * [Lab: Extended MNIST with letters](./unit06_svm/lab06_emnist_partial.ipynb)    
-    * Problems [[pdf]](./unit06_svm/hw/hw06_svm.pdf) [[Latex]](./unit06_svm/hw/hw06_svm.tex) 
+    * [Demo:  MNIST digit classification](./unit08_svm/demo_mnist_svm.ipynb)
+    * [Lab: Extended MNIST with letters](./unit08_svm/lab_emnist_partial.ipynb)    
+    * Problems [[pdf]](./unit08_svm/prob/prob_svm.pdf) [[Latex]](./unit08_svm/prob/prob_svm.tex) 
 * Unit 9: Statistical Learning Theory
     * To be developed
 * [Unit 10: Neural networks with Keras and Tensorflow](./unit07_neural/readme.md)
