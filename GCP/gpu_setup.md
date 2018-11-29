@@ -22,12 +22,16 @@ To use a GPU on GCP, you will need to first request GPU access.
 1.  Go to the [IAM & admin page](https://console.cloud.google.com/projectselector/iam-admin)
 2.  Select the project you are using or create a new one.
 3.  Select "Quotas" on the left menu.
-4.  Scroll down the list and you will find an entry "Google Compute Engine API"
-    for the zone that is best for you.  You want to select one NVIDIA K80 GPUs.
-5.  After you have selected the item, select "Edit Quotas" at the top of the page.
+4.  There are a large number of quotas that can be edited.  To find
+    the correct quota, select on the top of the page:
+    *   Service:  "Compute Engine API"
+    *   Metric:  "NVIDIA P100 GPUs"
+5.  You will now see a list of metrics, one for each zone. Select the zone that is
+    best for you.  NYU students should select "us-east1".  
+6.  After you have selected the item, select "Edit Quotas" at the top of the page.
     You will be prompted to answer some questions on why you need the GPUs.
     Request at least one more GPU.
-6.  You should hear from them quite fast (sometimes even within the same day!) 
+7.  You should hear from them quite fast (sometimes even within the same day!) 
 
 ## Creating the VM with a GPU
 1.	Open up the google developer console page: [Google API Console](https://console.developers.google.com/)
@@ -39,10 +43,11 @@ To use a GPU on GCP, you will need to first request GPU access.
     *	Machine type:   Select `Customize` so that more options appear.  Then select:
         * Select 2 vCPUs or more
         * Select 12 GB or more
-        * Select 1 or more NVIDIA Tesla K80 GPUs
-    * Look at the price on the right.  It should be around 79 cents per hour.  
+        * Select 1 or more NVIDIA P100 GPUs
+    * Look at the price on the right.  It should be around 1.20 cents per hour.  
       So be very careful with using these machines!
-    *	Boot disk: Ubuntu 16.04 LTS with 30 GB boot disk space
+    *	Boot disk: Ubuntu 16.04 LTS with 30 GB boot disk space.   Do not use later versions of Ubuntu,
+        as the Nvidia drivers are not always available.
     *	Firewall: Allow HTTP/HTTPS traffic checked.
     *   Hit "Create".  The VM will then take a short time to be created and will then appear in the list of VM
         instances.        
@@ -55,27 +60,32 @@ To use a GPU on GCP, you will need to first request GPU access.
 
 ## Install the Nvidia Driver
 
-First, perform steps 1 and 2 of the Nvidia driver installation instructions
-on the 
-[NVIDIA webpage](https://www.nvidia.com/en-us/data-center/gpu-accelerated-applications/tensorflow/).
+Most of the instructions are now available on
+[Tensorflow installation page](https://www.tensorflow.org/install/install_linux).
+This note will cover some of the details they don't say.
 
-* In step 2, when downloading the Nvidia driver,
-  you will need to use the Toolkit 8.0, not 9.0.
+First, we install CUDA Toolkit 9.0 following the instructions on the 
+[NVIDIA webpage](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/).
+
+* In step 2.6, when downloading the Nvidia driver,
+  you will need to use the Toolkit 9.0, not 9.2.
   This is a legacy release, so you will need to go to
   [Nvidia archive page](https://developer.nvidia.com/cuda-toolkit-archive).
-  At the current time, Tensorflow is not compatible with Toolkit 9.0.
-* Select CUDA Toolkit 8.0 - GA2
+  At the current time, Tensorflow is not compatible with versions later that 9.0.
+* Select CUDA Toolkit 9.0
     * Select architecture: x86_64
-    * Ubuntu 16.04, deb (local)
-* The file is large (1.8 GB) and can take a long time to download.  
+    * Ubuntu 16.04
+    * Installer type:  deb (local)
+* The file is large (1.2 GB) and can take a long time to download.  
 
 ## Install cuDNN
-Next follow Steps 3 and 4 of 
-the 
-[NVIDIA installation webpage](https://www.nvidia.com/en-us/data-center/gpu-accelerated-applications/tensorflow/).
 
-* Select cuDNN for CUDA 8.0 v6.0 (There are more recent releases,
-  but I am not sure if they work with Tensorflow)
+Follow the instructions on [NVIDIA cuDNN installation page](https://docs.nvidia.com/deeplearning/sdk/cudnn-install/).
+
+* In Step 2.2, when you download select "cuDNN v7.1.4 for CUDA 9.0",
+    * You will need to get all three files: 
+    "Runtime library", "Developer library" and "Code Samples for Ubuntu16.04 (Deb)".
+
   
 ## Install Tensorflow
 
