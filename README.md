@@ -5,7 +5,7 @@ machine learning in python.  The material is used for two classes taught at NYU 
 by [Sundeep Rangan](http://wireless.engineering.nyu.edu/sundeep-rangan/):
 
 * EE-UY / CS-UY 4563: Introduction to Machine Learning (Undergraduate)
-* EL-GY 9123: Introduction to Machine Learning (Graduate)
+* EL-GY 6123: Introduction to Machine Learning (Graduate)
 
 Anyone is free to use and copy this material (at their own risk!).
 But, please cite the material if you use the material in your own class.

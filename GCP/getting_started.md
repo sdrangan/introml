@@ -47,6 +47,7 @@ In this class, we will use Python 3.  So, make sure you get the correct version.
 ~~~bash
     wget  https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86_64.sh
 ~~~    
+Or whatever is the latest version.
 4. Run the script:  `bash ~/Downloads/Anaconda3-4.4.0-Linux-x86_64.sh`.
 5. Follow instructions [https://www.continuum.io/downloads](https://www.continuum.io/downloads).
 6. Close and re-open SSH
