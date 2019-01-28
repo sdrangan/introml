@@ -158,6 +158,7 @@
 \def\etabf{{\boldsymbol \eta}}
 \def\xibf{{\boldsymbol \xi}}
 \def\taubf{{\boldsymbol \tau}}
+\def\phibf{{\boldsymbol \phi}}
 \def\sigmahat{{\widehat{\sigma}}}
 \def\thetabf{{\bm{\theta}}}
 \def\thetabfhat{{\widehat{\bm{\theta}}}}
@@ -262,6 +263,20 @@ in the model.
 \end{enumerate}
 \end{center}
 
+
+\item Write each of the following models as transformed linear models.
+That is, find a parameter vector $\betabf$ in terms of the given parameters $a_i$
+and a set basis functions of functions $\phibf(\xbf)$ such that $\hat{y}=\betabf\tran\phi(\xbf)$.
+Also, show how to recover the original parameters $a_i$ from the parameters $\beta_j$:
+\begin{enumerate}[(a)]
+\item $\hat{y} = (a_1x_1+a_2x_2)e^{-x_1-x_2}$.
+\item $\hat{y} = \begin{cases}
+    a_1 + a_2x & \mbox{if } x < 1 \\
+    a_3 + a_4x & \mbox{if } x \geq 1
+    \end{cases}$
+\item $\hat{y} = (1+a_1x_1)e^{-x_2+a_2}$.
+\end{enumerate}
+
 \item An automobile engineer wants to model the relation
 between the accelerator control and the velocity of the car.
 The relation may not be simple since there is a lag in depressing
@@ -323,6 +338,40 @@ from this model.
 \item Now suppose the frequencies $\Omega_\ell$ were not known.
 If we had to solve for the parameters $a_\ell$, $b_\ell$ and $\Omega_\ell$,
 would the problem be a linear regression problem?
+\end{enumerate}
+
+\item \emph{Python broadcasting}.  Rewrite the following code without for-loops using
+vectorization and python broadcasting.
+\begin{enumerate}[(a)]
+\item Given a data matrix \pycode{X} and vector \pycode{beta} compute a vector \pycode{yhat}:
+\begin{python}
+    n = X.shape[0]
+    yhat = np.zeros(n)
+    for i in range(n):
+        yhat[i] = beta[0]*X[i,0] + beta[1]*X[i,1] + \beta[2]*X[i,1]*X[i,2]        
+\end{python}
+
+\item Given vectors \pycode{x}, \pycode{alpha}, and \pycode{beta} computes a vector \pycode{yhat}:
+\begin{python}
+    n = len(x)
+    m = len(alpha)
+    yhat = np.zeros(n)
+    for i in range(n):
+        for j in range(m):
+            yhat[i] += alpha[j]*np.exp(-beta[j]*x[i])
+\end{python}
+
+\item Given vectors \pycode{x} and \pycode{y} find the squared distances \pycode{dist}:
+\begin{python}
+    n,d = x.shape
+    m,d = y.shape
+    dist = np.zeros((n,m))    
+    for i in range(n):
+        for j in range(m):
+            for k in range(d):
+                dist[i,j] += (x[i,k]-y[i,k])**2                
+\end{python}
+
 \end{enumerate}
 
 \end{enumerate}
