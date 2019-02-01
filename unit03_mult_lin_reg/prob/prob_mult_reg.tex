@@ -348,7 +348,7 @@ vectorization and python broadcasting.
     n = X.shape[0]
     yhat = np.zeros(n)
     for i in range(n):
-        yhat[i] = beta[0]*X[i,0] + beta[1]*X[i,1] + \beta[2]*X[i,1]*X[i,2]        
+        yhat[i] = beta[0]*X[i,0] + beta[1]*X[i,1] + beta[2]*X[i,1]*X[i,2]
 \end{python}
 
 \item Given vectors \pycode{x}, \pycode{alpha}, and \pycode{beta} computes a vector \pycode{yhat}:
@@ -361,15 +361,15 @@ vectorization and python broadcasting.
             yhat[i] += alpha[j]*np.exp(-beta[j]*x[i])
 \end{python}
 
-\item Given vectors \pycode{x} and \pycode{y} find the squared distances \pycode{dist}:
+\item Given arrays \pycode{x} and \pycode{y}, find the squared distances \pycode{dist}:
 \begin{python}
     n,d = x.shape
     m,d = y.shape
-    dist = np.zeros((n,m))    
+    dist = np.zeros((n,m))
     for i in range(n):
         for j in range(m):
             for k in range(d):
-                dist[i,j] += (x[i,k]-y[i,k])**2                
+                dist[i,j] += (x[i,k]-y[i,k])**2
 \end{python}
 
 \end{enumerate}
