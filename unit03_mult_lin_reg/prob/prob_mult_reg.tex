@@ -369,7 +369,7 @@ vectorization and python broadcasting.
     for i in range(n):
         for j in range(m):
             for k in range(d):
-                dist[i,j] += (x[i,k]-y[i,k])**2
+                dist[i,j] += (x[i,k]-y[j,k])**2
 \end{python}
 
 \end{enumerate}
