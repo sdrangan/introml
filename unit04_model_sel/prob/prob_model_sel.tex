@@ -261,14 +261,14 @@ write python code that, given vectors \pycode{u} and \pycode{y}:
 \]
 We get data $(x_i,y_i)$, $i=1,\ldots,N$ and compute the estimate, 
 \[
-    \widehat{\beta} = \frac{\sum_i y_i}{ \sum_i x^2}.
+    \widehat{\beta} = \frac{\sum_{i=1}^N y_i}{ \sum_{i=1}^N x_i^2}.
 \]
 Note:  This is not optimal least-squares estimator.  But, it is easier to analyze.
 For each case below compute the bias, 
 \[
     \mathrm{Bias}(x) := \Exp(f(x,\widehat{\beta})) -  f(x,\beta_0),
 \]
-as a function of the test point $x$ and true parameter $\beta_0$.
+as a function of the test point $x$, true parameter $\beta_0$ and test data $x_i$.
 \begin{enumerate}[(a)]
 \item The training data has no noise: $y_i = f(x_i,\beta_0)$.
 
