@@ -123,6 +123,7 @@
 \newcommand{\xbfhat}{\widehat{\mathbf{x}}}
 \newcommand{\xbfbar}{\overline{\mathbf{x}}}
 \newcommand{\ybf}{\mathbf{y}}
+\newcommand{\yhat}{\widehat{y}}
 \newcommand{\zbf}{\mathbf{z}}
 \newcommand{\zbfbar}{\overline{\mathbf{z}}}
 \newcommand{\zbfhat}{\widehat{\mathbf{z}}}
@@ -234,6 +235,51 @@ is no under-modeling, what is the true parameter?
     f(\xbf,a,b_1,b_2,c_1,c_2) = a + b_1x_1 + b_2x_2 + c_{1}x_1^2 +  + c_{2}x_2^2.
 \]
 \end{enumerate}
+
+\item You want to fit an exponential model of the form,
+\[ 
+    y \approx \yhat = \sum_{j=0}^d \beta_j e^{-j u/d},
+\]
+where the input $u$ and output $y$ are scalars.  
+You are given python functions:
+\begin{python}    
+    model = LinearRegression()
+    model.fit(X,y)            # Fits a linear model for a data matrix X
+    yhat = model.predict(X)   # Predicts values
+\end{python}
+Using these functions, 
+write python code that, given vectors \pycode{u} and \pycode{y}:
+\begin{itemize}
+\item Splits the data into training and test using half the samples for each.
+\item Fits models of order \pycode{dtest = [1,2,...,10]} on the training data.
+\item Selects the model with the lowest mean squared error. 
+\end{itemize}
+
+\item Suppose we want to fit a model,
+\[
+    y \approx \yhat = f(x,\beta) = \beta x^2.
+\]
+We get data $(x_i,y_i)$, $i=1,\ldots,N$ and compute the estimate, 
+\[
+    \widehat{\beta} = \frac{\sum_i y_i}{ \sum_i x^2}.
+\]
+Note:  This is not optimal least-squares estimator.  But, it is easier to analyze.
+For each case below compute the bias, 
+\[
+    \mathrm{Bias}(x) := \Exp(f(x,\widehat{\beta})) -  f(x,\beta_0),
+\]
+as a function of the test point $x$ and true parameter $\beta_0$.
+\begin{enumerate}[(a)]
+\item The training data has no noise: $y_i = f(x_i,\beta_0)$.
+
+\item The training data is $y_i = f(x_i,\beta_0) + \epsilon_i$ where 
+the noise is i.i.d.\  $\epsilon_i \sim {\mathcal N}(0,\sigma^2)$.
+
+\item The training data is $y_i = f(x_i+\epsilon_i,\beta_0)$ where
+the noise is i.i.d.\ $\epsilon_i \sim {\mathcal N}(0,\sigma^2)$.
+
+\end{enumerate}
+
 
 \item In this problem, we will see how to calculate the bias when
 there is undermodeling.  Suppose that training data $(x_i,y_i)$, $i=1,\ldots,n$
