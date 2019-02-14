@@ -61,7 +61,7 @@ to documents that don't match the number of the unit.  We will fix these soon!
     * Lecture:  LASSO Regularization [[pdf]](./lectures/Lect05_Lasso.pdf)
      [[Powerpoint]](./lectures/Lect05_Lasso.pptx)         
     * [Demo:  Finding predictors of prostate cancer](./unit05_lasso/demo_prostate.ipynb) 
-    * [Lab: Student performance prediction](./unit05_lasso/lab_student-performance.ipynb) 
+    * [Lab: EEG source localization](./unit05_lasso/lab_eeg_partial.ipynb) 
     * Problems [[pdf]](./unit05_lasso/prob/prob_lasso.pdf) [[Latex]](./unit05_lasso/prob/prob_lasso.tex)
 * [Unit 6:  Logistic regression](./unit06_logistic/readme.md)
     * Lecture:  Linear classification and logistic regression
