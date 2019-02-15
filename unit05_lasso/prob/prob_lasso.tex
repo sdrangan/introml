@@ -1,0 +1,382 @@
+\documentclass[11pt]{article}
+
+\usepackage{fullpage}
+\usepackage{amsmath, amssymb, bm, cite, epsfig, psfrag}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{listings}
+\usepackage{cite}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{enumerate}
+\usepackage{listings}
+\usepackage{mathtools}
+\lstloadlanguages{Python}
+\usetikzlibrary{shapes,arrows}
+%\usetikzlibrary{dsp,chains}
+
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{9} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{9}  % for normal
+% Defining colors
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+%\restylefloat{figure}
+%\theoremstyle{plain}      \newtheorem{theorem}{Theorem}
+%\theoremstyle{definition} \newtheorem{definition}{Definition}
+
+\def\del{\partial}
+\def\ds{\displaystyle}
+\def\ts{\textstyle}
+\def\beq{\begin{equation}}
+\def\eeq{\end{equation}}
+\def\beqa{\begin{eqnarray}}
+\def\eeqa{\end{eqnarray}}
+\def\beqan{\begin{eqnarray*}}
+\def\eeqan{\end{eqnarray*}}
+\def\nn{\nonumber}
+\def\binomial{\mathop{\mathrm{binomial}}}
+\def\half{{\ts\frac{1}{2}}}
+\def\Half{{\frac{1}{2}}}
+\def\N{{\mathbb{N}}}
+\def\Z{{\mathbb{Z}}}
+\def\Q{{\mathbb{Q}}}
+\def\R{{\mathbb{R}}}
+\def\C{{\mathbb{C}}}
+\def\argmin{\mathop{\mathrm{arg\,min}}}
+\def\argmax{\mathop{\mathrm{arg\,max}}}
+%\def\span{\mathop{\mathrm{span}}}
+\def\diag{\mathop{\mathrm{diag}}}
+\def\x{\times}
+\def\limn{\lim_{n \rightarrow \infty}}
+\def\liminfn{\liminf_{n \rightarrow \infty}}
+\def\limsupn{\limsup_{n \rightarrow \infty}}
+\def\GV{Guo and Verd{\'u}}
+\def\MID{\,|\,}
+\def\MIDD{\,;\,}
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{assumption}{Assumption}
+\newtheorem{claim}{Claim}
+\def\qed{\mbox{} \hfill $\Box$}
+\setlength{\unitlength}{1mm}
+
+\def\bhat{\widehat{b}}
+\def\ehat{\widehat{e}}
+\def\phat{\widehat{p}}
+\def\qhat{\widehat{q}}
+\def\rhat{\widehat{r}}
+\def\shat{\widehat{s}}
+\def\uhat{\widehat{u}}
+\def\ubar{\overline{u}}
+\def\vhat{\widehat{v}}
+\def\xhat{\widehat{x}}
+\def\xbar{\overline{x}}
+\def\zhat{\widehat{z}}
+\def\zbar{\overline{z}}
+\def\la{\leftarrow}
+\def\ra{\rightarrow}
+\def\MSE{\mbox{\small \sffamily MSE}}
+\def\SNR{\mbox{\small \sffamily SNR}}
+\def\SINR{\mbox{\small \sffamily SINR}}
+\def\arr{\rightarrow}
+\def\Exp{\mathbb{E}}
+\def\var{\mbox{var}}
+\def\Tr{\mbox{Tr}}
+\def\tm1{t\! - \! 1}
+\def\tp1{t\! + \! 1}
+
+\def\Xset{{\cal X}}
+
+\newcommand{\one}{\mathbf{1}}
+\newcommand{\abf}{\mathbf{a}}
+\newcommand{\bbf}{\mathbf{b}}
+\newcommand{\dbf}{\mathbf{d}}
+\newcommand{\ebf}{\mathbf{e}}
+\newcommand{\gbf}{\mathbf{g}}
+\newcommand{\hbf}{\mathbf{h}}
+\newcommand{\pbf}{\mathbf{p}}
+\newcommand{\pbfhat}{\widehat{\mathbf{p}}}
+\newcommand{\qbf}{\mathbf{q}}
+\newcommand{\qbfhat}{\widehat{\mathbf{q}}}
+\newcommand{\rbf}{\mathbf{r}}
+\newcommand{\rbfhat}{\widehat{\mathbf{r}}}
+\newcommand{\sbf}{\mathbf{s}}
+\newcommand{\sbfhat}{\widehat{\mathbf{s}}}
+\newcommand{\ubf}{\mathbf{u}}
+\newcommand{\ubfhat}{\widehat{\mathbf{u}}}
+\newcommand{\utildebf}{\tilde{\mathbf{u}}}
+\newcommand{\vbf}{\mathbf{v}}
+\newcommand{\vbfhat}{\widehat{\mathbf{v}}}
+\newcommand{\wbf}{\mathbf{w}}
+\newcommand{\wbfhat}{\widehat{\mathbf{w}}}
+\newcommand{\xbf}{\mathbf{x}}
+\newcommand{\xbfhat}{\widehat{\mathbf{x}}}
+\newcommand{\xbfbar}{\overline{\mathbf{x}}}
+\newcommand{\ybf}{\mathbf{y}}
+\newcommand{\zbf}{\mathbf{z}}
+\newcommand{\zbfbar}{\overline{\mathbf{z}}}
+\newcommand{\zbfhat}{\widehat{\mathbf{z}}}
+\newcommand{\Ahat}{\widehat{A}}
+\newcommand{\Abf}{\mathbf{A}}
+\newcommand{\Bbf}{\mathbf{B}}
+\newcommand{\Cbf}{\mathbf{C}}
+\newcommand{\Bbfhat}{\widehat{\mathbf{B}}}
+\newcommand{\Dbf}{\mathbf{D}}
+\newcommand{\Gbf}{\mathbf{G}}
+\newcommand{\Hbf}{\mathbf{H}}
+\newcommand{\Ibf}{\mathbf{I}}
+\newcommand{\Kbf}{\mathbf{K}}
+\newcommand{\Pbf}{\mathbf{P}}
+\newcommand{\Phat}{\widehat{P}}
+\newcommand{\Qbf}{\mathbf{Q}}
+\newcommand{\Rbf}{\mathbf{R}}
+\newcommand{\Rhat}{\widehat{R}}
+\newcommand{\Sbf}{\mathbf{S}}
+\newcommand{\Ubf}{\mathbf{U}}
+\newcommand{\Vbf}{\mathbf{V}}
+\newcommand{\Wbf}{\mathbf{W}}
+\newcommand{\Xhat}{\widehat{X}}
+\newcommand{\Xbf}{\mathbf{X}}
+\newcommand{\Ybf}{\mathbf{Y}}
+\newcommand{\Zbf}{\mathbf{Z}}
+\newcommand{\Zhat}{\widehat{Z}}
+\newcommand{\Zbfhat}{\widehat{\mathbf{Z}}}
+\def\alphabf{{\boldsymbol \alpha}}
+\def\betahat{\widehat{\beta}}
+\def\betabf{{\boldsymbol \beta}}
+\def\betabfhat{{\widehat{\bm{\beta}}}}
+\def\epsilonbf{{\boldsymbol \epsilon}}
+\def\mubf{{\boldsymbol \mu}}
+\def\lambdabf{{\boldsymbol \lambda}}
+
+\def\betabf{{\boldsymbol \beta}}
+
+\def\etabf{{\boldsymbol \eta}}
+\def\xibf{{\boldsymbol \xi}}
+\def\taubf{{\boldsymbol \tau}}
+\def\sigmahat{{\widehat{\sigma}}}
+\def\thetabf{{\bm{\theta}}}
+\def\thetabfhat{{\widehat{\bm{\theta}}}}
+\def\thetahat{{\widehat{\theta}}}
+\def\mubar{\overline{\mu}}
+\def\muavg{\mu}
+\def\sigbf{\bm{\sigma}}
+\def\etal{\emph{et al.}}
+\def\Ggothic{\mathfrak{G}}
+\def\Pset{{\mathcal P}}
+\newcommand{\bigCond}[2]{\bigl({#1} \!\bigm\vert\! {#2} \bigr)}
+\newcommand{\BigCond}[2]{\Bigl({#1} \!\Bigm\vert\! {#2} \Bigr)}
+\newcommand{\tran}{^{\text{\sf T}}}
+\newcommand{\herm}{^{\text{\sf H}}}
+\newcommand{\bkt}[1]{{\langle #1 \rangle}}
+\def\Norm{{\mathcal N}}
+\newcommand{\vmult}{.}
+\newcommand{\vdiv}{./}
+
+
+% Python style for highlighting
+\newcommand\pythonstyle{\lstset{
+language=Python,
+backgroundcolor=\color{backcolour},
+commentstyle=\color{deepgreen},
+basicstyle=\ttm,
+otherkeywords={self},             % Add keywords here
+keywordstyle=\ttb\color{deepblue},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\ttb\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepgreen},
+%frame=tb,                         % Any extra options here
+showstringspaces=false            %
+}}
+
+% Python environment
+\lstnewenvironment{python}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
+
+% Python for external files
+\newcommand\pythonexternal[2][]{{
+\pythonstyle
+\lstinputlisting[#1]{#2}}}
+
+% Python for inline
+\newcommand\pycode[1]{{\pythonstyle\lstinline!#1!}}
+
+\begin{document}
+
+\title{Introduction to Machine Learning\\
+Problems:  LASSO and Model Selection}
+\author{Prof. Sundeep Rangan}
+\date{}
+
+\maketitle
+
+\begin{enumerate}
+
+\item \emph{Exhaustive search.}  In this problem, we will look at how to exhaustively search
+over all possible subsets of features.  You are given three python functions:
+\begin{python}
+    model = LinearRegression()  # Create a linear regression model object
+    model.fit(X,y)              # Fits the model
+    yhat = model.predict(X)     # Predicts targets given features
+\end{python}
+Given training data \pycode{Xtr,ytr} and test data \pycode{Xts,yts},
+write a few lines of python code to:
+\begin{enumerate}[(a)]
+\item Find the best model using only one feature of the data (i.e.\ one column of
+\pycode{Xtr} and \pycode{Xts}).
+
+\item Find the best model using only two features of the data (i.e.\ two columns of
+\pycode{Xtr} and \pycode{Xts}).
+
+\item Suppose we wish to find the best $k$ of $p$ features via exhaustive searching over all
+possible subsets of features.  How many times would you need to call the \pycode{fit} function?
+What if $k=10$ and $p=1000$?
+
+\end{enumerate}
+
+
+\item \emph{Selecting a regularizer.}  Suppose we fit a regularized least squares objective,
+\[
+    J(\wbf) = \sum_{i=1}^N (y_i - \hat{y}_i)^2 + \lambda\phi(\wbf),
+\]
+where $\hat{y}_i$ is some prediction of $y_i$ given the model parameters $\wbf$.
+For each case below, suggest a possible regularization function $\phi(\wbf)$.  
+There is no single correct answer.
+\begin{enumerate}[(a)]
+\item All parameters vectors $\wbf$ should be considered.  
+\item Negative values of $w_j$ are unlikely (but still possible).
+\item For each $j$, $w_j$ should not change that significantly from $w_{j-1}$.
+\item For most $j$, $w_j=w_{j-1}$.  However, it can happen that $w_j$ can be different from $w_{j-1}$
+for a few indices $j$.
+\end{enumerate}
+
+\begin{table}
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+Variable & Units & Mean  & Std dev  \\ \hline
+Median income, $x_1$ & \$ & 50000 & 15000 \\ \hline
+Median age, $x_2$ & years & 45 & 10 \\ \hline
+House sale price, $y$ & \$1000 & 300 & 100 \\ \hline
+\end{tabular}
+\caption{Features for Problem~\ref{prob:house_price}} \label{tbl:house_features}
+\end{table}
+
+\item \label{prob:house_price}
+\emph{Normalization.}  A data analyst for a real estate firm wants to predict house prices based on
+two features in each zip code.  The features are shown in Table~\ref{tbl:house_features}.
+The agent decides to use a linear model,
+\beq \label{eq:yunnorm}
+    \hat{y} = \beta_0 + \beta_1 x_1 + \beta_2 x_2, \quad z_i = \frac{x_i - \bar{x}_i}{\sigma_j}.
+\eeq
+
+\begin{enumerate}[(a)]
+\item What is the problem in using a LASSO regularizer of the form,
+\[
+    \phi(\betabf) = \sum_{j=1}^2 |\beta_j|.
+\]
+
+\item To uniformly regularize the features, she fits a model on the normalized features,
+\[
+    \hat{u} = \alpha_1 z_1 + \alpha_2 z_2, \quad z_i = \frac{z_j - \bar{z}_j}{\sigma_j}, 
+    \quad u = \frac{\hat{y}-\bar{y}}{\sigma_y}
+\]
+She obtains parameters $\alphabf = [0.6,-0.3]$?  What are the parameters $\beta$ in the original model
+\eqref{eq:yunnorm}.
+\end{enumerate}
+
+
+\item \emph{Normalization in python.}  You are given python functions,
+\begin{python}
+    model = SomeModel()         # Creates a model
+    model.fit(Z,u)              # Fits the model, expecting normalized features
+    yhat = model.predict(Z)     # Predicts targets given features
+\end{python}
+Given training data \pycode{Xtr,ytr} and test data \pycode{Xts,yts},
+write python code to:
+\begin{itemize}
+\item Normalize the training data to remove the mean and standard deviation from both
+\pycode{Xtr} and \pycode{ytr}.
+\item Fit the model on the normalized data.
+\item Predict the values \pycode{yhat} on the test data.
+\item Measure the RSS on the test data.
+\end{itemize}
+
+
+\item \emph{Discretization.}  Suppose we wish to fit a model,
+\beq \label{eq:ynl}
+    y \approx \hat{y} = \sum_{j=1}^K \beta_j e^{-\alpha_j x},
+\eeq
+for parameters $\alpha_j$ and $\beta_j$.  Since the parameters $\alpha_j$ are not known,
+this model is nonlinear and cannot be fit with least squares.
+A common approach in such circumstances is to use an alternate linear model,
+\beq \label{eq:ydis}
+    y \approx \hat{y} = \sum_{j=1}^p \tilde{\beta}_j e^{-\tilde{\alpha}_j x},
+\eeq
+where the values $\tilde{\alpha}_j$ are a fixed, large number $p$ of possible values for $\alpha_j$
+and $\tilde{\beta}_j$ are the coefficients in the model.  The values $\tilde{\alpha}_j$ 
+are \emph{fixed}, so only the parameters $\tilde{\beta}_j$ need to be learned.
+Hence, the model \eqref{eq:ydis} is linear.  The model \eqref{eq:ydis}
+is equivalent to \eqref{eq:ynl} if only a small number $K$ of the coefficients $\tilde{\beta}_j$ are
+non-zero.  
+You are given three python functions:
+\begin{python}
+    model = Lasso(lam=lam)           # Creates a linear LASSO model 
+                                     # with a regularization lamb
+    beta = model.fit(Z,y)            # Finds the model parameters using the 
+                                     # LASSO objective
+                                     #  ||y-Z*beta||^2 + lamb*||beta||_1
+    yhat = model.predict(Z)          # Predicts targets given features Z:
+                                     #   yhat = Z*beta
+\end{python}
+Note this syntax is slightly different from the \pycode{sklearn} syntax.
+You are also given training data \pycode{xtr,ytr} and test data \pycode{xts,yts}.
+Write python code to:
+\begin{itemize}
+\item Create $p=100$ values of $\tilde{\alpha}_j$ uniformly in some interval $\tilde{\alpha}_j \in [a,b]$
+where $a$ and $b$ are given.
+\item Fit the linear model \eqref{eq:ydis} on the training data for some given \pycode{lam}.
+\item Measure the test error.
+\item Find coefficients $\alpha_j$ and $\beta_j$ corresponding to the largest $k=3$ values
+in $\tilde{\beta}_j$.  You can use the function \pycode{np.argsort}.
+\end{itemize}
+
+
+\item \emph{Minimizing an $\ell_1$ objective.} 
+In this problem, we will show how to minimize a simple scalar function with
+an $\ell_1$-term.  Given $y$ and $\lambda > 0$, suppose we wish to find the minimum,
+\[
+    \widehat{w} = \argmin_w J(w) = \frac{1}{2}(y-w)^2 + \lambda|w|.
+\]
+Write $\widehat{w}$ in terms of $y$ and $\lambda$.  Since $|w|$ is not
+differentiable everywhere, you cannot simple set $J'(w)=0$ and solve for $w$.
+Instead, you have to look at three cases:
+\begin{enumerate}[(i)]
+  \item First, suppose there is a minima at $w > 0$.  In this region, $|w| = w$.
+  Since the set $w > 0$ is open, at any minima $J'(w)=0$. Solve for $w$ and
+  test if the solution indeed satisfies $w > 0$.
+  \item Similarly, suppose $w < 0$. Solve for $J'(w) = 0$ and test if the solution
+  satisfies the assumption that $w < 0$.
+  \item If neither of the above cases have a minima, then the minima must be at
+  $w=0$.
+\end{enumerate}
+
+
+\end{enumerate}
+\end{document}
+
+
