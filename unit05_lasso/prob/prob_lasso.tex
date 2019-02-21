@@ -254,10 +254,10 @@ What if $k=10$ and $p=1000$?
     J(\wbf) = \sum_{i=1}^N (y_i - \hat{y}_i)^2 + \lambda\phi(\wbf),
 \]
 where $\hat{y}_i$ is some prediction of $y_i$ given the model parameters $\wbf$.
-For each case below, suggest a possible regularization function $\phi(\wbf)$.  
+For each case below, suggest a possible regularization function $\phi(\wbf)$.
 There is no single correct answer.
 \begin{enumerate}[(a)]
-\item All parameters vectors $\wbf$ should be considered.  
+\item All parameters vectors $\wbf$ should be considered.
 \item Negative values of $w_j$ are unlikely (but still possible).
 \item For each $j$, $w_j$ should not change that significantly from $w_{j-1}$.
 \item For most $j$, $w_j=w_{j-1}$.  However, it can happen that $w_j$ can be different from $w_{j-1}$
@@ -281,7 +281,7 @@ House sale price, $y$ & \$1000 & 300 & 100 \\ \hline
 two features in each zip code.  The features are shown in Table~\ref{tbl:house_features}.
 The agent decides to use a linear model,
 \beq \label{eq:yunnorm}
-    \hat{y} = \beta_0 + \beta_1 x_1 + \beta_2 x_2, \quad z_i = \frac{x_i - \bar{x}_i}{\sigma_j}.
+    \hat{y} = \beta_0 + \beta_1 x_1 + \beta_2 x_2, 
 \eeq
 
 \begin{enumerate}[(a)]
@@ -292,11 +292,12 @@ The agent decides to use a linear model,
 
 \item To uniformly regularize the features, she fits a model on the normalized features,
 \[
-    \hat{u} = \alpha_1 z_1 + \alpha_2 z_2, \quad z_i = \frac{z_j - \bar{z}_j}{\sigma_j}, 
-    \quad u = \frac{\hat{y}-\bar{y}}{\sigma_y}
+    \hat{u} = \alpha_1 z_1 + \alpha_2 z_2, \quad z_j = \frac{x_j - \bar{x}_j}{s_j},
+    \quad u = \frac{\hat{y}-\bar{y}}{s_y},
 \]
+where $s_j$ and $s_y$ are the standard deviations of the  $x_{j}$ and $y$.
 She obtains parameters $\alphabf = [0.6,-0.3]$?  What are the parameters $\beta$ in the original model
-\eqref{eq:yunnorm}.
+\eqref{eq:yunnorm}?
 \end{enumerate}
 
 
@@ -327,19 +328,20 @@ A common approach in such circumstances is to use an alternate linear model,
 \beq \label{eq:ydis}
     y \approx \hat{y} = \sum_{j=1}^p \tilde{\beta}_j e^{-\tilde{\alpha}_j x},
 \eeq
-where the values $\tilde{\alpha}_j$ are a fixed, large number $p$ of possible values for $\alpha_j$
-and $\tilde{\beta}_j$ are the coefficients in the model.  The values $\tilde{\alpha}_j$ 
-are \emph{fixed}, so only the parameters $\tilde{\beta}_j$ need to be learned.
+where the values $\tilde{\alpha}_1,\ldots,\tilde{\alpha}_p$ are a \emph{fixed}, 
+large set of possible values for $\alpha_j$,
+and $\tilde{\beta}_j$ are the coefficients in the model.  Since the values $\tilde{\alpha}_j$
+are fixed, only the parameters $\tilde{\beta}_j$ need to be learned.
 Hence, the model \eqref{eq:ydis} is linear.  The model \eqref{eq:ydis}
 is equivalent to \eqref{eq:ynl} if only a small number $K$ of the coefficients $\tilde{\beta}_j$ are
-non-zero.  
+non-zero.
 You are given three python functions:
 \begin{python}
-    model = Lasso(lam=lam)           # Creates a linear LASSO model 
-                                     # with a regularization lamb
-    beta = model.fit(Z,y)            # Finds the model parameters using the 
+    model = Lasso(lam=lam)           # Creates a linear LASSO model
+                                     # with a regularization lam
+    beta = model.fit(Z,y)            # Finds the model parameters using the
                                      # LASSO objective
-                                     #  ||y-Z*beta||^2 + lamb*||beta||_1
+                                     #  ||y-Z*beta||^2 + lam*||beta||_1
     yhat = model.predict(Z)          # Predicts targets given features Z:
                                      #   yhat = Z*beta
 \end{python}
@@ -356,7 +358,7 @@ in $\tilde{\beta}_j$.  You can use the function \pycode{np.argsort}.
 \end{itemize}
 
 
-\item \emph{Minimizing an $\ell_1$ objective.} 
+\item \emph{Minimizing an $\ell_1$ objective.}
 In this problem, we will show how to minimize a simple scalar function with
 an $\ell_1$-term.  Given $y$ and $\lambda > 0$, suppose we wish to find the minimum,
 \[
