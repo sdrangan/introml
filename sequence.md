@@ -77,7 +77,7 @@ to documents that don't match the number of the unit.  We will fix these soon!
     [[Powerpoint]](./lectures/Lect07_Optim.pptx)         
     * [Demo 1:  Computing gradients](./unit07_optim/demo1_computing_gradients.ipynb)
     * [Demo 2:  Simple gradient descent optimization](./unit07_optim/demo2_grad_descent.ipynb)    
-    * [Lab: Audio pitch detection](./unit07_optim/lab_audio_partial.ipynb)
+    * [Lab: Nonlinear least squares material modeling](./unit07_optim/lab_nlls_partial.ipynb)
     * Problems [[pdf]](./unit07_optim/prob/prob_optim.pdf)
     [[Latex]](./unit07_optim/prob/prob_optim.tex)
 * [Unit 8:  Support vector machines](./unit08_svm/readme.md)
