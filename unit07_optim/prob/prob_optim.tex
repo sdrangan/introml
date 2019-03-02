@@ -229,19 +229,86 @@ Unit 7 Problems:  Gradient Calculations and Nonlinear Optimization}
 
 \begin{enumerate}
 
-\item Consider a function,
+\item \emph{Simple gradient calculation.}  Consider a function,
 \[
     J = z_1e^{z_1z_2}, \quad z_1 = a_1w_1w_2, \quad z_2 = a_2w_1 + a_3w_2^2,
 \]
 \begin{enumerate}[(a)]
 \item Compute the partial derivatives, $\partial J/\partial w_j$ for $j=1,2$.
-\item Write a python function that, given $\wbf$ and $\abf$ 
+\item Write a python function that, given $\wbf$ and $\abf$
 computes $J(\wbf)$ and $\nabla J(\wbf)$.
 \end{enumerate}
 
-\item Consider the function
+\item \emph{Gradient with a logarithmic loss.}  Consider the loss function,
 \[
-    f(x) = \frac{1}{4}x^2 + 1 - \cos(x).
+    J(\wbf,b) := \sum_{i=1}^N (\log(y_i)-\log(\hat{y}_i))^2,
+    \quad \hat{y}_i = \sum_{j=1}^p x_{ij}w_j + b,
+\]
+This is an MSE loss function, but in log domain.
+\begin{enumerate}[(a)]
+\item Find the gradient components, $\partial J/\partial w_j$ and $\partial J/\partial b$.
+\item Complete the following python function
+\begin{python}
+    def Jeval(w,b,...):
+        ...
+        return J, Jgradw, Jgradb
+\end{python}
+that computes $J$ and $\nabla_w J$ and $\nabla_b J$.
+You need to complete the arguments of the function.
+To receive full credit, avoid using for loops.
+\end{enumerate}
+
+\item \emph{Gradient with an inverse function.}
+Consider the nonlinear least squares fit loss funciton
+\[
+    J(\wbf) = \sum_{i=1}^n \left[y_i -
+        \frac{1}{w_0 + \sum_{j=1}^d w_jx_{ij}}\right]^2.
+\]
+\begin{enumerate}[(a)]
+\item Compute the gradient components, $\partial J/\partial w_j$.
+You may want to define the intermediate variable,
+\[
+    z_i = w_0 + \sum_{j=1}^d w_jx_{ij}.
+\]
+Also, you can write separate answers for $\partial J/\partial w_0$ and $\partial J/w_j$
+for $j = 1,\ldots,d$.
+
+\item Complete the following function to compute the loss and gradient,
+\begin{python}
+    def Jeval(w,...):
+        ...
+        return J, Jgrad
+\end{python}
+For the gradient, you may wish to use the function,
+\begin{python}
+    Jgrad = np.hstack((Jgrad0, Jgrad1))
+\end{python}
+to stack two vectors.
+\end{enumerate}
+
+\item \emph{Gradient with nonlinear parametrization.}  Given data $(x_i,y_i)$ with
+binary class labels $y_i \in \{0,1\}$, consider the
+binary cross-entropy loss function,
+\[
+    J(\abf,\bbf) := \sum_{i=1}^N \log(1+e^{z_i}) - y_iz_i,
+    \quad
+    z_i = \sum_{j=1}^d a_j e^{-(x_i-b_j)^2/2}.
+\]
+\begin{enumerate}[(a)]
+\item Compute the gradient components, $\partial J/\partial a_j$ and $\partial J/\partial b_j$.
+
+\item Complete the following function to compute the loss and gradient,
+\begin{python}
+    def Jeval(a,b,...):
+        ...
+        return J, Jgrada, Jgradb
+\end{python}
+Avoid for loops to receive full credit.
+\end{enumerate}
+
+\item \emph{Finding local and global minima}.  Consider the function
+\[
+    f(x) = \frac{1}{4}x^2 + 1 - \cos(2\pi x).
 \]
 \begin{enumerate}[(a)]
 \item Approximately draw $f(x)$.
@@ -249,38 +316,11 @@ computes $J(\wbf)$ and $\nabla J(\wbf)$.
 \item Using the graph in part (a), where is the global minima of $f(x)$?
 \item Using the graph in part (a), find one initial condition where gradient descent
 could end up converging to a local minima that is not the global minima.
-The local minima do not have a closed form expression, but you should be 
-able to use the graph in part (a) to ``eyeball" an initial condition close to 
+The local minima do not have a closed form expression, but you should be
+able to use the graph in part (a) to ``eyeball" an initial condition close to
 a bad local minima.
 \end{enumerate}
 
-
-\item Suppose we want to fit a model,
-\[
-    \hat{y} = \frac{1}{w_0 + \sum_{j=1}^d w_jx_j},
-\]
-for parameters $\wbf$. Given training data $(\xbf_i,y_i)$, $i=1,\ldots,n$,
-a nonlinear least squares fit could use the loss function,
-\[
-    J(\wbf) = \sum_{i=1}^n \left[y_i -
-        \frac{1}{w_0 + \sum_{j=1}^d w_jx_{ij}}\right]^2
-\]
-\begin{enumerate}[(a)]
-\item Find a function $g(\zbf)$ and matrix $\Abf$ such that
-the loss function is given by,
-\[
-    J(\wbf) = g(\zbf), \quad \zbf = \Abf\wbf.
-\]
-
-\item Use chain rule to compute the components of the gradient $\partial J/\partial w_j$.
-
-\item Using the previous answer to write $\nabla_w J(\wbf)$ as a matrix vector product.
-
-\item Write a few lines of python code to compute the loss function $J(\wbf)$ and
-$\nabla J(\wbf)$.
-
-\item What is the gradient descent update for $\wbf$?
-\end{enumerate}
 
 \item In this problem, we will see why gradient descent can often exhibit
 very slow convergence, even on apparently simple functions.
