@@ -28,10 +28,8 @@ to documents that don't match the number of the unit.  We will fix these soon!
 
 * [Setting up python, jupyter and github](./Basics/setup.md)
     * [Set up a local machine](./Basics/setup.md)
-    * [Set up a virtual machine in Google Cloud Platform](./GCP/getting_started.md)
-    * [Set up a virtual machine in Google Cloud Platform with Docker](./GCP/docker.md)
+    * [Set up a CPU or GPU virtual machine in Google Cloud Platform](./GCP/getting_started.md)    
     * [Downloading the course material from github](./Basics/github.md)
-    * [Set up a GPU machine](./GCP/gpu_setup.md)  (Needed for Unit 10)
 * Introduction
     * Course Admin [[pdf]](./lectures/CourseAdmin.pdf) [[Powerpoint]](./lectures/CourseAdmin.pptx)
 * Unit 1:  What is machine learning? 
