@@ -13,6 +13,8 @@
 \usepackage{enumerate}
 \usepackage{listings}
 \usepackage{mathtools}
+\usepackage{mdframed}
+
 \lstloadlanguages{Python}
 \usetikzlibrary{shapes,arrows}
 %\usetikzlibrary{dsp,chains}
@@ -56,7 +58,6 @@
 \def\limn{\lim_{n \rightarrow \infty}}
 \def\liminfn{\liminf_{n \rightarrow \infty}}
 \def\limsupn{\limsup_{n \rightarrow \infty}}
-\def\GV{Guo and Verd{\'u}}
 \def\MID{\,|\,}
 \def\MIDD{\,;\,}
 
@@ -214,20 +215,35 @@ showstringspaces=false            %
 % Python for inline
 \newcommand\pycode[1]{{\pythonstyle\lstinline!#1!}}
 
+% Solution environment
+\definecolor{lightgray}{gray}{0.95}
+\newmdenv[linecolor=white,backgroundcolor=lightgray,frametitle=Solution:]{solution}
+
 \begin{document}
 
 \title{Introduction to Machine Learning\\
-Homework 8:  Convolutional Neural Networks}
+Problems:  Convolutional Neural Networks}
 \author{Prof. Sundeep Rangan}
 \date{}
 
 \maketitle
 
-Submit answers to only problems 1--3.  But, make sure you know how to do all problems.
-
 \begin{enumerate}
 
-\item Let $X$ and $W$ be arrays,
+\item \emph{Tensors.}  For each of the following datasets, describe how you
+would represent them as tensors.  Specifically, give the shape of the tensors.
+\begin{enumerate}[(a)]
+\item A batch of 100 color images, each image is 256 $\times$ 256.
+
+\item A batch of 40 EEG recordings.  Each EEG records has 80 channels of output
+at a sample rate of 240 Hz for 10 seconds.
+
+\item A batch of 32 videos.  Each video has a frame rate of 30 frames per second
+and is 10 seconds long.  The video is color with a resolution of 512 $\times$ 512.
+\end{enumerate}
+
+
+\item \emph{2D convolutions.}  Let $X$ and $W$ be arrays,
 \[
     X = \left[ \begin{array}{ccccc}
         0 & 0 & 0 & 0 & 0 \\
@@ -256,7 +272,9 @@ where the summation in \eqref{eq:Zconv} does not exceed the boundaries of $W$ or
 \item Find one pixel location where $Z[i,j]=0$.
 \end{enumerate}
 
-\item Suppose that a convolutional layer of a neural network has an input tensor $X[i,j,k]$ and computes
+
+\item \emph{Complexity and number of parameters.}
+Suppose that a convolutional layer of a neural network has an input tensor $X[i,j,k]$ and computes
 an output via a convolution and ReLU activation,
 \begin{align*}
     Z[i,j,m] &= \sum_{k_1} \sum_{k_2} \sum_n W[k_1,k_2,n,m]X[i+k_1,j+k_2,n] + b[m], \\
@@ -271,29 +289,57 @@ Assume the convolution is computed on the \emph{valid} pixels.
 \item If $W$ and $b$ are to be learned, what are the total number of trainable parameters in the layer?
 \end{enumerate}
 
-\item Suppose that a convolutional layer in some neural network
+
+\item \emph{Back-propagation.}
+Suppose that a convolutional layer in some neural network
 is described as a linear convolution followed by a sigmoid activation,
 \begin{align*}
-    Z[i,j,m] &= \sum_{k_1} \sum_{k_2} \sum_n W[k_1,k_2,n,m]X[i+k_1,j+k_2,n] + b[m], \\
-    U[i,j,m] &= 1/(1+\exp(-Z[i,j,m])).
+    Z[i,j_1,j_2,m] &= \sum_{k_1} \sum_{k_2} \sum_n W[k_1,k_2,n,m]X[i,j_1+k_1,j_2+k_2,n] + b[m], \\
+    U[i,j_1,j_2,m] &= 1/(1+\exp(-Z[i,j_1,j_2,m])).
 \end{align*}
-where $X[i,j,n]$ is the input of the layer and $U[i,j,m]$ is the output.
+where $X[i,j_1,j_2,n]$ is the input of the layer and $U[i,j_1,j_2,m]$ is the output.
 Suppose that during back-propagation, we have computed the gradient $\partial J/\partial U$ for some loss function $J$.
-That is, we have computed  the components $\partial J/\partial U[i,j,m]$.  Show how to compute the following:
+That is, we have computed  the components $\partial J/\partial U[i,j_1,j_2,m]$.
+Show how to compute the following:
 \begin{enumerate}[(a)]
-\item The gradient components $\partial J/\partial Z[i,j,m]$.
+\item The gradient components $\partial J/\partial Z[i,j_1,j_2,m]$.
 \item The gradient components $\partial J/\partial W[k_1,k_2,n,m]$.
-\item The gradient components $\partial J/\partial X[i,j,n]$.
+\item The gradient components $\partial J/\partial X[i,j_1,j_2,n]$.
 \end{enumerate}
 
-\item 
-In the previous problem, we considered a single sample.
-Suppose there were a mini-batch of samples.
+\item \emph{Sub-sampling and pooling}.
+In CNNs, convolution operations are often followed
+by a data reduction step, typically either via \emph{sub-sampling} or \emph{max pooling}.
+The methods can be described as follows:
+Let $x[j]$, $j=0,1,\ldots,N-1$ be a 1D input (say in one channel in one sample).
+The outputs $y[k]$ for sub-sampling and max-pooling are given by:
+\begin{itemize}
+\item \emph{Sub-sampling} with \emph{stride} $s$ selects every $s$-th sample:
+\[
+    y[k] = x[sk], \quad k=0,1,\ldots, \left\lfloor \frac{N-1}{s} \right\rfloor.
+\]
+\item \emph{Max pooling} with \emph{pool size} $p$ and \emph{stride} $s$ computes,
+\[
+    y[k] = \max_{j=0,1,\ldots,p-1} x[sk+j], \quad  k=0,1,\ldots, \left\lfloor \frac{N-1}{s} \right\rfloor.
+\]
+\end{itemize}
 \begin{enumerate}[(a)]
-\item How would you represent $Z$ and $U$ for the mini-batch case?
-\item Re-write the equations for $Z$ and $U$.  
-\item Re-compute the gradients.
+\item Let $\xbf$ be the vector,
+\[
+    \xbf = [1,2,3,2,0,10,1,0].
+\]
+Find the output $\ybf$ when sub-sampling with stride $s=2$.
+
+\item For the same vector $\xbf$ as in part (a), find the output of max pooling with
+stride $s=2$ and pool size $p=2$.
+
+\item Let $X[i,j,n]$ be a tensor of shape $(B,N,C)$ where $B$ is the batch size,
+$N$ is the number of samples per channel and $C$ is the number of channels.
+Write equations for sampling and max pooling of $X$ if the operations are to be
+performed on each channel and sample.  What are the output shapes?
+
 \end{enumerate}
+
 \end{enumerate}
 
 \end{document}
