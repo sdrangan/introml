@@ -6,7 +6,7 @@ virtual machine (VM) instance with most of the
 tools necessary for this class.  GCP has made the process considerably
 easier by using pre-built images with all the necessary software installed.
 
-The note will cover creating both CPU and GPU isntances.\
+The note will cover creating both CPU and GPU isntances.
 Although most labs in this class can be performed
 with a CPU instance, a GPU instance is highly recommended for the deep learning lab.
 You may also wish to consider using GPUs for your project, particularly if you
@@ -14,7 +14,7 @@ are training a deep network with a large number of parameters.
 Using these instances
 can dramatically speed up training of deep networks
 and are essential for large-scale
-problems.  
+problems.
 Note that the per hour costs of GPU instances are much more expensive than
 regular CPU instancess, so you want to make sure you turn off the instances
 you are not using.  
@@ -55,6 +55,19 @@ the software installed.  The steps are as follows:
 3.  Look at the price on the right.  It should be around 1.29 cents per hour
     in the us-east1-b zone for GPU instances.  So be very careful with using these machines!*	
 4.  Select "Deploy".      The VM will now take several minutes to deploy.
+5.  Now go to the [instance listing page](https://console.cloud.google.com/compute/instances).
+    You should see your instance and should be running.  You can connect to it via SSH
+    VM by clicking the "SSH". 
+
+## Configuring the VM
+We next need to reconfigure the VM.
+1.  If the instance is running, stop the VM by selecting the VM on the
+    [instance listing page](https://console.cloud.google.com/compute/instances)
+    and then hit "Stop".
+2.  Click the name of the VM on the instance listing page.  You will be taken to a "VM 
+    instance details" page.  Select "Edit".
+3.  Select "Allow HTTP traffic" and "Allow HTTPS traffic".
+4.  Select "allow full access to all Cloud APIs"
 5.  Optionally, reserve a Static IP Address
     *	Navigate to the [Google Cloud Networking page](https://console.cloud.google.com/networking/addresses/list)
     *   Change the IP type of your VM instance to static.
@@ -100,7 +113,6 @@ Uncomment and modify existing lines, or add these new ones:
     * `c.NotebookApp.port = 8888 # or some other custom port`
     * `c.NotebookApp.password = u'sha1:sdasd...' # sha1 hash generated from previous step`
     * `c.NotebookApp.open_browser = False`
-    
 5. Start the jupyter notebook server as a background process:
 ```bash
     jupyter notebook &
