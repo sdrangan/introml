@@ -1,4 +1,4 @@
-# Setting up a CPU and GPU Instances on GCP
+# Setting up CPU and GPU Instances on GCP
 
 This note provides a step by step guide on setting up a 
 [Google Cloud Platform (GCP)](https://cloud.google.com) 

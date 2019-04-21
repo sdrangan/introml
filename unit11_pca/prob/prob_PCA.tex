@@ -56,7 +56,6 @@
 \def\limn{\lim_{n \rightarrow \infty}}
 \def\liminfn{\liminf_{n \rightarrow \infty}}
 \def\limsupn{\limsup_{n \rightarrow \infty}}
-\def\GV{Guo and Verd{\'u}}
 \def\MID{\,|\,}
 \def\MIDD{\,;\,}
 
@@ -217,8 +216,8 @@ showstringspaces=false            %
 \begin{document}
 
 \title{Introduction to Machine Learning\\
-Homework 9: Principle Component Analysis and Feature Dimension Reduction}
-\author{Prof. Yao Wang}
+Problems: Principal Component Analysis}
+\author{Profs. Sundeep Rangan and Yao Wang}
 \date{}
 
 \maketitle
@@ -234,29 +233,81 @@ Homework 9: Principle Component Analysis and Feature Dimension Reduction}
         0 & 2 &5 \\
           \end{array} \right] \quad
  \]
+ For the problems below, you may do the calculations in python.  Describe the commands
+ you used.
  \begin{enumerate}
  \item Find the sample mean.
- \item Find the sample covariance matrix $Q$. 
- \item Find the eigenvalues and eigenvectors. You can use the numpy.linalg.eig to compute eigenvalues and eigenvectors from $Q$.
+ \item Find the sample covariance matrix $Q$.
+ \item Find the eigenvalues and eigenvectors. You can use the 
+ \pycode{numpy.linalg.eig} to compute eigenvalues and eigenvectors from $Q$.
  \item Find the PCA coefficients corresponding to samples in $X$.
  \item Reconstruct the original samples from the PCA coefficients.
  \item Approximate the samples using principle components corresponding to the two largest eigenvalues.
  \item Verify the sum of reconstruction error squares = sum of squares of skipped PCA coefficients.
- 
- You could do the above calculation using a simple python code.
  \end{enumerate}
  
- \item
-Show that PCA serves the purpose of decorrelating the elements in the original samples. That is, the covariance matrix of the coefficient data is diagonal, and that the variance of the coefficients are equal to the eigenvalues.
+ 
+ \item \emph{PC bases.}  Suppose that the mean and first two PCs in a basis
+ are,
+\[
+    \mubf = [1,0,2], \quad \vbf_1 = \frac{1}{\sqrt{2}}[1,1,0], \quad
+    \vbf_2 = \frac{1}{\sqrt{2}}[1,-1,0], 
+\]
+\begin{enumerate}[(a)]
+  \item What are the two PC coefficients of the vector $\xbf=[2,3,4]$?
+  \item What is $\xbfhat$, the approximation of $\xbf$ using two PCs?
+  \item What is the approximation error $\|\xbf-\xbfhat\|^2$?
+\end{enumerate}
 
-\item
-For machine learning, we often transform original sample features using PCA. Is it beneficial if you keep all the coefficients? What is the benefit if you keep a subset of coefficients? What coefficients should you keep?
+\item \emph{Fitting data with PCs}.  You are given python functions
+for PCA transform and a binary classifier:
+\begin{python}
+    mu, V = PCA(X)  # Finds the mean and PCs for a data matrix X
+    
+    clf = Classifier()
+    clf.fit(Z,y)    # Fits a binary classifier from features Z and labels y
+    yhat = clf.predict(Z)  # Predicts labels from Z
+\end{python}
+Given a data matrix \pycode{X} with binary labels \pycode{y},
+you wish to build a classifier that uses a PCA transform followed by
+the \pycode{Classifier}.  Write python code that uses model validation
+to select the optimal number of PCA components to use.  You may assume:
+\begin{itemize}
+\item You use simple cross validation with one training and test split.
+Not You do not need to do $K$-fold validation.
+\item You should use roughly 25\% of the samples for test.  Data shuffling
+before splitting is not needed.
+\end{itemize}
 
+\item \emph{PC with images}.  A dataset has 1000 images of size 28 $\times$ 28,
+represented as python array \pycode{X} with shape \pycode{(1000,28,28)}.
+You are given the following python functions:
+\begin{python}
+    Y = reshape(X, shape)         # Reshapes X to a shape 
+    pca = PCA(n_components = nc)  # Creates a PCA object
+    pca.fit(Y)   # Finds the mean and PCs from training data Y
+    Z = pca.transform(Y)   # Find coefficients in the PC basis 
+    Yhat = pca.inverse_transform(Z)  # Invert the PC transform
+\end{python}
+Write a few lines of python code to (i) fit a PC model from the first 500 images
+with 5 components; 
+and (ii) create an array of approximations of the remaining 500 images.
+ 
+\item \emph{PCs using SVDs.}  You are given a python function:
+\begin{python}
+    U,s, Vtr = svd(Z, full_matrices = False)
+\end{python}
+which computes an ``economy" SVD.  Given a data matrix \pycode{X},
+write python code that:
+\begin{enumerate}[(i)]
+\item Finds the PCs and mean of the data.
+\item Finds the minimum number of PCs in order that the proportion of variance is
+at least 90\%.
+\item Create an approximation \pycode{Xhat} of \pycode{X} using the number of
+PCs in part (ii).
+\end{enumerate}
+\end{enumerate}
+ 
 
-\item
-What is the problem of using the PCA coefficients directly as the transformed features for machine learning?
-How should you fix that?
-
- \end{enumerate}
  \end{document}
 
