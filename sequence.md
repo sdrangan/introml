@@ -109,7 +109,7 @@ to documents that don't match the number of the unit.  We will fix these soon!
 * [Unit 11:  PCA](./pca/readme.md)
     * Lecture:  PCA [[pdf]](./lectures/Lect11_PCA.pdf), Modifed Note [[pdf]](./lectures/Lect11_PCA_modified.pdf)
     [[Powerpoint]](./lectures/Lect11_PCA_modified.pptx)         
-    * [Demo:  PCA eigen-faces-SVM](./unit11_pca/demo1_eigen_face_SVM.ipynb)
+    * [Demo:  PCA eigen-faces-SVM](./unit11_pca/demo1_eigen_face.ipynb)
     * [Lab 1:  PCA with NN vs CNN](./unit11_pca/lab_pca_nn_cnn_partial.ipynb)
     * [Lab 2: Movie recommendations](./unit11_pca/lab_movies_partial.ipynb) (Not required) 
     * Problems [[pdf]](./unit11_pca/prob/prob_PCA.pdf) [[Latex]](./unit11_pca/prob/prob_PCA.tex)
