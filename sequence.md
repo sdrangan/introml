@@ -39,7 +39,7 @@ to documents that don't match the number of the unit.  We will fix these soon!
 * Unit 2:  Simple linear regression
     * Lecture:  Simple linear regression [[pdf]](./lectures/Lect02_SimpRegression.pdf)
      [[Powerpoint]](./lectures/Lect02_SimpRegression.pptx)        
-    * [Demo:  Understanding automobile mpg](./unit02_simp_lin_reg/demo2_auto_mpg.ipynb)
+    * [Demo:  Understanding automobile mpg](./unit02_simp_lin_reg/demo_auto_mpg.ipynb)
     * [Lab: Boston housing data](./unit02_simp_lin_reg/lab_housing_partial.ipynb) 
     * Problems [[pdf]](./unit02_simp_lin_reg/prob/prob_simp_lin_reg.pdf) [[Latex]](./unit02_simp_lin_reg/prob/prob_simp_lin_reg.tex)
 * Unit 3:  Multiple linear regression
@@ -109,7 +109,8 @@ to documents that don't match the number of the unit.  We will fix these soon!
 * [Unit 11:  PCA](./pca/readme.md)
     * Lecture:  PCA [[pdf]](./lectures/Lect11_PCA.pdf), Modifed Note [[pdf]](./lectures/Lect11_PCA_modified.pdf)
     [[Powerpoint]](./lectures/Lect11_PCA_modified.pptx)         
-    * [Demo:  PCA eigen-faces-SVM](./unit11_pca/demo1_eigen_face.ipynb)
+    * [Demo 1:  PCA eigen-faces-SVM](./unit11_pca/demo1_eigen_face.ipynb)
+    * [Demo 2:  Low-rank matrix completion via embedding layers](./unit11_pca/demo2_low_rank.ipynb)
     * [Lab:  PCA with hyper-parameter optimization](./unit11_pca/lab_wine_partial.ipynb)
     * Problems [[pdf]](./unit11_pca/prob/prob_PCA.pdf) [[Latex]](./unit11_pca/prob/prob_PCA.tex)
 * [Unit 12:  Clustering and EM](./unit12_cluster/readme.md)
