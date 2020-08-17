@@ -47,6 +47,7 @@ to documents that don't match the number of the unit.  We will fix these soon!
      [[Powerpoint]](./lectures/Lect03_MultLinRegression.pptx)    
     * [Demo 1:  Predicting glucose levels](./unit03_mult_lin_reg/demo1_glucose.ipynb)
     * [Demo 2:  Python broadcasting](./unit03_mult_lin_reg/demo2_python_broadcasting.ipynb)
+    * [In-class Exercise](./unit03_mult_lin_reg/linreg_inclass.ipynb)
     * [Lab: Calibrating robot dynamics](./unit03_mult_lin_reg/lab_robot_calib_partial.ipynb)
     * Problems [[pdf]](./unit03_mult_lin_reg/prob/prob_mult_reg.pdf) [[Latex]](./unit03_mult_lin_reg/prob/prob_mult_reg.tex)
 * Unit 4:  Model selection
