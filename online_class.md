@@ -16,25 +16,11 @@ I am hoping to add more as the class progresses.
 
 
 * Course Admin: 
-    *  Material to be added
 * Unit 1:  What is Machine Learning? 
-    *  Material to be added
 * Unit 2:  Simple Linear Regression
-    * This unit is skipped for graduate students
-* Unit 3:  Multiple Linear Regression
-    * Learning Objectives and Pre-requisites [[Video]](https://www.dropbox.com/s/136rt9l45irdjdp/Intro.mp4?dl=0)
-    * Motivating Example:  Tracking Blood Glucose Levels [[Video]](https://www.dropbox.com/s/xls1tj5jbmjo2re/Example.mp4)
-    * Exercise 1:  [[Question]](./unit03_mult_lin_reg/online/Ex1_Example.pdf)  [[Soln]](./unit03_mult_lin_reg/online/Ex1_Example_Soln.pdf)  
-    * Multiple Linear Regression Models [[Video]](https://www.dropbox.com/s/kn9hxf3k70hceiz/Model.mp4)
-    * Exercise 2:  [[Question]](./unit03_mult_lin_reg/online/Ex2_Model.pdf)  [[Soln]](./unit03_mult_lin_reg/online/Ex2_Model.pdf)  
-    * Least Squares Solutions 
-    * Exercise 3:  
-    * Computing Solutions in Python
-    * Exercise 4:  
-    * Extensions
-    * Exercise 5: [[Question]](./unit03_mult_lin_reg/linreg_inclass.ipynb).  Solution in class
+    * This material will be skipped for the graduate students
+* Unit 3:  [Multiple Linear Regression](./unit03_mult_lin_reg/online/readme.md)
 
-    
     
     
 
