@@ -4,22 +4,35 @@
 
 Due to Covid-19, the Fall 2020 ML class is being taught online.  To facilitate
 online teaching, I have begun to create videos for the lectures.
-The videos mostly follow the powerpoint slides, although sometimes the powerpoint
-slides have more material.  Each lecture is broken down into a few sections.
-Watch the video in each section and then try to do the exercise for that section
-before continuing.  The exercise is typically very simple.  The solutions 
-for most of the exercises are included here, but in some cases, I have left
-out the solutions since they will be covered in the discussion section.
 
-Right now, I only have a small fraction of the videos for the class, but
-I am hoping to add more as the class progresses.  
+## How to Use the Online Material
 
+The material in each unit below mostly follows the Powerpoint slides in the
+[lectures](./lectures), although sometimes the slides have a few more details.
+To follow the online material:
+* Select the unit you want to watch from the list below.
+* The presentations in each unit are then divided into section.  In each section,
+you will find a video, typically 10 to 20 minutes long.  Watch the video.
+* After most sections, there is usually a short exercise.  Generally,
+this is a very simple exercise just to emphasize some basic point in the section.
+Try to do this exercise.
+* For most of the exercises, you will the solution that you can look at to 
+compare your answer against.  For others, the solution will be posted in
+the class website.  You do not need to submit answers to any of the questions.
+But, try to complete the exercise before moving to the next video.
+* When you have completed all the sections, there is generally an end-of-unit 
+in-class exercise.
+* After completing the end of unit in-class exercise, you will be ready to solve
+the problems and lab for the unit given in the [class syllabus](./sequence.md).
 
-* Course Admin: 
+## Material Contents
+
+Right now, we have only completed one unit, but more will be added.
+
 * Unit 1:  What is Machine Learning? 
 * Unit 2:  Simple Linear Regression
     * This material will be skipped for the graduate students
-* Unit 3:  [Multiple Linear Regression](./unit03_mult_lin_reg/online/readme.md)
+* [Unit 3:  Multiple Linear Regression](./unit03_mult_lin_reg/online/readme.md)
 
     
     
