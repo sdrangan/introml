@@ -29,7 +29,7 @@ the problems and lab for the unit given in the [class syllabus](./sequence.md).
 
 Right now, we have only completed one unit, but more will be added.
 
-* Unit 1:  What is Machine Learning? 
+* [Unit 1:  What is Machine Learning?](./unit01_intro/online/readme.md)
 * Unit 2:  Simple Linear Regression
     * This material will be skipped for the graduate students
 * [Unit 3:  Multiple Linear Regression](./unit03_mult_lin_reg/online/readme.md)
