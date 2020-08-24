@@ -4,7 +4,7 @@
 
 I will re-record some of these videos shortly to improve the audio quality.
 
-* Learning Objectives and Pre-requisites [[Video]](https://www.dropbox.com/s/136rt9l45irdjdp/Intro.mp4?dl=0) (2 minutes)
+* Learning Objectives and Pre-requisites [[Video]](https://www.dropbox.com/s/bimvowegp595pr6/Intro.mp4) (2 minutes)
 * Motivating Example:  Tracking Blood Glucose Levels [[Video]](https://www.dropbox.com/s/ey1ins077lzeywy/Example.mp4) (10 minutes)
     * Exercise 1:  [[Question]](./Ex1_Example.pdf)  [[Soln]](./Ex1_Example_Soln.pdf)  
 * Multiple Linear Regression Models: [[Video]](https://www.dropbox.com/s/kn9hxf3k70hceiz/Model.mp4) (9 minutes)
