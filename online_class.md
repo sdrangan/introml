@@ -11,12 +11,12 @@ The material in each unit below mostly follows the Powerpoint slides in the
 [lectures](./lectures), although sometimes the slides have a few more details.
 To follow the online material:
 * Select the unit you want to watch from the list below.
-* The presentations in each unit are then divided into section.  In each section,
+* The presentations in each unit are then divided into sections.  In each section,
 you will find a video, typically 10 to 20 minutes long.  Watch the video.
-* After most sections, there is usually a short exercise.  Generally,
+* After most sections, there is a short exercise.  Generally,
 this is a very simple exercise just to emphasize some basic point in the section.
 Try to do this exercise.
-* For most of the exercises, you will the solution that you can look at to 
+* For most of the exercises, you will a solution that you can look at to 
 compare your answer against.  For others, the solution will be posted in
 the class website.  You do not need to submit answers to any of the questions.
 But, try to complete the exercise before moving to the next video.
@@ -27,7 +27,7 @@ the problems and lab for the unit given in the [class syllabus](./sequence.md).
 
 ## Material Contents
 
-Right now, we have only completed one unit, but more will be added.
+Right now, we have only completed two units, but more will be added.
 
 * [Unit 1:  What is Machine Learning?](./unit01_intro/online/readme.md)
 * Unit 2:  Simple Linear Regression
