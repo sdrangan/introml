@@ -2,8 +2,6 @@
 
 # Unit 3.  Multiple Linear Regression Online Material
 
-I will re-record some of these videos shortly to improve the audio quality.
-
 Slides:  [[pdf]](./lectures/Lect03_MultLinRegression.pdf)  [[Powerpoint]](./lectures/Lect03_MultLinRegression.pptx) 
 
 * Learning Objectives and Pre-requisites [[Video]](https://www.dropbox.com/s/bimvowegp595pr6/Intro.mp4) (2 minutes)

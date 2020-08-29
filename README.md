@@ -5,7 +5,7 @@ machine learning in python.  The material is used for two classes taught at NYU 
 by [Sundeep Rangan](http://wireless.engineering.nyu.edu/sundeep-rangan/):
 
 * EE-UY / CS-UY 4563: Introduction to Machine Learning (Undergraduate)
-* EL-GY 6123: Introduction to Machine Learning (Graduate)
+* EL-GY 6143: Introduction to Machine Learning (Graduate)
 
 Anyone is free to use and copy this material (at their own risk!).
 But, please cite the material if you use the material in your own class.
@@ -15,14 +15,24 @@ But, please cite the material if you use the material in your own class.
 * All the software can be run on any laptop (Windows, MAC or UNIX).
 [Instructions](./GCP/getting_started.md)
 are also provided to run the code in Google Cloud Platform on a virtual machine (VM).
-* Both classes assume no python or ML experience.  However, experience
+* If you want to avoid setting up software on your local machine,
+most of the demos can also be directly run in the cloud on the excellent 
+[Google Colaboratory](https://colab.research.google.com) cloud service.
+* Both the undergrad and graduate classes assume no python or ML experience.  However, experience
 with some programming language (preferably object-oriented) is required.
 * To follow all the mathematical details and to complete the homework exercises,
 the class assumes undergraduate probability, linear algebra and multi-variable calculus.
 
 ## Start the course
 
-Go to the [units sequence](sequence.md) to being the machine learning course.
+Go to the [units sequence](sequence.md) for all the material for the
+machine learning course divided into units.  Each unit includes
+slides, python demos, problems and labs.
+
+## Online material including videos
+
+We have also begun recording [videos](online_class.md) for a fully online version
+of the class.
 
 ## Feedback
 
