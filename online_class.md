@@ -33,6 +33,7 @@ Right now, we have only completed two units, but more will be added.
 * Unit 2:  Simple Linear Regression
     * This material will be skipped for the graduate students
 * [Unit 3:  Multiple Linear Regression](./unit03_mult_lin_reg/online/readme.md)
+* [Unit 4:  Model Order Selection](./unit04_model_sel/online/readme.md)
 
     
     
