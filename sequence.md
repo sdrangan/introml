@@ -4,9 +4,11 @@
 
 The course is taught in a sequence of units.  Each unit takes between one
 and two weeks so that the entire class can be fit into a single semester.
-Most units currently have four components:
+Most units currently have four or five components:
 * **Lecture Notes**:  These are slides accompanying the class lecture.  They include code snippets
    from the demos.   
+* **Lecture Videos**:  These are videos of the lectures.  Right now, the videos
+   for only a few units have been recorded, but I am hoping to add more.
 * **Demo**: These are python-based [Jupyter notebooks](http://jupyter.org/)
    for demonstrations given during the lectures.  Some demos have a
    component that is done in class.  The demos do not generally cover
@@ -35,6 +37,7 @@ to documents that don't match the number of the unit.  We will fix these soon!
 * Unit 1:  What is machine learning? 
     * Lecture:  Introduction to Machine Learning [[pdf]](./lectures/Lect01_IntroML.pdf)
      [[Powerpoint]](./lectures/Lect01_IntroML.pptx)    
+     * [Lecture videos](./unit01_intro/online/readme.md)
      * [Demo:  Introduction to numpy vectors](./unit01_intro/demo_intro_vectors.ipynb)
 * Unit 2:  Simple linear regression
     * Lecture:  Simple linear regression [[pdf]](./lectures/Lect02_SimpRegression.pdf)
@@ -45,6 +48,7 @@ to documents that don't match the number of the unit.  We will fix these soon!
 * Unit 3:  Multiple linear regression
     * Lecture:  Multiple linear regression [[pdf]](./lectures/Lect03_MultLinRegression.pdf)
      [[Powerpoint]](./lectures/Lect03_MultLinRegression.pptx)    
+    * [Lecture videos](./unit03_mult_lin_reg/online/readme.md)
     * [Demo 1:  Predicting glucose levels](./unit03_mult_lin_reg/demo1_glucose.ipynb)
     * [Demo 2:  Python broadcasting](./unit03_mult_lin_reg/demo2_python_broadcasting.ipynb)
     * [In-class Exercise](./unit03_mult_lin_reg/linreg_inclass.ipynb)
@@ -53,6 +57,7 @@ to documents that don't match the number of the unit.  We will fix these soon!
 * Unit 4:  Model selection
     * Lecture:  Model selection [[pdf]](./lectures/Lect04_ModelSelection.pdf)
      [[Powerpoint]](./lectures/Lect04_ModelSelection.pptx)    
+    * [Lecture videos](./unit04_model_sel/online/readme.md)     
     * [Demo:  Polynomial order selection with cross-validation](./unit04_model_sel/demo_polyfit.ipynb)
     * [Lab: Neural decoding motor cortex signals](./unit04_model_sel/lab_neural_partial.ipynb)          
     * Problems [[pdf]](./unit04_model_sel/prob/prob_model_sel.pdf) [[Latex]](./unit03_model_sel/hw/hw03_model_sel.tex)    
