@@ -2,7 +2,7 @@
 
 # Unit 3.  Multiple Linear Regression Online Material
 
-Slides:  [[pdf]](./lectures/Lect03_MultLinRegression.pdf)  [[Powerpoint]](./lectures/Lect03_MultLinRegression.pptx) 
+Slides:  [[pdf]](../../lectures/Lect03_MultLinRegression.pdf)  [[Powerpoint]](../../lectures/Lect03_MultLinRegression.pptx) 
 
 * Learning Objectives and Pre-requisites  [[YouTube]](https://youtu.be/pEYxSSlioPg) [[Dropbox Video]](https://www.dropbox.com/s/bimvowegp595pr6/Intro.mp4) (2 minutes)
 * Motivating Example:  Tracking Blood Glucose Levels [[YouTube]](https://youtu.be/gfga94I8dRY) [[Video]](https://www.dropbox.com/s/ey1ins077lzeywy/Example.mp4) (12 minutes)

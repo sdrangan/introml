@@ -2,7 +2,7 @@
 
 # Unit 1.  Introduction
 
-Slides:  [[pdf]](./lectures/Lect01_IntroML.pdf) [[Powerpoint]](./lectures/Lect01_IntroML.pptx) 
+Slides:  [[pdf]](../../lectures/Lect01_IntroML.pdf) [[Powerpoint]](../../lectures/Lect01_IntroML.pptx) 
 
 * What is Machine Learning?  [[YouTube]](https://youtu.be/WaVsEXB-SsI) [[Dropbox Video]](https://www.dropbox.com/s/ztq9s67d7kmdl0q/WhatIsML.mp4) (11 minutes)
     * Exercise 1:  [[Question]](./Ex1_MLDefn.pdf)  [[Soln]](./Ex1_MLDefn_Soln.pdf)  
