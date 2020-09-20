@@ -72,7 +72,8 @@ to documents that don't match the number of the unit.  We will fix these soon!
 * [Unit 6:  Logistic regression](./unit06_logistic/readme.md)
     * Lecture:  Linear classification and logistic regression
     [[pdf]](./lectures/Lect06_LogisticReg.pdf)
-    [[Powerpoint]](./lectures/Lect06_LogisticReg.pptx)         
+    [[Powerpoint]](./lectures/Lect06_LogisticReg.pptx) 
+    * [Lecture videos](./unit06_logistic/online/readme.md)            
     * [Demo:  Breast cancer diagnosis via logistic regression](./unit06_logistic/demo_breast_cancer.ipynb)
     * [Lab: Genetic analysis of Down's syndrome in mice](./unit06_logistic/lab_gene_partial.ipynb)
     * Problems [[pdf]](./unit06_logistic/prob/prob_logistic.pdf)
