@@ -37,6 +37,8 @@ Right now, we have only completed a few units, but more will be added.
     * This material will be skipped for the graduate students
 * [Unit 3:  Multiple Linear Regression](./unit03_mult_lin_reg/online/readme.md)
 * [Unit 4:  Model Order Selection](./unit04_model_sel/online/readme.md)
+* [Unit 4:  LASSO Regularization](./unit05_lasso/online/readme.md)
+* [Unit 4:  Logistic Regression](./unit06_logistic/online/readme.md)
 
     
     
