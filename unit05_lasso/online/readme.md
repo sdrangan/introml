@@ -11,3 +11,4 @@ Slides:  [[pdf]](../../lectures/Lect05_Lasso.pdf)  [[Powerpoint]](../../lectures
 * Predicting House Prices with LASSO: [[YouTube]](https://youtu.be/EYyryUv3WvM) [[DB Video]](https://www.dropbox.com/s/zrpzhxsan8tvrle/PythonDemo.mp4) (18 minutes)
 * End of unit in-class exercise:  [[Notebook]](../lasso_in_class.ipynb).  Solutions will be uploaded to class website.
 
+https://youtu.be/GoelkqRVHdE
