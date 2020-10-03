@@ -30,7 +30,7 @@ YouTube video.  You can also like the video and subscribe to the channel.
 
 ## Material Contents
 
-Right now, we have only completed a few units, but more will be added.
+Right now, we have only completed the first half of the class, but more will be added.
 
 * [Unit 1:  What is Machine Learning?](./unit01_intro/online/readme.md)
 * Unit 2:  Simple Linear Regression
@@ -39,6 +39,7 @@ Right now, we have only completed a few units, but more will be added.
 * [Unit 4:  Model Order Selection](./unit04_model_sel/online/readme.md)
 * [Unit 5:  LASSO Regularization](./unit05_lasso/online/readme.md)
 * [Unit 6:  Logistic Regression](./unit06_logistic/online/readme.md)
+* [Unit 7:  Non-linear Optimization](./unit07_optim/online/readme.md)
 
     
     
