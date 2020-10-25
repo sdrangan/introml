@@ -10,5 +10,6 @@ Slides:  [[pdf]](../../lectures/Lect08_SVM.pdf)  [[Powerpoint]](../../lectures/L
     * Exercise 1 in [in-class exercises](https://github.com/sdrangan/introml/blob/master/unit08_svm/svm_inclass.ipynb)
 * Support Vector Machines: [[YouTube]](https://youtu.be/-7o1hOWrgwY) [[DB Video]](https://www.dropbox.com/s/u1idek17id17tei/SVM.mp4) (11 minutes)
     * Exercise 2 in [in-class exercises](https://github.com/sdrangan/introml/blob/master/unit08_svm/svm_inclass.ipynb)
-* Kernel Trick: [[YouTube]](https://youtu.be/YiodXkExmkw) [[DB Video]](https://www.dropbox.com/s/92e0ife7v6ajdcc/Kernel.mp4?) (14 minutes)
+* Kernel Trick: [[YouTube]](https://youtu.be/yZR3xv6T83Q) [[DB Video]](https://www.dropbox.com/s/92e0ife7v6ajdcc/Kernel.mp4) (20 minutes)
+
 
