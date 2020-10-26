@@ -8,8 +8,6 @@ Slides:  [[pdf]](../../lectures/Lect09_Neural.pdf)  [[Powerpoint]](../../lecture
     * Exercise 1 in [in-class exercises](https://github.com/sdrangan/introml/blob/master/unit09_neural/neural_inclass.ipynb)
 * Training Neural Networks:  [[YouTube]](https://youtu.be/oQqIdjBgLSM) [[DB Video]](https://www.dropbox.com/s/9qtnvl1otm7svjx/Training.mp4) (15 minutes)
     * Exercise 2 in [in-class exercises](https://github.com/sdrangan/introml/blob/master/unit09_neural/neural_inclass.ipynb)
-* Python Examples:  TBD
+* Python Examples:  [[YouTube]](https://youtu.be/9bXFr2cggRg) [[DB Video]](https://www.dropbox.com/s/flfd4hf4vzxoxk8/Python.mp4) (24 minutes)
+    * Exercise 3 in [in-class exercises](https://github.com/sdrangan/introml/blob/master/unit09_neural/neural_inclass.ipynb)
 * Backpropagation:  TBD
-
-
-?dl=0
