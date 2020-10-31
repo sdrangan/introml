@@ -112,6 +112,7 @@ to documents that don't match the number of the unit.  We will fix these soon!
     [[pdf]](./lectures/Lect10_ConvNet.pdf)
     [[Powerpoint]](./lectures/Lect10_ConvNet.pptx)         
     * [Setting up a GPU instance](./GCP/gpu_setup.md) (Recommended)
+    * [Lecture videos](./unit10_cnn/online/readme.md)   
     * [Demo 1: 2D convolutions and convolutional layers in keras](./unit10_cnn/demo1_convolutions.ipynb)
     * [Demo 2: Creating an image set using the Flickr API](./unit10_cnn/demo2_flickr_images.ipynb)
     * [Demo 3: Exploring the deep VGG16 network](./unit10_cnn/demo3_vgg16.ipynb)

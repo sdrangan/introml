@@ -41,6 +41,8 @@ Right now, we have only completed the first half of the class, but more will be 
 * [Unit 6:  Logistic Regression](./unit06_logistic/online/readme.md)
 * [Unit 7:  Non-linear Optimization](./unit07_optim/online/readme.md)
 * [Unit 8:  SVM](./unit08_svm/online/readme.md)
+* [Unit 9:  Neural Networks](./unit09_neural/online/readme.md)
+* [Unit 10: Convolutional and Deep Networks](./unit10_cnn/online/readme.md)
 
     
     
