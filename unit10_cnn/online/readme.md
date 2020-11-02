@@ -10,9 +10,7 @@ Slides:  [[pdf]](../../lectures/Lect10_ConvNet.pdf)  [[Powerpoint]](../../lectur
 * CNN Structure: [[YouTube]](https://youtu.be/tILB_0w_Yd8) [[DB Video]](https://www.dropbox.com/s/tj1bogjxe38rzeo/ConvLayers.mp4) (11 minutes)       
 * Convolutional Layers in Tensorflow:  [[YouTube]](https://youtu.be/JeoJp2vr5Po) [[DB Video]](https://www.dropbox.com/s/58pum5vlqb73a1f/ConvPython.mp4) (16 minutes)   
     * Exercise 2 in [convolution demo](../demo1_convolutions.ipynb)
-* Training CNNs
+* Training CNNs:  [[YouTube]](https://youtu.be/hoVwe1EUD5I) [[DB Video]](https://www.dropbox.com/s/l7xaokp8g7rvb2i/Training.mp4) (18 minutes)   
 * Transfer Learning from Famous Networks
-
-
 
 
