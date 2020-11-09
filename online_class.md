@@ -30,7 +30,7 @@ YouTube video.  You can also like the video and subscribe to the channel.
 
 ## Material Contents
 
-Right now, we have only completed the first half of the class, but more will be added.
+Right now, not all the videos have been created.
 
 * [Unit 1:  What is Machine Learning?](./unit01_intro/online/readme.md)
 * Unit 2:  Simple Linear Regression
@@ -43,6 +43,7 @@ Right now, we have only completed the first half of the class, but more will be 
 * [Unit 8:  SVM](./unit08_svm/online/readme.md)
 * [Unit 9:  Neural Networks](./unit09_neural/online/readme.md)
 * [Unit 10: Convolutional and Deep Networks](./unit10_cnn/online/readme.md)
+* [Unit 11: PCA](./unit11_pca/online/readme.md)
 
     
     

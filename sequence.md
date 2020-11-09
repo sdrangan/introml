@@ -124,6 +124,7 @@ to documents that don't match the number of the unit.  We will fix these soon!
 * [Unit 11:  PCA](./pca/readme.md)
     * Lecture:  PCA [[pdf]](./lectures/Lect11_PCA.pdf), Modifed Note [[pdf]](./lectures/Lect11_PCA_modified.pdf)
     [[Powerpoint]](./lectures/Lect11_PCA_modified.pptx)         
+    * [Lecture videos](./unit11_pca/online/readme.md)   
     * [Demo 1:  PCA eigen-faces-SVM](./unit11_pca/demo1_eigen_face.ipynb)
     * [Demo 2:  Low-rank matrix completion via embedding layers](./unit11_pca/demo2_low_rank.ipynb)
     * [Lab:  PCA with hyper-parameter optimization](./unit11_pca/lab_wine_partial.ipynb)

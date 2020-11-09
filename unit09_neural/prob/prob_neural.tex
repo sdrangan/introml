@@ -220,7 +220,7 @@ showstringspaces=false            %
 \begin{document}
 
 \title{Introduction to Machine Learning\\
-Homework 7:  Neural Networks}
+Neural Networks Problems}
 \author{Prof. Sundeep Rangan and Yao Wang}
 \date{}
 
@@ -289,16 +289,16 @@ The hidden weights and biases are:
 \begin{enumerate}[(a)]
 
 \item What is the number $N_h$ of hidden units?  For each $j=1,\ldots,N_h$,
-draw $u^\hid_j$ as a function of $x$ over some suitable range of values $x$. 
+draw $u^\hid_j$ as a function of $x$ over some suitable range of values $x$.
 You may draw them on one plot, or on
 multiple plots.
 
-\item Since the network is for regression, you may choose 
+\item Since the network is for regression, you may choose
 the activation function $g_{\rm out}(z^\out)$ to be linear.
 Given training data $(x_i,y_i)$, $i=1,\ldots,N$, formally define the loss function you would use
 to train the network?
 
-\item Using the output activation and loss function selected in part (b), set up the formulation to determine 
+\item Using the output activation and loss function selected in part (b), set up the formulation to determine
 output weights and bias, $\Wbf^\out$, $b^\out$,
 for the training data below.  You should be able to find a closed form solution. Write a few line of python code to solve the problem.
 \begin{center}
@@ -309,7 +309,7 @@ $y_i$ & 0 & 0   & 1 & 3 & 3 \\ \hline
 \end{center}
 
 \item
- Based on your solution for the output weights and bias,  
+ Based on your solution for the output weights and bias,
 draw $\hat{y}$ vs.\ $x$ over some suitable range of values $x$.  Write a few line of python code to do this.
 
 
@@ -344,13 +344,13 @@ add the indexing $i$, to the equations.
 \[
     L = \sum_{i=1}^N (y_i - \hat{y}_i)^2,
 \]
-draw the computation graph describing the mapping from $\xbf_i$ and parameters 
+draw the computation graph describing the mapping from $\xbf_i$ and parameters
 to $L$.
 Indicate which nodes are trainable parameters.
 
 
 \item Compute the gradient  $\partial L/\partial \hat{y}_i$
-for all $i$.  
+for all $i$.
 
 \item Suppose that, in backpropagation, we have computed $\partial L/\partial \hat{y}_i$
 for all $i$, represented as $\partial L/\partial \hat{\bf y}$. Describe how to compute the components of the gradient
@@ -364,18 +364,18 @@ Suppose that we have computed the gradient $\partial L/\partial \ubf$, describe 
 \item
 Suppose that we have computed the gradient $\partial L/\partial \zbf$, describe how would you compute the gradient
  $\partial L/\partial W_{jk}$ and $\partial L/\partial b_j$.
- 
+
  \item
  Put all above together, describe how would you compute the gradient  $\partial L/\partial W_{jk}$ and $\partial L/\partial b_j$.
- 
+
 
 \item Write a few lines of python code to implement the gradients  $\partial L/\partial \ubf$ (as in part (d)), given the gradient $\partial L/\partial \hat{\bf y}$.
 Indicate how you represent the gradients.
 Full credit requires that you avoid for-loops.
- 
+
 \end{enumerate}
 
 \end{enumerate}
 \end{document}
 
-c
+c 
