@@ -11,5 +11,5 @@ Slides:  [[pdf]](../../lectures/Lect11_PCA.pdf)  [[Powerpoint]](../../lectures/L
     * Exercise 2 of the [in class exercises](../pca_inclass.ipynb)
 * Computing the PCA via the SVD: [[YouTube]](https://youtu.be/O5djQVTz68o) [[DB Video]](https://www.dropbox.com/s/n7ff7m0ch3q4w4v/SVD.mp4) (14 minutes)       
     * Exercise 3 of the [in class exercises](../pca_inclass.ipynb)
-* Eigen-Faces Demo
+* Eigen-Faces Demo:  [[YouTube]](https://youtu.be/Mh64RWAy5As) [[DB Video]](https://www.dropbox.com/s/bvo8vxlhpaxg2n3/EigenFaces.mp4) (25 minutes)       
 
