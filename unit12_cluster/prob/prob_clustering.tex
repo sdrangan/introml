@@ -217,7 +217,7 @@ showstringspaces=false            %
 \begin{document}
 
 \title{Introduction to Machine Learning\\
-Homework 10: Clustering: K-means and EM-GMM algorithm}
+$K$-means and Clustering Problems}
 \author{Prof. Sundeep Rangan}
 \date{}
 
@@ -268,8 +268,8 @@ You may assume you have the following functions:
 \begin{python}
    km = KMeans(n_cluster=nc)   # Creates a K-Means object
    km.fit(X)  # Fits the k-means clusters
-   km.cluster_centers_   # Returns the cluster centers 
-                         # (one cluster per row)          
+   km.cluster_centers_   # Returns the cluster centers
+                         # (one cluster per row)
 \end{python}
 
 \item \emph{Initialization.}  Write a few lines of python
@@ -280,12 +280,12 @@ Make sure you do not pick the same sample twice.
 \item \emph{Clustering as pre-processing.}
 Suppose we want to cluster data and then
 fit a linear model in each cluster.
-You are given training data \pycode{Xtr,ytr} 
+You are given training data \pycode{Xtr,ytr}
 and test data \pycode{Xts,yts} for a regression problem.
 Write code to do the following:
 \begin{itemize}
   \item Perform $K$-means clustering on the training data \pycode{Xtr} with a given number \pycode{nc} clusters;
-  \item In each cluster in the training data, 
+  \item In each cluster in the training data,
     fit a linear model.
   \item Compute the predicted outputs \pycode{yhat_ts}
   and mean squared error of the model on the test data.
@@ -295,11 +295,11 @@ You may assume you have the following functions:
    km = KMeans(n_cluster=nc)   # Creates a K-Means object
    km.fit(X)       # Fits the k-means clusters
    km.predict(X)   # Finds the index of the closest cluster
-   
+
    reg = LinearRegression()   # Creates a linear regression object
    reg.fit(X,y)  # Fits the linear model
    yhat = reg.predict(X)  # Predicts the output
-   
+
 \end{python}
 Note:  You may need a list of regression objects.
 
