@@ -218,14 +218,96 @@ showstringspaces=false            %
 
 \title{Introduction to Machine Learning\\
 Homework 10: Clustering: K-means and EM-GMM algorithm}
-\author{Prof. Yao Wang}
+\author{Prof. Sundeep Rangan}
 \date{}
 
 \maketitle
 
 \begin{enumerate}
 
-\item Figure \ref{fig:samples} shows a set of samples to be clustered. Show the results from K-means algorithm in successive iterations, starting with the initial centroids indicated in the figure. You can do nearest neighbor partition and centroid update approximately by ``eyeballing''. 
+
+\item \label{prob:km}
+You are given five data samples:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}  \hline
+$i$ & 1 & 2 & 3 & 4 & 5 \\ \hline
+$x_{i1}$ & 0 & 1 & 0 & 2 & 2 \\ \hline
+$x_{i2}$ & 0 & 0 & 1 & 2 & 3 \\ \hline
+\end{tabular}
+\end{center}
+
+
+\begin{enumerate}[(a)]
+
+
+\item Draw the five points.
+
+\item Starting with $K=2$ cluster centers at $(0,0)$ and $(1,0)$,
+what are the cluster assignments and new cluster centers after one
+iteration of $K$-means?
+\end{enumerate}
+
+\item \emph{$K$-means for outlier detection.}  Write a
+function for outlier detection:
+\begin{python}
+    def outlier_detect(Xtr,Xts,nc,t):
+        ...
+        return outlier
+\end{python}
+The function should:
+\begin{itemize}
+  \item Perform $K$-means clustering on the training data \pycode{Xtr};
+  \item Given the matrix of test data \pycode{Xts},
+    it sets an output \pycode{outlier[i]=1} if
+    the sample \pycode{Xts[i,:]} is greater than some
+    distance \pycode{t} from all cluster centers.
+\end{itemize}
+Try to avoid for loops.
+You may assume you have the following functions:
+\begin{python}
+   km = KMeans(n_cluster=nc)   # Creates a K-Means object
+   km.fit(X)  # Fits the k-means clusters
+   km.cluster_centers_   # Returns the cluster centers 
+                         # (one cluster per row)          
+\end{python}
+
+\item \emph{Initialization.}  Write a few lines of python
+code to initialize $K$-means by selecting $K$
+random samples of the training data as the cluster centers.
+Make sure you do not pick the same sample twice.
+
+\item \emph{Clustering as pre-processing.}
+Suppose we want to cluster data and then
+fit a linear model in each cluster.
+You are given training data \pycode{Xtr,ytr} 
+and test data \pycode{Xts,yts} for a regression problem.
+Write code to do the following:
+\begin{itemize}
+  \item Perform $K$-means clustering on the training data \pycode{Xtr} with a given number \pycode{nc} clusters;
+  \item In each cluster in the training data, 
+    fit a linear model.
+  \item Compute the predicted outputs \pycode{yhat_ts}
+  and mean squared error of the model on the test data.
+\end{itemize}
+You may assume you have the following functions:
+\begin{python}
+   km = KMeans(n_cluster=nc)   # Creates a K-Means object
+   km.fit(X)       # Fits the k-means clusters
+   km.predict(X)   # Finds the index of the closest cluster
+   
+   reg = LinearRegression()   # Creates a linear regression object
+   reg.fit(X,y)  # Fits the linear model
+   yhat = reg.predict(X)  # Predicts the output
+   
+\end{python}
+Note:  You may need a list of regression objects.
+
+
+\end{enumerate}
+\end{document}
+
+\item Figure \ref{fig:samples} shows a set of samples to be clustered. Show the results from K-means algorithm in successive iterations, starting with the initial centroids indicated in the figure. You can do nearest neighbor partition and centroid update approximately by ``eyeballing''.
 
 
 \begin{figure}[h]
@@ -233,19 +315,19 @@ Homework 10: Clustering: K-means and EM-GMM algorithm}
 \includegraphics[width=0.5\columnwidth]{samples.png}
 \caption{The set of samples to be clustered} \label{fig:samples}
 \end{figure}
- 
+
   \item\label{kmeans-NN}
  Suppose you have conducted a clustering analysis for a dataset with each sample described by $D$ features, and you used K-means algorithm to derive $K$ clusters and determined the cluster model parameters (including the centroids of the $K$ clusters). Given a test dataset containing $N$ samples,  you want to classify each sample into one of the cluster using the nearest neighbor rule. How many computations are needed? For simplicity, for this and all following problems, only count multiplications (consider the square operation as  multiplication).
 
 \item\label{kmeans}
-Suppose you are given $N$ samples each described by $D$ features, and you are asked to cluster them into $K$ clusters using the K-means algorithm. Suppose you run the K-means iteration $T$ times. How many computations are needed? 
+Suppose you are given $N$ samples each described by $D$ features, and you are asked to cluster them into $K$ clusters using the K-means algorithm. Suppose you run the K-means iteration $T$ times. How many computations are needed?
 
- 
- \item (Optional)
-  Suppose you have conducted a clustering analysis for a dataset with each sample described by $D$ features, and you used EM-GMM algorithm to derive $K$ clusters and determined the cluster model parameters (including the prior probabilities, centroids and covariance matrices of the $K$ clusters). Given a test dataset containing $N$ samples,  you want to classify each sample into the cluster  that has the highest posterior probability. How many computations are needed? 
 
  \item (Optional)
-Suppose you are given $N$ samples each described by $D$ features, and you are asked to cluster them into $K$ clusters using the EM-GMM algorithm. Suppose you run the EM  iteration $T$ times. How many computations are needed? 
+  Suppose you have conducted a clustering analysis for a dataset with each sample described by $D$ features, and you used EM-GMM algorithm to derive $K$ clusters and determined the cluster model parameters (including the prior probabilities, centroids and covariance matrices of the $K$ clusters). Given a test dataset containing $N$ samples,  you want to classify each sample into the cluster  that has the highest posterior probability. How many computations are needed?
+
+ \item (Optional)
+Suppose you are given $N$ samples each described by $D$ features, and you are asked to cluster them into $K$ clusters using the EM-GMM algorithm. Suppose you run the EM  iteration $T$ times. How many computations are needed?
 
 \end{enumerate}
   \end{document}
