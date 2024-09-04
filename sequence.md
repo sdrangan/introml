@@ -38,12 +38,14 @@ to documents that don't match the number of the unit.  We will fix these soon!
     * Lecture:  Introduction to Machine Learning [[pdf]](./lectures/Lect01_IntroML.pdf)
      [[Powerpoint]](./lectures/Lect01_IntroML.pptx)    
      * [Lecture videos](./unit01_intro/online/readme.md)
-     * [Demo:  Introduction to numpy vectors](./unit01_intro/demo_intro_vectors.ipynb)
+     * [Demo:  Introduction to numpy vectors](./unit01_intro/demo_intro_vectors.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sdrangan/introml/blob/master/unit01_intro/demo_intro_vectors.ipynb)
 * Unit 2:  Simple linear regression
     * Lecture:  Simple linear regression [[pdf]](./lectures/Lect02_SimpRegression.pdf)
      [[Powerpoint]](./lectures/Lect02_SimpRegression.pptx)        
     * [Demo:  Understanding automobile mpg](./unit02_simp_lin_reg/demo_auto_mpg.ipynb)
+   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sdrangan/introml/blob/master/unit02_simp_lin_reg/demo_auto_mpg.ipynb)
     * [Lab: Boston housing data](./unit02_simp_lin_reg/lab_housing_partial.ipynb) 
+    [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sdrangan/introml/blob/master/unit02_simp_lin_reg/lab_housing_partial.ipynb)
     * Problems [[pdf]](./unit02_simp_lin_reg/prob/prob_simp_lin_reg.pdf) [[Latex]](./unit02_simp_lin_reg/prob/prob_simp_lin_reg.tex)
 * Unit 3:  Multiple linear regression
     * Lecture:  Multiple linear regression [[pdf]](./lectures/Lect03_MultLinRegression.pdf)
