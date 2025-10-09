@@ -14,6 +14,7 @@
 \usepackage{listings}
 \usepackage{mathtools}
 \lstloadlanguages{Python}
+\usepackage{mdframed}
 \usetikzlibrary{shapes,arrows}
 %\usetikzlibrary{dsp,chains}
 
@@ -173,6 +174,7 @@
 \def\etal{\emph{et al.}}
 \def\Ggothic{\mathfrak{G}}
 \def\Pset{{\mathcal P}}
+
 \newcommand{\bigCond}[2]{\bigl({#1} \!\bigm\vert\! {#2} \bigr)}
 \newcommand{\BigCond}[2]{\Bigl({#1} \!\Bigm\vert\! {#2} \Bigr)}
 \newcommand{\tran}{^{\text{\sf T}}}
@@ -181,6 +183,8 @@
 \def\Norm{{\mathcal N}}
 \newcommand{\vmult}{.}
 \newcommand{\vdiv}{./}
+\newcommand{\bsym}[1]{\boldsymbol{{#1}}}
+\newcommand{\wh}[1]{\widehat{{#1}}}
 
 
 % Python style for highlighting
@@ -214,10 +218,14 @@ showstringspaces=false            %
 % Python for inline
 \newcommand\pycode[1]{{\pythonstyle\lstinline!#1!}}
 
+% Solution environment
+\definecolor{lightgray}{gray}{0.95}
+\newmdenv[linecolor=white,backgroundcolor=lightgray,frametitle=Solution:]{solution}
+
 \begin{document}
 
 \title{Introduction to Machine Learning\\
-Unit 8 Problems:  Support Vector Machines}
+Problems:  K-NN, Kernel Methods, and Support Vector Machines}
 \author{Prof. Sundeep Rangan}
 \date{}
 
@@ -225,7 +233,165 @@ Unit 8 Problems:  Support Vector Machines}
 
 \begin{enumerate}
 
-\item Consider the data set for four points with
+
+\item \label{prob:knn1d} \emph{K-NN in 1D.}
+Consider the following dataset consisting of one-dimensional input-output pairs:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+$i$ & 1 & 2 & 3 & 4 & 5 \\ \hline
+$x_i$ & 0.8 & 2.2 & 3.6 & 4.1 & 5.5 \\  \hline
+$y_i$ & 2.0 & 2.5 & 3.5 & 5.0 & 4.5 \\ \hline 
+\end{tabular}
+\end{center}
+Compute the K-NN regression estimate at the query point $x = 3.7$ for:
+\begin{enumerate}[(a)]
+	\item \( K = 1 \)
+    \item \( K = 2 \)
+\end{enumerate}
+
+
+\item \label{prob:ksmooth1d} \emph{Kernel smoother in 1D.}
+Consider the kernel
+\[
+	K(x_i,x) = \max\{0, 1-|x-x'|\}
+\]
+\begin{enumerate}[(a)]
+\item Draw the kernel $K(x_i,x)$ as a function of $x$ for $x_i=0$.
+\item Using the same data as in Problem~\ref{prob:knn1d}, compute the kernel smoothing estimate
+for $x=3.7$
+\end{enumerate}
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[scale=1.0]
+  % Axes
+  \draw[->] (-2,0) -- (2,0) node[right] {$x$};
+  \draw[->] (0,0) -- (0,1.2) node[above] {$K(0,x)$};
+
+  % Kernel function
+  \draw[ultra thick, blue] (-1.8,0) -- (-1,0) -- (0,1) -- (1,0) -- (1.8,0);
+
+  % Dashed lines at x = -1 and x = 1
+  \draw[-] (-1,0.2) -- (-1,-0.2) node [below] {-1};
+  \draw[-] (1,0.2) -- (1,-0.2) node [below] {1};
+  \draw[-] (0.2,1) -- (-0.2,1) node [left] {1};
+ 
+\end{tikzpicture}
+\caption{Problem \ref{prob:ksmooth1d}.  Triangular kernel}
+\label{fig:trik}
+
+\end{figure}
+
+
+\item \label{prob:knn_cosine} \emph{K-NN with cosine similarity}.  
+Consider the following dataset consisting of two-dimensional input vectors and scalar output values:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$i$ & 1 & 2 & 3 & 4 & 5 \\ \hline
+$x_{i1}$ & 1 & 0 & 1 & 1.5 & 1 \\ \hline
+$x_{i2}$ & 0 & 1 & 1 & 1 & 2 \\ \hline
+$y_i$ & 2.0 & 2.5 & 3.5 & 5.0 & 4.5 \\ \hline
+\end{tabular}
+\end{center}
+
+Let the query point be $\bsym{x} = [1.5, 1.5]$. Use cosine similarity to determine the nearest neighbors.
+\begin{enumerate}[(a)]
+\item Plot the data points $\bsym{x}_i$ in 2D space.  Add the query point $\bsym{x}$ with a different marker.
+
+\item  Compute the cosine similarity between the query point and each data point:
+\[
+	K(\bsym{x}_i, \bsym{x}) = \frac{\bsym{x}_i^\intercal \bsym{x}}{\|\bsym{x}\|\|\bsym{x}_i\|}
+\]
+
+\item Compute the K-NN regression estimate at $\bsym{x}$ by averaging the $y_i$ values of the $K$
+ most similar neighbors:
+ \begin{itemize} 
+ \item $K=1$
+ \item $K=2$
+ \end{itemize}
+\end{enumerate}
+
+
+\item \emph{Bias and variance}.  Suppose that we have data
+\[
+	y_i = f_0(x_i) + w_i, \quad w_i \sim \mathcal{N}(0,\sigma^2),
+\]
+where $f_0(x)$ is the unknown true function:
+\[
+	f_0(x) = x^2.
+\]
+Suppose that at some test point $x_0 = 1.3$, we have the estimate 
+\[
+	\wh{f}(x_0) = \alpha_1 y_1 + \alpha_2 y_2,
+\]
+with 
+\[
+	x_1 = 1, \quad x_2 = 2, \quad \alpha_1 = 0.7, \quad \alpha_2 = 0.3.
+\]
+\begin{enumerate}[(a)]
+\item What is the bias: $\mathrm{Bias}(x_0) = f_0(x_0) - \Exp[\wh{f}(x_0)]$
+\item What is the variance: $\mathrm{Var}(x_0) = \Exp[ \wh{f}(x_0) - \Exp(\wh{f}(x_0)) ]^2$.
+\end{enumerate}
+
+
+
+\item \label{prob:ks_pycode} \emph{Kernel smoother implementation}.  
+Implement the following function kernel smoother in python. 
+Avoid using for-loops for efficient code.
+\begin{python}
+	def kernel_smoother(Xdat, ydat, X, gam=1.0):
+		"""
+		Kernel smoother with an RBF kernel
+		
+		Parameters
+		----------
+		Xdat:  (ndat,d) array of data inputs
+		ydat:  (ndat,) array of data outputs
+		X:  (n,d) array of query inputs
+		
+		Returns
+		-------
+		yhat: (n,) array of predicted outputs at the queries
+		"""
+		...
+		return yhat
+\end{python}
+
+
+\item \emph{Outlier detection}. Suppose one uses kernel smoothing with an RBF kernel and a query value $\bsym{x}$ satisfies:
+\[
+	\sum_{i=1}^n K(\bsym{x},\bsym{x}_i) \leq \epsilon,
+\]
+for some small $\epsilon > 0$.  This condition generally implies that the query sample $\bsym{x}$
+is far from all the training data samples $\bsym{x}_i$.  This sort of check can be used to detect
+\emph{outliers} that do not follow the training data.  Hence, reliable predictions cannot be made.
+Modify the function in Problem~\ref{prob:ks_pycode} to add an output vector \pycode{outlier}
+that indicates which samples are outliers.  Use a default value of $\epsilon = 10^{-3}$.
+
+
+\item \emph{KNN implementation.}  Write a simple function in \pycode{numpy} to implement K-NN.
+You can use the function:
+\begin{python}
+	ind = np.argsort(A, axis=1)  
+\end{python} 
+which finds the indices for the sorting in each row.  That is,
+\begin{python}
+	ind[i,k] = index of k-th smallest value in A[i,:]
+\end{python}
+Use the following function definition:
+\begin{python}
+	def knn(Xdat, ydat, X,k=1):
+		...
+		return yhat
+\end{python}
+
+
+\item \label{prob:class1d} 
+\emph{Margin in 1d} Consider the data set for four points with
 features $\xbf_i=(x_{i1},x_{i2})$ and binary class
 labels $y_i=\pm 1$.
 
@@ -250,6 +416,7 @@ State the intercept $b$ and weights $w_1$ and $w_2$ for your classifier.
 Note there is no unique answer as there are multiple linear classifiers
 that could separate the classes.
 
+
 \item Find the maximum $\gamma$ such that
 \[
     y_i(b+w_1x_{i1} + w_{i2}x_{i2}) \geq \gamma, \mbox{ for all } i,
@@ -264,7 +431,10 @@ for the classifier in part (a)?
 \item Which samples $i$ are on the margin for your classifier?
 \end{enumerate}
 
-\item  Consider the data set with scalar features $x_i$
+
+
+\item \emph{Minimization of the hinge loss}. 
+Consider the data set with scalar features $x_i$
 and binary class labels $y_i=\pm 1$.
 
 \begin{center}
@@ -304,7 +474,7 @@ and which samples $i$ are misclassified ($\epsilon_i > 1$).
 
 \end{enumerate}
 
-\item
+\item  \emph{Images as matrices}. 
 Consider an image recognition problem, where an image $\Xbf$
 and filter $\Wbf$ are $4 \x 4$ matrices:
 \[
@@ -347,7 +517,13 @@ to the 16-dimensional vector, \pycode{x}.  What is the python command
 to go from \pycode{x} to \pycode{Xmat}.
 \end{enumerate}
 
-\item
+
+
+
+
+
+
+\item \label{prob:rbf}
 Consider the data set with scalar features $x_i$
 and binary class labels $y_i=\pm 1$.
 
@@ -376,6 +552,9 @@ $\hat{y}$ vs.\ $x$ when $\gamma = 3$ and $\alphabf = [0,0,1,1]$.
 \item Repeat (a) with $\gamma = 0.3$ and $\alphabf = [1,1,1,1]$.
 \item Which classifier makes more errors on the training data.
 \end{enumerate}
+
 \end{enumerate}
+
+
 \end{document}
 
