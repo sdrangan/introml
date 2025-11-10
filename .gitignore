@@ -1,0 +1,29 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Python cache and environment
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.mypy_cache/
+.venv/
+.env
+
+# OS-specific clutter
+.DS_Store
+Thumbs.db
+
